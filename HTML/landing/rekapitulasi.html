@@ -109,6 +109,9 @@
           <ul class="navigation-menu justify-content-end">
             <li><a href="index-saas.html" class="sub-menu-item">Beranda</a></li>
             <li><a href="peta.html" class="sub-menu-item">Peta</a></li>
+            <li>
+              <a href="virtual-tour.html" class="sub-menu-item">Virtual Tour</a>
+            </li>
             <li class="has-submenu parent-menu-item">
               <a href="javascript:void(0)">Data</a
               ><span class="menu-arrow"></span>
@@ -224,20 +227,12 @@
                 placeholder="Search"
               />
             </div>
-            <button
-              type="button"
-              class="btn btn-light mb-2 rounded"
-              id="filterButton"
-            >
-              Filter
-              <span class="mdi mdi-filter"></span>
-            </button>
           </div>
         </div>
         <!-- End Search -->
 
         <!-- Start Filter -->
-        <div class="row py-3 px-2 rounded-3 d-none" id="filterContainer">
+        <div class="row py-3 px-2 rounded-3">
           <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
             <label for="entitas">Entitas</label>
             <select class="form-select" id="entitas">
@@ -1019,13 +1014,6 @@
       });
 
       // new DataTable("#daftarProvinsi");
-
-      document
-        .getElementById("filterButton")
-        .addEventListener("click", function () {
-          var filterContainer = document.getElementById("filterContainer");
-          filterContainer.classList.toggle("d-none");
-        });
     </script>
   </body>
 </html>

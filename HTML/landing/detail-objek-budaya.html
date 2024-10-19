@@ -104,6 +104,9 @@
           <ul class="navigation-menu justify-content-end">
             <li><a href="index-saas.html" class="sub-menu-item">Beranda</a></li>
             <li><a href="peta.html" class="sub-menu-item">Peta</a></li>
+            <li>
+              <a href="virtual-tour.html" class="sub-menu-item">Virtual Tour</a>
+            </li>
             <li class="has-submenu parent-menu-item">
               <a href="javascript:void(0)">Data</a
               ><span class="menu-arrow"></span>
@@ -183,74 +186,74 @@
       </div>
       <div class="container pb-lg-4 mb-md-5 mb-4 mt-60">
         <!-- Start row 1 & 2 -->
-        <div class="row mb-5">
-          <div class="col-sm-12 col-md-6 col-lg-6 p-3">
-            <div
-              id="carouselExampleIndicators"
-              class="carousel slide"
-              data-bs-ride="carousel"
-              style="width: 100%; height: 100%"
-            >
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-              </div>
-              <div class="carousel-inner rounded-3">
-                <div class="carousel-item active">
-                  <img src="images/1.jpg" class="d-block w-100" alt="..." />
-                </div>
-                <div class="carousel-item">
-                  <img src="images/2.jpg" class="d-block w-100" alt="..." />
-                </div>
-                <div class="carousel-item">
-                  <img src="images/3.jpg" class="d-block w-100" alt="..." />
-                </div>
-              </div>
+        <div
+          class="row mb-5 d-flex flex-row justify-content-center align-items-center"
+        >
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            style="width: 75%; height: 75%"
+          >
+            <div class="carousel-indicators">
               <button
-                class="carousel-control-prev"
                 type="button"
                 data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
               <button
-                class="carousel-control-next"
                 type="button"
                 data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
             </div>
+            <div class="carousel-inner rounded-3">
+              <div class="carousel-item active">
+                <img src="images/1.jpg" class="d-block w-100" alt="..." />
+              </div>
+              <div class="carousel-item">
+                <img src="images/2.jpg" class="d-block w-100" alt="..." />
+              </div>
+              <div class="carousel-item">
+                <img src="images/3.jpg" class="d-block w-100" alt="..." />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-          <div class="col-sm-12 col-md-5 col-lg-6 py-3">
+          <div class="row mt-5 w-75">
             <div class="rounded-3" style="height: 100%">
               <ul
                 class="nav nav-pills d-flex flex-nowrap overflow-auto p-1 rounded-3"
@@ -356,6 +359,34 @@
                     Kepemilikan
                   </button>
                 </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="tab-pengelola"
+                    data-bs-toggle="tab"
+                    data-bs-target="#detail-pengelola"
+                    type="button"
+                    role="tab"
+                    aria-controls="contact"
+                    aria-selected="false"
+                  >
+                    Pengelola
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="tab-sejarah"
+                    data-bs-toggle="tab"
+                    data-bs-target="#detail-sejarah"
+                    type="button"
+                    role="tab"
+                    aria-controls="contact"
+                    aria-selected="false"
+                  >
+                    Sejarah
+                  </button>
+                </li>
               </ul>
               <div class="tab-content" id="myTabContent">
                 <div
@@ -367,18 +398,24 @@
                   <h5 class="mb-3 pb-2 border-bottom fw-normal">
                     Data Identitas
                   </h5>
-                  <ul class="list-unstyled">
-                    <div class="row">
-                      <div class="col-3">
-                        <li class="mb-2" style="color: #6b7280">Nama</li>
-                        <li class="mb-2" style="color: #6b7280">NIK</li>
-                      </div>
-                      <div class="col-9">
-                        <li class="mb-2 fw-bold">: Rudi Tabuti</li>
-                        <li class="mb-2 fw-bold">: 123456789</li>
-                      </div>
-                    </div>
-                  </ul>
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="fw-normal w-25">Nama</th>
+                        <td class="fw-bold">: Budi Budian</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">NIK</th>
+                        <td class="fw-bold">: 1234567890123456</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Foto KTP</th>
+                        <td>
+                          <img src="images/e-ktp.jpg" class="w-50 rounded-3" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
                 <div
                   class="tab-pane fade"
@@ -389,6 +426,28 @@
                   <h5 class="mb-3 pb-2 border-bottom fw-normal">
                     Data Struktur
                   </h5>
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="fw-normal w-25">Nama ODCB/CB di Lapangan</th>
+                        <td class="fw-bold">
+                          : perumahan anggrek angkasa lima puluh dua
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Fungsi Struktur</th>
+                        <td class="fw-bold">: Jacob</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Staff Struktur</th>
+                        <td class="fw-bold">:</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Periode Struktur</th>
+                        <td class="fw-bold">:</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
                 <div
                   class="tab-pane fade"
@@ -397,6 +456,42 @@
                   aria-labelledby="contact-tab"
                 >
                   <h5 class="mb-3 pb-2 border-bottom fw-normal">Data Lokasi</h5>
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="fw-normal w-25">Provinsi</th>
+                        <td class="fw-bold">: Riau</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Kabupaten/Kota</th>
+                        <td class="fw-bold">: Kota Pekanbaru</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Kecamatan</th>
+                        <td class="fw-bold">: Jambu</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Kelurahan</th>
+                        <td class="fw-bold">: Apel</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Alamat</th>
+                        <td class="fw-bold">: Perumahan Angkasa Bersinar</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Latitude</th>
+                        <td class="fw-bold">: 0.0101010</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Longitude</th>
+                        <td class="fw-bold">: 0.0101010</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Ketinggian</th>
+                        <td class="fw-bold">: 100 MDPL</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
                 <div
                   class="tab-pane fade"
@@ -405,7 +500,41 @@
                   aria-labelledby="contact-tab"
                 >
                   <h5 class="mb-3 pb-2 border-bottom fw-normal">Data Fisik</h5>
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="fw-normal w-25">Bahan Bangunan</th>
+                        <td class="fw-bold">: Semen Padang</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Satuan Waktu</th>
+                        <td class="fw-bold">: Dekade</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Periode Waktu</th>
+                        <td class="fw-bold">: 2</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Waktu Pembuatan</th>
+                        <td class="fw-bold">: 10 Tahun</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Ornamen Bangunan</th>
+                        <td class="fw-bold">: List Hitam</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Tanda Bangunan</th>
+                        <td class="fw-bold">: Corak Apel</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Warna Bangunan</th>
+                        <td class="fw-bold">: Coklat</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
+
+                <!-- Start Data Dimensi -->
                 <div
                   class="tab-pane fade"
                   id="detail-dimensi"
@@ -415,7 +544,42 @@
                   <h5 class="mb-3 pb-2 border-bottom fw-normal">
                     Data Dimensi
                   </h5>
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="fw-normal w-25">Panjang</th>
+                        <td class="fw-bold">: 100 Meter</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Lebar</th>
+                        <td class="fw-bold">: 100 Meter</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Tinggi</th>
+                        <td class="fw-bold">: 100 Meter</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Luas Struktur</th>
+                        <td class="fw-bold">: 10 Meter</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Luas Tanah</th>
+                        <td class="fw-bold">: 10 Meter</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Diameter Badan</th>
+                        <td class="fw-bold">: 1 Meter</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Diameter Kaki</th>
+                        <td class="fw-bold">: 1 Meter</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
+                <!-- End Data Dimensi -->
+
+                <!-- Start Data Kondisi -->
                 <div
                   class="tab-pane fade"
                   id="detail-kondisi"
@@ -425,7 +589,30 @@
                   <h5 class="mb-3 pb-2 border-bottom fw-normal">
                     Data Kondisi
                   </h5>
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="fw-normal w-25">Keutuhan</th>
+                        <td class="fw-bold">: > 90%</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Pemeliharaan</th>
+                        <td class="fw-bold">: Rutin</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Pemugaran</th>
+                        <td class="fw-bold">: 5 Kali</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Adaptasi</th>
+                        <td class="fw-bold">: Candi</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
+                <!-- End Data Kondisi -->
+
+                <!-- Start Data Kepemilikan -->
                 <div
                   class="tab-pane fade"
                   id="detail-kepemilikan"
@@ -435,7 +622,183 @@
                   <h5 class="mb-3 pb-2 border-bottom fw-normal">
                     Data Kepemilikan
                   </h5>
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="fw-normal w-25">Nama Pemilik</th>
+                        <td class="fw-bold">: Budi Tabuti</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Status Kepemilikan</th>
+                        <td class="fw-bold">: Pribadi</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Status Perolehan</th>
+                        <td class="fw-bold">: Legal</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Provinsi</th>
+                        <td class="fw-bold">: Riau</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Kabupaten/Kota</th>
+                        <td class="fw-bold">: Kota Pekanbaru</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Kecamatan</th>
+                        <td class="fw-bold">: Jambu</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Kelurahan</th>
+                        <td class="fw-bold">: Apel</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Alamat</th>
+                        <td class="fw-bold">: Perumahan Angkasa Bersinar</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Latitude</th>
+                        <td class="fw-bold">: 0.0101010</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Longitude</th>
+                        <td class="fw-bold">: 0.0101010</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
+                <!-- End Data Kepemilikan -->
+
+                <!-- Data Pengelola -->
+                <div
+                  class="tab-pane fade"
+                  id="detail-pengelola"
+                  role="tabpanel"
+                  aria-labelledby="contact-tab"
+                >
+                  <h5 class="mb-3 pb-2 border-bottom fw-normal">
+                    Data Pengelola
+                  </h5>
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="fw-normal w-25">Nama Pengelola</th>
+                        <td class="fw-bold">: Budi Tabuti</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Status Pengelola</th>
+                        <td class="fw-bold">: Pribadi</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Status Perolehan</th>
+                        <td class="fw-bold">: Legal</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Provinsi</th>
+                        <td class="fw-bold">: Riau</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Kabupaten/Kota</th>
+                        <td class="fw-bold">: Kota Pekanbaru</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Kecamatan</th>
+                        <td class="fw-bold">: Jambu</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Kelurahan</th>
+                        <td class="fw-bold">: Apel</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Alamat</th>
+                        <td class="fw-bold">: Perumahan Angkasa Bersinar</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Latitude</th>
+                        <td class="fw-bold">: 0.0101010</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Longitude</th>
+                        <td class="fw-bold">: 0.0101010</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- End Data Pengelola -->
+
+                <!-- Data Pengelola -->
+                <div
+                  class="tab-pane fade"
+                  id="detail-sejarah"
+                  role="tabpanel"
+                  aria-labelledby="contact-tab"
+                >
+                  <h5 class="mb-3 pb-2 border-bottom fw-normal">
+                    Data Sejarah
+                  </h5>
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="fw-normal w-25">Deskripsi Sejarah</th>
+                        <td class="fw-bold">
+                          : Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Officiis, ipsa porro soluta odit consequuntur
+                          dolor, voluptas laudantium ducimus exercitationem
+                          nostrum ut repudiandae tempore, architecto sed quasi
+                          mollitia consequatur dolores! Fugiat!
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Alamat</th>
+                        <td class="fw-bold">: Perumahan Angkasa Bersinar</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Latitude</th>
+                        <td class="fw-bold">: 0.0101010</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Longitude</th>
+                        <td class="fw-bold">: 0.0101010</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Foto/Gambar</th>
+                        <td>
+                          <img
+                            src="images/candi-muara-takus.jpg"
+                            class="w-50 rounded-3"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Video</th>
+                        <td>
+                          <video
+                            src="images/Latihan Pukul Cepat Kompang Berarak Bengkalis Ya Rasulullah di Teluk Latak.mp4"
+                            class="object-fit-fill w-50 rounded-3"
+                            controls
+                          ></video>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Dokumen Kajian</th>
+                        <td class="fw-bold">: <a href="#">pdf</a></td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Dokumen Lainnya</th>
+                        <td class="fw-bold">: <a href="#">pdf</a></td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Berkas Vektor</th>
+                        <td class="fw-bold">: <a href="#">Vektor</a></td>
+                      </tr>
+                      <tr>
+                        <th class="fw-normal">Berkas Raster</th>
+                        <td class="fw-bold">: <a href="#">Raster</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- End Data Pengelola -->
               </div>
             </div>
           </div>
@@ -443,8 +806,9 @@
         <!-- End row 1 & 2 -->
       </div>
     </section>
-    <section class="section bg-light py-5">
-      <div class="container pb-lg-4 mb-md-5">
+
+    <section id="virtual-tour" class="section bg-light py-5">
+      <div class="container pb-lg-4 mb-md-5 mt-100 mt-60">
         <div class="row justify-content-center">
           <div class="col-12 text-center">
             <div class="section-title mb-4 pb-2">

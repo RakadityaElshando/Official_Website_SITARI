@@ -121,6 +121,9 @@
           <ul class="navigation-menu justify-content-end">
             <li><a href="index-saas.html" class="sub-menu-item">Beranda</a></li>
             <li><a href="peta.html" class="sub-menu-item">Peta</a></li>
+            <li>
+              <a href="virtual-tour.html" class="sub-menu-item">Virtual Tour</a>
+            </li>
             <li class="has-submenu parent-menu-item">
               <a href="javascript:void(0)">Data</a
               ><span class="menu-arrow"></span>
@@ -299,6 +302,32 @@
                     <p class="ms-2 mb-0">Data Kepemilikan</p>
                   </div>
                 </a>
+                <a
+                  class="list-group-item list-group-item-action"
+                  id="step-pengelola"
+                  data-bs-toggle="list"
+                  href="#data-pengelola"
+                  role="tab"
+                  aria-controls="step-pengelola"
+                >
+                  <div class="d-flex flex-row align-items-center">
+                    <span class="progress-steps">8</span>
+                    <p class="ms-2 mb-0">Data Pengelola</p>
+                  </div>
+                </a>
+                <a
+                  class="list-group-item list-group-item-action"
+                  id="step-sejarah"
+                  data-bs-toggle="list"
+                  href="#data-sejarah"
+                  role="tab"
+                  aria-controls="step-sejarah"
+                >
+                  <div class="d-flex flex-row align-items-center">
+                    <span class="progress-steps">9</span>
+                    <p class="ms-2 mb-0">Data Sejarah</p>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -384,7 +413,9 @@
                 <p>Masukkan data identitas anda sebagai...</p>
                 <form>
                   <div class="mb-3">
-                    <label for="struktur-nama" class="form-label">Nama</label>
+                    <label for="struktur-nama" class="form-label"
+                      >Nama ODCB/CB di Lapangan</label
+                    >
                     <input
                       type="text"
                       class="form-control"
@@ -394,7 +425,7 @@
                   </div>
                   <div class="mb-3">
                     <label for="struktur-fungsi" class="form-label"
-                      >Fungsi</label
+                      >Fungsi Struktur</label
                     >
                     <input
                       type="text"
@@ -406,7 +437,7 @@
                   <div class="row">
                     <div class="col-lg-6 col-sm-12 col-md-6">
                       <label for="struktur-staff" class="form-label"
-                        >Staff</label
+                        >Staff Struktur</label
                       >
                       <select class="form-select" id="struktur-staff">
                         <option selected>Pilih salah satu</option>
@@ -417,7 +448,7 @@
                     </div>
                     <div class="col-lg-6 col-sm-12 col-md-6">
                       <label for="struktur-periode" class="form-label"
-                        >Periode</label
+                        >Periode Struktur</label
                       >
                       <select class="form-select" id="struktur-periode">
                         <option selected>Pilih salah satu</option>
@@ -465,49 +496,58 @@
               >
                 <h4>Data Lokasi</h4>
                 <p>Masukkan detail lokasi tempat objek ditemukan...</p>
-                <form>
-                  <div class="row mb-3">
-                    <div class="col-lg-6 col-sm-12 col-md-6">
-                      <label for="lokasi-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="lokasi-"
-                        placeholder="empty"
-                      />
-                    </div>
-                    <div class="col-lg-6 col-sm-12 col-md-6">
-                      <label for="lokasi-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="lokasi-"
-                        placeholder="empty"
-                      />
-                    </div>
+
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="struktur-staff" class="form-label"
+                      >Provinsi</label
+                    >
+                    <select class="form-select" id="struktur-staff">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
                   </div>
-                  <div class="row mb-3">
-                    <div class="col-lg-6 col-sm-12 col-md-6">
-                      <label for="lokasi-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="lokasi-"
-                        placeholder="empty"
-                      />
-                    </div>
-                    <div class="col-lg-6 col-sm-12 col-md-6">
-                      <label for="lokasi-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="lokasi-"
-                        placeholder="empty"
-                      />
-                    </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="struktur-periode" class="form-label"
+                      >Kabupaten/Kota</label
+                    >
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
                   </div>
-                  <div class="col-lg-12 col-sm-12 col-md-12 mb-4">
-                    <label for="lokasi-" class="form-label">empty</label>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="struktur-staff" class="form-label"
+                      >Kecamatan</label
+                    >
+                    <select class="form-select" id="struktur-staff">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="struktur-periode" class="form-label"
+                      >Kelurahan</label
+                    >
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label">Alamat</label>
                     <input
                       type="text"
                       class="form-control"
@@ -515,38 +555,38 @@
                       placeholder="empty"
                     />
                   </div>
-
-                  <div class="row mb-3">
-                    <span>Detail Lokasi</span>
-                    <div class="col-lg-4 col-sm-12 col-md-4">
-                      <label for="lokasi-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="lokasi-"
-                        placeholder="empty"
-                      />
-                    </div>
-                    <div class="col-lg-4 col-sm-12 col-md-4">
-                      <label for="lokasi-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="lokasi-"
-                        placeholder="empty"
-                      />
-                    </div>
-                    <div class="col-lg-4 col-sm-12 col-md-4">
-                      <label for="lokasi-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="lokasi-"
-                        placeholder="empty"
-                      />
-                    </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label">Latitude</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lokasi-"
+                      placeholder="empty"
+                    />
                   </div>
-                </form>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label">Longitude</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lokasi-"
+                      placeholder="empty"
+                    />
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label"
+                      >Ketinggian(MDPL)</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lokasi-"
+                      placeholder="empty"
+                    />
+                  </div>
+                </div>
                 <div class="d-flex justify-content-end mt-3">
                   <button
                     id="btn-back"
@@ -584,78 +624,92 @@
               >
                 <h4>Data fisik</h4>
                 <p>Masukkan detail fisik dari objek yang ditemukan...</p>
-                <form>
-                  <div class="row mb-3">
-                    <div class="col-lg-6 col-sm-12 col-md-6">
-                      <label for="fisik-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="fisik-"
-                        placeholder="empty"
-                      />
-                    </div>
-                    <div class="col-lg-6 col-sm-12 col-md-6">
-                      <label for="fisik-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="fisik-"
-                        placeholder="empty"
-                      />
-                    </div>
+
+                <div class="row mb-3">
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label for="dimensi-" class="form-label"
+                      >Bahan bangunan</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="dimensi-"
+                      placeholder="empty"
+                    />
                   </div>
-                  <div class="row mb-3">
-                    <div class="col-lg-6 col-sm-12 col-md-6">
-                      <label for="fisik-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="fisik-"
-                        placeholder="empty"
-                      />
-                    </div>
-                    <div class="col-lg-6 col-sm-12 col-md-6">
-                      <label for="fisik-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="fisik-"
-                        placeholder="empty"
-                      />
-                    </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label for="struktur-periode" class="form-label"
+                      >Satuan Waktu</label
+                    >
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
                   </div>
-                  <div class="row mb-3">
-                    <span>Waktu</span>
-                    <div class="col-lg-4 col-sm-12 col-md-4">
-                      <label for="fisik-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="fisik-"
-                        placeholder="empty"
-                      />
-                    </div>
-                    <div class="col-lg-4 col-sm-12 col-md-4">
-                      <label for="fisik-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="fisik-"
-                        placeholder="empty"
-                      />
-                    </div>
-                    <div class="col-lg-4 col-sm-12 col-md-4">
-                      <label for="fisik-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="fisik-"
-                        placeholder="empty"
-                      />
-                    </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label for="struktur-periode" class="form-label"
+                      >Periode Waktu</label
+                    >
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
                   </div>
-                </form>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label"
+                      >Waktu Pembuatan</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lokasi-"
+                      placeholder="empty"
+                    />
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label"
+                      >Ornamen Bangunan</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lokasi-"
+                      placeholder="empty"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label"
+                      >Tanda Bangunan</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lokasi-"
+                      placeholder="empty"
+                    />
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="struktur-periode" class="form-label"
+                      >Warna Bangunan</label
+                    >
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
+                  </div>
+                </div>
+
                 <div class="d-flex justify-content-end mt-3">
                   <button
                     id="btn-back"
@@ -693,86 +747,148 @@
               >
                 <h3>Data dimensi</h3>
                 <p>Masukkan detail dimensi dari objek yang ditemukan...</p>
-                <form>
-                  <div class="row mb-3">
-                    <div class="col-lg-4 col-sm-12 col-md-4">
-                      <label for="dimensi-" class="form-label">empty</label>
+                <div class="row mb-3">
+                  <!-- Kolom 1 -->
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label for="kondisi-" class="form-label">Panjang</label>
+                    <div class="d-flex">
                       <input
                         type="text"
-                        class="form-control"
-                        id="dimensi-"
-                        placeholder="empty"
+                        class="form-control flex-grow-1"
+                        placeholder="Masukkan ukuran"
+                        aria-label="Ukuran"
                       />
-                    </div>
-                    <div class="col-lg-4 col-sm-12 col-md-4">
-                      <label for="dimensi-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="dimensi-"
-                        placeholder="empty"
-                      />
-                    </div>
-                    <div class="col-lg-4 col-sm-12 col-md-4">
-                      <label for="dimensi-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="dimensi-"
-                        placeholder="empty"
-                      />
+                      <select class="form-select w-auto ms-2">
+                        <option value="m">m</option>
+                        <option value="m2">m²</option>
+                        <option value="cm">cm</option>
+                        <option value="km">km</option>
+                      </select>
                     </div>
                   </div>
-                  <div class="row mb-3">
-                    <div class="col-lg-4 col-sm-12 col-md-4">
-                      <label for="dimensi-" class="form-label">empty</label>
+
+                  <!-- Kolom 2 -->
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label for="kondisi-" class="form-label">Lebar</label>
+                    <div class="d-flex">
                       <input
                         type="text"
-                        class="form-control"
-                        id="dimensi-"
-                        placeholder="empty"
+                        class="form-control flex-grow-1"
+                        placeholder="Masukkan ukuran"
+                        aria-label="Ukuran"
                       />
-                    </div>
-                    <div class="col-lg-4 col-sm-12 col-md-4">
-                      <label for="dimensi-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="dimensi-"
-                        placeholder="empty"
-                      />
-                    </div>
-                    <div class="col-lg-4 col-sm-12 col-md-4">
-                      <label for="dimensi-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="dimensi-"
-                        placeholder="empty"
-                      />
+                      <select class="form-select w-auto ms-2">
+                        <option value="m">m</option>
+                        <option value="m2">m²</option>
+                        <option value="cm">cm</option>
+                        <option value="km">km</option>
+                      </select>
                     </div>
                   </div>
-                  <div class="row mb-3">
-                    <div class="col-lg-6 col-sm-12 col-md-6">
-                      <label for="dimensi-" class="form-label">empty</label>
+
+                  <!-- Kolom 3 -->
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label for="kondisi-" class="form-label">Tinggi</label>
+                    <div class="d-flex">
                       <input
                         type="text"
-                        class="form-control"
-                        id="dimensi-"
-                        placeholder="empty"
+                        class="form-control flex-grow-1"
+                        placeholder="Masukkan ukuran"
+                        aria-label="Ukuran"
                       />
-                    </div>
-                    <div class="col-lg-6 col-sm-12 col-md-6">
-                      <label for="dimensi-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="dimensi-"
-                        placeholder="empty"
-                      />
+                      <select class="form-select w-auto ms-2">
+                        <option value="m">m</option>
+                        <option value="m2">m²</option>
+                        <option value="cm">cm</option>
+                        <option value="km">km</option>
+                      </select>
                     </div>
                   </div>
-                </form>
+                </div>
+                <div class="row mb-3">
+                  <!-- Kolom 1 -->
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="kondisi-" class="form-label"
+                      >Luas Struktur</label
+                    >
+                    <div class="d-flex">
+                      <input
+                        type="text"
+                        class="form-control flex-grow-1"
+                        placeholder="Masukkan ukuran"
+                        aria-label="Ukuran"
+                      />
+                      <select class="form-select w-auto ms-2">
+                        <option value="m">m</option>
+                        <option value="m2">m²</option>
+                        <option value="cm">cm</option>
+                        <option value="km">km</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- Kolom 2 -->
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="kondisi-" class="form-label">Luas Tanah</label>
+                    <div class="d-flex">
+                      <input
+                        type="text"
+                        class="form-control flex-grow-1"
+                        placeholder="Masukkan ukuran"
+                        aria-label="Ukuran"
+                      />
+                      <select class="form-select w-auto ms-2">
+                        <option value="m">m</option>
+                        <option value="m2">m²</option>
+                        <option value="cm">cm</option>
+                        <option value="km">km</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <!-- Kolom 1 -->
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="kondisi-" class="form-label"
+                      >Diameter Badan</label
+                    >
+                    <div class="d-flex">
+                      <input
+                        type="text"
+                        class="form-control flex-grow-1"
+                        placeholder="Masukkan ukuran"
+                        aria-label="Ukuran"
+                      />
+                      <select class="form-select w-auto ms-2">
+                        <option value="m">m</option>
+                        <option value="m2">m²</option>
+                        <option value="cm">cm</option>
+                        <option value="km">km</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- Kolom 2 -->
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="kondisi-" class="form-label"
+                      >Diameter Kaki</label
+                    >
+                    <div class="d-flex">
+                      <input
+                        type="text"
+                        class="form-control flex-grow-1"
+                        placeholder="Masukkan ukuran"
+                        aria-label="Ukuran"
+                      />
+                      <select class="form-select w-auto ms-2">
+                        <option value="m">m</option>
+                        <option value="m2">m²</option>
+                        <option value="cm">cm</option>
+                        <option value="km">km</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
                 <div class="d-flex justify-content-end mt-3">
                   <button
                     id="btn-back"
@@ -810,48 +926,54 @@
               >
                 <h3>Data Kondisi</h3>
                 <p>Masukkan detail kondisi dari objek yang ditemukan...</p>
-                <form>
-                  <div class="row mb-3">
-                    <div class="col-lg-6 col-sm-12 col-md-6">
-                      <label for="kondisi-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="kondisi-"
-                        placeholder="empty"
-                      />
-                    </div>
-                    <div class="col-lg-6 col-sm-12 col-md-6">
-                      <label for="kondisi-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="kondisi-"
-                        placeholder="empty"
-                      />
-                    </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="struktur-periode" class="form-label"
+                      >Keutuhan</label
+                    >
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
                   </div>
-                  <div class="row mb-3">
-                    <div class="col-lg-6 col-sm-12 col-md-6">
-                      <label for="kondisi-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="kondisi-"
-                        placeholder="empty"
-                      />
-                    </div>
-                    <div class="col-lg-6 col-sm-12 col-md-6">
-                      <label for="kondisi-" class="form-label">empty</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="kondisi-"
-                        placeholder="empty"
-                      />
-                    </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="struktur-periode" class="form-label"
+                      >Pemeliharaan</label
+                    >
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
                   </div>
-                </form>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="struktur-periode" class="form-label"
+                      >Pemugaran</label
+                    >
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="struktur-periode" class="form-label"
+                      >Adaptasi</label
+                    >
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
+                  </div>
+                </div>
                 <div class="d-flex justify-content-end mt-3">
                   <button
                     id="btn-back"
@@ -880,7 +1002,7 @@
               </div>
               <!-- End Data Kondisi -->
 
-              <!-- Start Data Kondisi -->
+              <!-- Start Data Kepemilikan -->
               <div
                 class="tab-pane fade"
                 id="data-kepemilikan"
@@ -889,6 +1011,430 @@
               >
                 <h3>Data Kepemilikan</h3>
                 <p>Masukkan detail kepemilikan dari objek yang ditemukan...</p>
+                <div class="row mb-3">
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label for="struktur-periode" class="form-label"
+                      >Status Kepemilikan</label
+                    >
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label for="dimensi-" class="form-label"
+                      >Nama Pemilik</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="dimensi-"
+                      placeholder="empty"
+                    />
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label for="struktur-periode" class="form-label"
+                      >Status Perolehan</label
+                    >
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="struktur-staff" class="form-label"
+                      >Provinsi</label
+                    >
+                    <select class="form-select" id="struktur-staff">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="struktur-periode" class="form-label"
+                      >Kabupaten/Kota</label
+                    >
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="struktur-staff" class="form-label"
+                      >Kecamatan</label
+                    >
+                    <select class="form-select" id="struktur-staff">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="struktur-periode" class="form-label"
+                      >Kelurahan</label
+                    >
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="identitas-nama" class="form-label">Alamat</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="identitas-nama"
+                    placeholder="Masukkan nama anda"
+                  />
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label">Latitude</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lokasi-"
+                      placeholder="empty"
+                    />
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label">Longitude</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lokasi-"
+                      placeholder="empty"
+                    />
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end mt-3">
+                  <button
+                    id="btn-back"
+                    class="btn btn-light me-2"
+                    type="button"
+                    disabled
+                  >
+                    Back
+                  </button>
+                  <button
+                    id="btn-next"
+                    class="btn btn-primary"
+                    type="button"
+                    onclick="nextStep()"
+                  >
+                    Next
+                  </button>
+                  <button
+                    id="btn-submit"
+                    class="btn btn-success d-none"
+                    type="button"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+              <!-- End Data Kepemilikan -->
+
+              <!-- Start Data Pengelola -->
+              <div
+                class="tab-pane fade"
+                id="data-pengelola"
+                role="tabpanel"
+                aria-labelledby="data-pengelola"
+              >
+                <h3>Data Pengelola</h3>
+                <p>Masukkan detail pengelola dari objek yang ditemukan...</p>
+                <div class="row mb-3">
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label for="struktur-periode" class="form-label"
+                      >Status Pengelola</label
+                    >
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label for="dimensi-" class="form-label"
+                      >Nama Pengelola</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="dimensi-"
+                      placeholder="empty"
+                    />
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label for="struktur-periode" class="form-label"
+                      >Status Perolehan</label
+                    >
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="struktur-staff" class="form-label"
+                      >Provinsi</label
+                    >
+                    <select class="form-select" id="struktur-staff">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="struktur-periode" class="form-label"
+                      >Kabupaten/Kota</label
+                    >
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="struktur-staff" class="form-label"
+                      >Kecamatan</label
+                    >
+                    <select class="form-select" id="struktur-staff">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="struktur-periode" class="form-label"
+                      >Kelurahan</label
+                    >
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="identitas-nama" class="form-label">Alamat</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="identitas-nama"
+                    placeholder="Masukkan nama anda"
+                  />
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label">Latitude</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lokasi-"
+                      placeholder="empty"
+                    />
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label">Longitude</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lokasi-"
+                      placeholder="empty"
+                    />
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end mt-3">
+                  <button
+                    id="btn-back"
+                    class="btn btn-light me-2"
+                    type="button"
+                    disabled
+                  >
+                    Back
+                  </button>
+                  <button
+                    id="btn-next"
+                    class="btn btn-primary"
+                    type="button"
+                    onclick="nextStep()"
+                  >
+                    Next
+                  </button>
+                  <button
+                    id="btn-submit"
+                    class="btn btn-success d-none"
+                    type="button"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+              <!-- End Data Kepemilikan -->
+
+              <!-- Start Data Sejarah -->
+              <div
+                class="tab-pane fade"
+                id="data-sejarah"
+                role="tabpanel"
+                aria-labelledby="data-sejarah"
+              >
+                <h3>Data Sejarah</h3>
+                <p>Masukkan detail sejarah dari objek yang ditemukan...</p>
+                <div class="mb-3">
+                  <div class="col-lg-12 col-sm-12 col-md-12">
+                    <label for="exampleFormControlTextarea1" class="form-label"
+                      >Deskripsi Sejarah</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="deskripsi-sejarah"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label">Alamat</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lokasi-"
+                      placeholder="empty"
+                    />
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label">Latitude</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lokasi-"
+                      placeholder="empty"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label">Longitude</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lokasi-"
+                      placeholder="empty"
+                    />
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label"
+                      >Ketinggian(MDPL)</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lokasi-"
+                      placeholder="empty"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="identitas-ktp" class="form-label"
+                      >Foto/Gambar</label
+                    >
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="identitas-ktp"
+                      placeholder="Unggah foto/gambar"
+                    />
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="identitas-ktp" class="form-label"
+                      >Dokumen Kajian</label
+                    >
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="identitas-ktp"
+                      placeholder="Unggah Dokumen Kajian (format .pdf)"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="identitas-ktp" class="form-label"
+                      >Tautan Video</label
+                    >
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="identitas-ktp"
+                      placeholder="Unggah video"
+                    />
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="identitas-ktp" class="form-label"
+                      >Dokumen Lainnya</label
+                    >
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="identitas-ktp"
+                      placeholder="Unggah dokumen lainnya (format .pdf)"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="identitas-ktp" class="form-label"
+                      >Berkas Vektor</label
+                    >
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="identitas-ktp"
+                      placeholder="Unggah berkas vektor"
+                    />
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="identitas-ktp" class="form-label"
+                      >Berkas Raster</label
+                    >
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="identitas-ktp"
+                      placeholder="Unggah berkas raster"
+                    />
+                  </div>
+                </div>
                 <div class="d-flex justify-content-end mt-3">
                   <button
                     id="btn-back"
