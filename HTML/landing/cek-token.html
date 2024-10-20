@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Cek Token - Dinas Kebudayaan Provinsi Riau</title>
+    <title>Cek Status Laporan - Dinas Kebudayaan Provinsi Riau</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -133,7 +133,9 @@
                   >
                 </li>
                 <li>
-                  <a href="cek-token.html" class="sub-menu-item">Cek Token</a>
+                  <a href="cek-token.html" class="sub-menu-item"
+                    >Cek Status Laporan</a
+                  >
                 </li>
               </ul>
             </li>
@@ -157,7 +159,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-12 text-center mt-0 mt-5 pt-0">
             <div class="title-heading margin-top-100">
-              <h1 class="heading mb-3">Cek Token</h1>
+              <h1 class="heading mb-3">Cek Status Laporan</h1>
             </div>
           </div>
           <!--end col-->
@@ -177,30 +179,32 @@
             <div class="section-title mb-4 pb-2">
               <h4 class="title">
                 Cek
-                <span class="text-primary">Token</span>
+                <span class="text-primary">Status Laporan </span>
               </h4>
               <p class="text-muted para-desc mx-auto mb-0">
-                Temukan informasi lengkap mengenai laporan anda
+                Temukan informasi terkait status laporan anda
               </p>
               <!--end col-->
             </div>
-            <form>
+            <form id="cek-status-laporan">
               <div class="mb-3">
                 <input
                   type="text"
                   class="form-control"
-                  id=""
+                  id="nik"
                   aria-describedby="emailHelp"
                   placeholder="Masukkan nomor NIK"
+                  required
                 />
               </div>
               <div class="mb-3">
                 <input
                   type="text"
                   class="form-control"
-                  id=""
+                  id="token"
                   aria-describedby="emailHelp"
                   placeholder="Masukkan nomor token"
+                  required
                 />
               </div>
 
@@ -208,12 +212,35 @@
                 type="submit"
                 class="btn btn-primary col-lg-12 col-sm-12 col-md-12"
               >
-                Submit
+                Cek Token
               </button>
             </form>
           </div>
         </div>
         <!--end col-->
+        <div class="row justify-content-center mt-5 d-none" id="status-laporan">
+          <div class="col-12 text-center">
+            <div class="card border-light rounded-3">
+              <div class="card-header bg-primary text-white">
+                <strong>Laporan Ditemukan</strong>
+              </div>
+              <div class="card-body mx-4">
+                <div class="d-flex justify-content-between">
+                  <strong>Nama pengirim </strong>
+                  <p>Rudi Tabuti</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <strong>Waktu Dikirim</strong>
+                  <p>Senin, 10 Oktober 2024, 19:12 WIB</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <strong>Status</strong>
+                  <span class="badge bg-success p-2">Diterima</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!--end row-->
 
@@ -241,7 +268,7 @@
                   >Lapor Temuan</a
                 >
                 <a href="cek-token.html" class="btn btn-outline-primary mt-2"
-                  >Cek Token</a
+                  >Cek Status Laporan</a
                 >
               </div>
             </div>
@@ -380,7 +407,8 @@
                     </li>
                     <li>
                       <a href="cek-token.html" class="text-foot"
-                        ><i class="uil uil-angle-right-b me-1"></i> Cek Token</a
+                        ><i class="uil uil-angle-right-b me-1"></i> Cek Status
+                        Laporan</a
                       >
                     </li>
                   </ul>
@@ -866,5 +894,24 @@
     <!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
     <script src="js/app.js"></script>
     <!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+    <script>
+      // Event listener for form submission
+      document
+        .getElementById("cek-status-laporan")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form from reloading the page
+
+          // Logic to check if the form is valid, here just as an example
+          const nik = document.getElementById("nik").value;
+          const token = document.getElementById("token").value;
+
+          // Display the laporan section after form submission
+          if (nik && token) {
+            document
+              .getElementById("status-laporan")
+              .classList.remove("d-none");
+          }
+        });
+    </script>
   </body>
 </html>

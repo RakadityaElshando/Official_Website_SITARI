@@ -150,9 +150,7 @@
                   >
                 </li>
                 <li>
-                  <a href="cek-token.html" class="sub-menu-item"
-                    >Cek Status Laporan</a
-                  >
+                  <a href="cek-token.html" class="sub-menu-item">Cek Token</a>
                 </li>
               </ul>
             </li>
@@ -386,7 +384,7 @@
                   />
                   <div id="passwordHelp" class="form-text">Minimal 8 digit</div>
                 </div>
-                <div class="mb-5">
+                <div class="mb-4">
                   <label for="identitas-ktp" class="form-label fw-normal"
                     >Foto KTP</label
                   >
@@ -403,7 +401,6 @@
                     id="btn-back"
                     class="btn btn-light me-2"
                     type="button"
-                    onclick="prevStep()"
                     disabled
                   >
                     Back
@@ -494,20 +491,17 @@
                     Pastikan jenis laporan sudah benar
                   </div>
                 </div>
-                <div class="row mb-5">
+                <div class="row">
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label for="struktur-staff" class="form-label fw-normal"
-                      >Kategori</label
+                      >Entitas</label
                     >
                     <select class="form-select text-muted" id="struktur-staff">
-                      <option selected>Pilih Kategori</option>
+                      <option selected>Pilih Entitas Penemuan</option>
                       <option value="1">Bangunan</option>
-                      <option value="2">Benda</option>
-                      <option value="3">Kawasan</option>
-                      <option value="4">Situs</option>
-                      <option value="5">Struktur</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
-                    <div class="form-text">Kategori objek temuan</div>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label for="struktur-periode" class="form-label fw-normal"
@@ -517,19 +511,10 @@
                       class="form-select text-muted"
                       id="struktur-periode"
                     >
-                      <option selected>Pilih Kabupaten/Kota</option>
+                      <option selected>Pilih Lokasi Penemuan</option>
                       <option value="1">Pekanbaru</option>
-                      <option value="2">Kabupaten Kampar</option>
-                      <option value="3">Kabupaten Rokan Hulu</option>
-                      <option value="4">Kabupaten Rokan Hilir</option>
-                      <option value="5">Kabupaten Siak</option>
-                      <option value="6">Kabupaten Indragiri Hulu</option>
-                      <option value="7">Kabupaten Indragiri Hilir</option>
-                      <option value="8">Kabupaten Kuantan Singingi</option>
-                      <option value="9">Kabupaten Pelalawan</option>
-                      <option value="10">Kabupaten Bengkalis</option>
-                      <option value="11">Kabupaten Meranti</option>
-                      <option value="12">Kabupaten Dumai</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                     <div class="form-text">Lokasi objek ditemukan</div>
                   </div>
@@ -539,7 +524,6 @@
                     id="btn-back"
                     class="btn btn-light me-2"
                     type="button"
-                    onclick="prevStep()"
                     disabled
                   >
                     Back
@@ -578,9 +562,6 @@
                     id="struktur-nama"
                     placeholder="Masukkan nama struktur"
                   />
-                  <div class="form-text">
-                    ODCB = Objek yang Diduga Cagar Budaya
-                  </div>
                 </div>
                 <div class="mb-3">
                   <label for="struktur-fungsi" class="form-label fw-normal"
@@ -625,7 +606,6 @@
                     id="btn-back"
                     class="btn btn-light me-2"
                     type="button"
-                    onclick="prevStep()"
                     disabled
                   >
                     Back
@@ -660,8 +640,10 @@
                       >Provinsi</label
                     >
                     <select class="form-select text-muted" id="lokasi-provinsi">
-                      <option selected>Pilih Provinsi</option>
-                      <option value="1">Riau</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
@@ -672,19 +654,10 @@
                       class="form-select text-muted"
                       id="struktur-periode"
                     >
-                      <option selected>Pilih Kabupaten/Kota</option>
-                      <option value="1">Pekanbaru</option>
-                      <option value="2">Kabupaten Kampar</option>
-                      <option value="3">Kabupaten Rokan Hulu</option>
-                      <option value="4">Kabupaten Rokan Hilir</option>
-                      <option value="5">Kabupaten Siak</option>
-                      <option value="6">Kabupaten Indragiri Hulu</option>
-                      <option value="7">Kabupaten Indragiri Hilir</option>
-                      <option value="8">Kabupaten Kuantan Singingi</option>
-                      <option value="9">Kabupaten Pelalawan</option>
-                      <option value="10">Kabupaten Bengkalis</option>
-                      <option value="11">Kabupaten Meranti</option>
-                      <option value="12">Kabupaten Dumai</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                 </div>
@@ -697,17 +670,10 @@
                       class="form-select text-muted"
                       id="lokasi-kecamatan"
                     >
-                      <option selected>Pilih Kecamatan</option>
-                      <option value="1">Kecamatan Tenayan Raya</option>
-                      <option value="2">Kecamatan Marpoyan Damai</option>
-                      <option value="3">Kecamatan Payung Sekaki</option>
-                      <option value="4">Kecamatan Pekanbaru Kota</option>
-                      <option value="5">Kecamatan Rumbai</option>
-                      <option value="6">Kecamatan Rumbai Pesisir</option>
-                      <option value="7">Kecamatan Bukit Raya</option>
-                      <option value="8">Kecamatan Lima Puluh</option>
-                      <option value="9">Kecamatan Sail</option>
-                      <option value="10">Kecamatan Senapelan</option>
+                      <option selected>Pilih kecamatan</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
@@ -718,17 +684,10 @@
                       class="form-select text-muted"
                       id="lokasi-kelurahan"
                     >
-                      <option selected>Pilih Kelurahan</option>
-                      <option value="1">Kelurahan Sempurna</option>
-                      <option value="2">Kelurahan Sidomulyo</option>
-                      <option value="3">Kelurahan Lembah Sari</option>
-                      <option value="4">Kelurahan Labuh Baru Timur</option>
-                      <option value="5">Kelurahan Labuh Baru Barat</option>
-                      <option value="6">Kelurahan Tangkerang Selatan</option>
-                      <option value="7">Kelurahan Tangkerang Utara</option>
-                      <option value="8">Kelurahan Kampung Dalam</option>
-                      <option value="9">Kelurahan Tanjung Rhu</option>
-                      <option value="10">Kelurahan Rintis</option>
+                      <option selected>Pilih kelurahan</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                 </div>
@@ -743,7 +702,7 @@
                     placeholder="Masukkan alamat lokasi penemuan"
                   />
                 </div>
-                <div class="row mb-5">
+                <div class="row mb-3">
                   <div class="col-lg-4 col-sm-12 col-md-4">
                     <label for="lokasi-longitude" class="form-label fw-normal"
                       >Latitude</label
@@ -752,7 +711,7 @@
                       type="text"
                       class="form-control text muted"
                       id="lokasi-"
-                      placeholder="(contoh: -0.4500)"
+                      placeholder="empty"
                     />
                   </div>
                   <div class="col-lg-4 col-sm-12 col-md-4">
@@ -763,7 +722,7 @@
                       type="text"
                       class="form-control text muted"
                       id="lokasi-"
-                      placeholder="(contoh: 101.4500)"
+                      placeholder="empty"
                     />
                   </div>
                   <div class="col-lg-4 col-sm-12 col-md-4">
@@ -774,7 +733,7 @@
                       type="text"
                       class="form-control text muted"
                       id="lokasi-"
-                      placeholder="(contoh: 200)"
+                      placeholder="empty"
                     />
                   </div>
                 </div>
@@ -783,7 +742,6 @@
                     id="btn-back"
                     class="btn btn-light me-2"
                     type="button"
-                    onclick="prevStep()"
                     disabled
                   >
                     Back
@@ -812,8 +770,8 @@
                   Masukkan detail fisik dari objek yang ditemukan...
                 </p>
 
-                <div class="mb-3">
-                  <div class="col-12">
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
                     <label for="fisik-bangunan" class="form-label fw-normal"
                       >Waktu Pembuatan</label
                     >
@@ -824,43 +782,26 @@
                       placeholder="empty"
                     />
                   </div>
-                </div>
-
-                <div class="row mb-3">
-                  <div class="col-lg-6 col-sm-12 col-md-6">
+                  <div class="col-lg-3 col-sm-12 col-md-3">
                     <label for="struktur-periode" class="form-label fw-normal"
                       >Satuan Waktu</label
                     >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
-                      <option selected>Pilih Satuan Waktu</option>
-                      <option value="1">Detik</option>
-                      <option value="2">Menit</option>
-                      <option value="3">Jam</option>
-                      <option value="4">Hari</option>
-                      <option value="5">Minggu</option>
-                      <option value="6">Bulan</option>
-                      <option value="7">Tahun</option>
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
-                  <div class="col-lg-6 col-sm-12 col-md-6">
+                  <div class="col-lg-3 col-sm-12 col-md-3">
                     <label for="struktur-periode" class="form-label fw-normal"
                       >Periode Waktu</label
                     >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
-                      <option selected>Pilih Periode Waktu</option>
-                      <option value="1">Harian</option>
-                      <option value="2">Mingguan</option>
-                      <option value="3">Bulanan</option>
-                      <option value="4">Triwulanan</option>
-                      <option value="5">Semestral</option>
-                      <option value="6">Tahunan</option>
-                      <option value="7">Kumulatif</option>
+                    <select class="form-select" id="struktur-periode">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                 </div>
@@ -874,7 +815,7 @@
                       type="text"
                       class="form-control"
                       id="lokasi-"
-                      placeholder="Masukkan bahan bangunan"
+                      placeholder="empty"
                     />
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
@@ -885,11 +826,11 @@
                       type="text"
                       class="form-control"
                       id="lokasi-"
-                      placeholder="Masukkan ornamen bangunan"
+                      placeholder="empty"
                     />
                   </div>
                 </div>
-                <div class="row mb-5">
+                <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label for="lokasi-" class="form-label fw-normal"
                       >Tanda Bangunan</label
@@ -898,7 +839,7 @@
                       type="text"
                       class="form-control"
                       id="lokasi-"
-                      placeholder="Masukkan tanda bangunan"
+                      placeholder="empty"
                     />
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
@@ -909,17 +850,10 @@
                       class="form-select text-muted"
                       id="struktur-periode"
                     >
-                      <option selected>Pilih Warna</option>
-                      <option value="1">Merah</option>
-                      <option value="2">Hijau</option>
-                      <option value="3">Biru</option>
-                      <option value="4">Kuning</option>
-                      <option value="5">Hitam</option>
-                      <option value="6">Putih</option>
-                      <option value="7">Abu-abu</option>
-                      <option value="8">Cokelat</option>
-                      <option value="9">Jingga</option>
-                      <option value="10">Ungu</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                 </div>
@@ -929,7 +863,6 @@
                     id="btn-back"
                     class="btn btn-light me-2"
                     type="button"
-                    onclick="prevStep()"
                     disabled
                   >
                     Back
@@ -959,7 +892,6 @@
                 </p>
                 <div class="row mb-3">
                   <!-- Kolom 1 -->
-                  <p class="text-muted">Atur satuan ukur terlebih dahulu</p>
                   <div class="col-lg-4 col-sm-12 col-md-4">
                     <label for="dimensi-panjang" class="form-label fw-normal"
                       >Panjang</label
@@ -968,7 +900,7 @@
                       <input
                         type="text"
                         class="form-control flex-grow-1"
-                        placeholder="Panjang"
+                        placeholder="Panjang Objek"
                         aria-label="Ukuran"
                       />
                       <select class="form-select w-auto ms-2 text-muted">
@@ -989,7 +921,7 @@
                       <input
                         type="text"
                         class="form-control flex-grow-1"
-                        placeholder="Lebar"
+                        placeholder="Masukkan ukuran"
                         aria-label="Ukuran"
                       />
                       <select class="form-select w-auto ms-2 text-muted">
@@ -1010,7 +942,7 @@
                       <input
                         type="text"
                         class="form-control flex-grow-1"
-                        placeholder="Tinggi"
+                        placeholder="Masukkan ukuran"
                         aria-label="Ukuran"
                       />
                       <select class="form-select w-auto ms-2 text-muted">
@@ -1065,7 +997,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="row mb-5">
+                <div class="row mb-3">
                   <!-- Kolom 1 -->
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label for="kondisi-" class="form-label fw-normal"
@@ -1113,7 +1045,6 @@
                     id="btn-back"
                     class="btn btn-light me-2"
                     type="button"
-                    onclick="prevStep()"
                     disabled
                   >
                     Back
@@ -1150,13 +1081,10 @@
                       class="form-select text-muted"
                       id="kondisi-keutuhan"
                     >
-                      <option selected>Pilih Kondisi</option>
-                      <option value="1">Utuh</option>
-                      <option value="2">Berkurangan</option>
-                      <option value="3">Rusak Ringan</option>
-                      <option value="4">Rusak Sedang</option>
-                      <option value="5">Rusak Berat</option>
-                      <option value="6">Tidak Diketahui</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
@@ -1169,17 +1097,14 @@
                       class="form-select text-muted"
                       id="kondisi-pemeliharaan"
                     >
-                      <option selected>Pilih Pemeliharaan</option>
-                      <option value="1">Rutin</option>
-                      <option value="2">Berkala</option>
-                      <option value="3">Darurat</option>
-                      <option value="4">Preventif</option>
-                      <option value="5">Korektif</option>
-                      <option value="6">Tidak Diperlukan</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                 </div>
-                <div class="row mb-5">
+                <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label for="struktur-periode" class="form-label fw-normal"
                       >Pemugaran</label
@@ -1188,13 +1113,10 @@
                       class="form-select text-muted"
                       id="struktur-periode"
                     >
-                      <option selected>Pilih Pemugaran</option>
-                      <option value="1">Ringan</option>
-                      <option value="2">Sedang</option>
-                      <option value="3">Berat</option>
-                      <option value="4">Renovasi</option>
-                      <option value="5">Restorasi</option>
-                      <option value="6">Rehabilitasi</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
@@ -1205,12 +1127,10 @@
                       class="form-select text-muted"
                       id="struktur-periode"
                     >
-                      <option selected>Pilih Adaptasi</option>
-                      <option value="1">Pengelolaan Konservasi</option>
-                      <option value="2">Restorasi Arsitektur</option>
-                      <option value="3">Pelestarian Budaya</option>
-                      <option value="4">Pendidikan Sejarah</option>
-                      <option value="5">Pemanfaatan Wisata</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                 </div>
@@ -1219,7 +1139,6 @@
                     id="btn-back"
                     class="btn btn-light me-2"
                     type="button"
-                    onclick="prevStep()"
                     disabled
                   >
                     Back
@@ -1267,12 +1186,10 @@
                       class="form-select text-muted"
                       id="struktur-periode"
                     >
-                      <option selected>Pilih Status</option>
-                      <option value="1">Pemerintah</option>
-                      <option value="2">Swasta</option>
-                      <option value="3">Komunitas</option>
-                      <option value="4">Yayasan</option>
-                      <option value="5">Individu</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
@@ -1283,27 +1200,23 @@
                       class="form-select text-muted"
                       id="struktur-periode"
                     >
-                      <option selected>Pilih Status</option>
-                      <option value="1">Sah</option>
-                      <option value="2">Warisan</option>
-                      <option value="3">Penelitian</option>
-                      <option value="4">Pembelian</option>
-                      <option value="5">Pertukaran</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                 </div>
-                <div class="row mb-3 border-top">
-                  <p class="mt-3 mb-0 fw-bold">Lokasi Pemilik</p>
-                  <p class="text-muted">
-                    Masukkan Lokasi tempat tinggal pemilik
-                  </p>
+                <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label for="struktur-staff" class="form-label fw-normal"
                       >Provinsi</label
                     >
                     <select class="form-select text-muted" id="struktur-staff">
-                      <option selected>Pilih Provinsi</option>
-                      <option value="1">Riau</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
@@ -1314,19 +1227,10 @@
                       class="form-select text-muted"
                       id="struktur-periode"
                     >
-                      <option selected>Pilih Kabupaten</option>
-                      <option value="1">Pekanbaru</option>
-                      <option value="2">Kabupaten Kampar</option>
-                      <option value="3">Kabupaten Rokan Hulu</option>
-                      <option value="4">Kabupaten Rokan Hilir</option>
-                      <option value="5">Kabupaten Siak</option>
-                      <option value="6">Kabupaten Indragiri Hulu</option>
-                      <option value="7">Kabupaten Indragiri Hilir</option>
-                      <option value="8">Kabupaten Kuantan Singingi</option>
-                      <option value="9">Kabupaten Pelalawan</option>
-                      <option value="10">Kabupaten Bengkalis</option>
-                      <option value="11">Kabupaten Meranti</option>
-                      <option value="12">Kabupaten Dumai</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                 </div>
@@ -1336,17 +1240,10 @@
                       >Kecamatan</label
                     >
                     <select class="form-select text-muted" id="struktur-staff">
-                      <option selected>Pilih Kecamatan</option>
-                      <option value="1">Kecamatan Tenayan Raya</option>
-                      <option value="2">Kecamatan Marpoyan Damai</option>
-                      <option value="3">Kecamatan Payung Sekaki</option>
-                      <option value="4">Kecamatan Pekanbaru Kota</option>
-                      <option value="5">Kecamatan Rumbai</option>
-                      <option value="6">Kecamatan Rumbai Pesisir</option>
-                      <option value="7">Kecamatan Bukit Raya</option>
-                      <option value="8">Kecamatan Lima Puluh</option>
-                      <option value="9">Kecamatan Sail</option>
-                      <option value="10">Kecamatan Senapelan</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
@@ -1357,17 +1254,10 @@
                       class="form-select text-muted"
                       id="struktur-periode"
                     >
-                      <option selected>Pilih Kelurahan</option>
-                      <option value="1">Kelurahan Sempurna</option>
-                      <option value="2">Kelurahan Sidomulyo</option>
-                      <option value="3">Kelurahan Lembah Sari</option>
-                      <option value="4">Kelurahan Labuh Baru Timur</option>
-                      <option value="5">Kelurahan Labuh Baru Barat</option>
-                      <option value="6">Kelurahan Tangkerang Selatan</option>
-                      <option value="7">Kelurahan Tangkerang Utara</option>
-                      <option value="8">Kelurahan Kampung Dalam</option>
-                      <option value="9">Kelurahan Tanjung Rhu</option>
-                      <option value="10">Kelurahan Rintis</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                 </div>
@@ -1379,10 +1269,10 @@
                     type="text"
                     class="form-control"
                     id="identitas-nama"
-                    placeholder="Masukkan alamat lengkap pemilik"
+                    placeholder="Masukkan nama anda"
                   />
                 </div>
-                <div class="row mb-5">
+                <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label for="lokasi-" class="form-label fw-normal"
                       >Latitude</label
@@ -1391,7 +1281,7 @@
                       type="text"
                       class="form-control"
                       id="lokasi-"
-                      placeholder="(contoh: -0.4500)"
+                      placeholder="empty"
                     />
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
@@ -1402,7 +1292,7 @@
                       type="text"
                       class="form-control"
                       id="lokasi-"
-                      placeholder="(contoh: 101.4500)"
+                      placeholder="empty"
                     />
                   </div>
                 </div>
@@ -1411,7 +1301,6 @@
                     id="btn-back"
                     class="btn btn-light me-2"
                     type="button"
-                    onclick="prevStep()"
                     disabled
                   >
                     Back
@@ -1447,7 +1336,7 @@
                     type="text"
                     class="form-control"
                     id="identitas-nama"
-                    placeholder="Masukkan nama lengkap pengelola objek"
+                    placeholder="Masukkan nama lengkap pemilik objek"
                   />
                 </div>
                 <div class="row mb-3">
@@ -1459,12 +1348,10 @@
                       class="form-select text-muted"
                       id="struktur-periode"
                     >
-                      <option selected>Pilih Status</option>
-                      <option value="1">Pemerintah</option>
-                      <option value="2">Swasta</option>
-                      <option value="3">Komunitas</option>
-                      <option value="4">Yayasan</option>
-                      <option value="5">Individu</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
@@ -1475,27 +1362,23 @@
                       class="form-select text-muted"
                       id="struktur-periode"
                     >
-                      <option selected>Pilih Status</option>
-                      <option value="1">Sah</option>
-                      <option value="2">Warisan</option>
-                      <option value="3">Penelitian</option>
-                      <option value="4">Pembelian</option>
-                      <option value="5">Pertukaran</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                 </div>
-                <div class="row mb-3 border-top">
-                  <p class="mt-3 mb-0 fw-bold">Lokasi Pengelola</p>
-                  <p class="text-muted">
-                    Masukkan Lokasi tempat tinggal pengelola
-                  </p>
+                <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label for="struktur-staff" class="form-label fw-normal"
                       >Provinsi</label
                     >
                     <select class="form-select text-muted" id="struktur-staff">
-                      <option selected>Pilih Provinsi</option>
-                      <option value="1">Riau</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
@@ -1506,19 +1389,10 @@
                       class="form-select text-muted"
                       id="struktur-periode"
                     >
-                      <option selected>Pilih Kabupaten</option>
-                      <option value="1">Pekanbaru</option>
-                      <option value="2">Kabupaten Kampar</option>
-                      <option value="3">Kabupaten Rokan Hulu</option>
-                      <option value="4">Kabupaten Rokan Hilir</option>
-                      <option value="5">Kabupaten Siak</option>
-                      <option value="6">Kabupaten Indragiri Hulu</option>
-                      <option value="7">Kabupaten Indragiri Hilir</option>
-                      <option value="8">Kabupaten Kuantan Singingi</option>
-                      <option value="9">Kabupaten Pelalawan</option>
-                      <option value="10">Kabupaten Bengkalis</option>
-                      <option value="11">Kabupaten Meranti</option>
-                      <option value="12">Kabupaten Dumai</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                 </div>
@@ -1528,17 +1402,10 @@
                       >Kecamatan</label
                     >
                     <select class="form-select text-muted" id="struktur-staff">
-                      <option selected>Pilih Kecamatan</option>
-                      <option value="1">Kecamatan Tenayan Raya</option>
-                      <option value="2">Kecamatan Marpoyan Damai</option>
-                      <option value="3">Kecamatan Payung Sekaki</option>
-                      <option value="4">Kecamatan Pekanbaru Kota</option>
-                      <option value="5">Kecamatan Rumbai</option>
-                      <option value="6">Kecamatan Rumbai Pesisir</option>
-                      <option value="7">Kecamatan Bukit Raya</option>
-                      <option value="8">Kecamatan Lima Puluh</option>
-                      <option value="9">Kecamatan Sail</option>
-                      <option value="10">Kecamatan Senapelan</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
@@ -1549,17 +1416,10 @@
                       class="form-select text-muted"
                       id="struktur-periode"
                     >
-                      <option selected>Pilih Kelurahan</option>
-                      <option value="1">Kelurahan Sempurna</option>
-                      <option value="2">Kelurahan Sidomulyo</option>
-                      <option value="3">Kelurahan Lembah Sari</option>
-                      <option value="4">Kelurahan Labuh Baru Timur</option>
-                      <option value="5">Kelurahan Labuh Baru Barat</option>
-                      <option value="6">Kelurahan Tangkerang Selatan</option>
-                      <option value="7">Kelurahan Tangkerang Utara</option>
-                      <option value="8">Kelurahan Kampung Dalam</option>
-                      <option value="9">Kelurahan Tanjung Rhu</option>
-                      <option value="10">Kelurahan Rintis</option>
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">Kategori 1</option>
+                      <option value="2">Kategori 2</option>
+                      <option value="3">Kategori 3</option>
                     </select>
                   </div>
                 </div>
@@ -1571,10 +1431,10 @@
                     type="text"
                     class="form-control"
                     id="identitas-nama"
-                    placeholder="Masukkan alamat lengkap pengelola"
+                    placeholder="Masukkan nama anda"
                   />
                 </div>
-                <div class="row mb-5">
+                <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label for="lokasi-" class="form-label fw-normal"
                       >Latitude</label
@@ -1583,7 +1443,7 @@
                       type="text"
                       class="form-control"
                       id="lokasi-"
-                      placeholder="(contoh: -0.4500)"
+                      placeholder="empty"
                     />
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
@@ -1594,7 +1454,7 @@
                       type="text"
                       class="form-control"
                       id="lokasi-"
-                      placeholder="(contoh: 101.4500)"
+                      placeholder="empty"
                     />
                   </div>
                 </div>
@@ -1603,7 +1463,6 @@
                     id="btn-back"
                     class="btn btn-light me-2"
                     type="button"
-                    onclick="prevStep()"
                     disabled
                   >
                     Back
@@ -1628,78 +1487,64 @@
                 aria-labelledby="data-sejarah"
               >
                 <h3>Data Sejarah</h3>
-                <p class="text-muted mb-3">
-                  Masukkan detail sejarah dari objek yang ditemukan...
-                </p>
+                <p>Masukkan detail sejarah dari objek yang ditemukan...</p>
                 <div class="mb-3">
                   <div class="col-lg-12 col-sm-12 col-md-12">
-                    <label
-                      for="exampleFormControlTextarea1"
-                      class="form-label fw-normal"
+                    <label for="exampleFormControlTextarea1" class="form-label"
                       >Deskripsi Sejarah</label
                     >
                     <textarea
                       class="form-control"
                       id="deskripsi-sejarah"
                       rows="3"
-                      placeholder="Berikan deskripsi detail mengenai sejarah objek yang dilaporkan"
                     ></textarea>
                   </div>
                 </div>
-                <div class="mb-3">
-                  <label for="lokasi-alamat" class="form-label fw-normal"
-                    >Alamat</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="identitas-nama"
-                    placeholder="Masukkan alamat lokasi penemuan"
-                  />
+                <div class="row mb-3">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label">Alamat</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lokasi-"
+                      placeholder="empty"
+                    />
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label">Latitude</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lokasi-"
+                      placeholder="empty"
+                    />
+                  </div>
                 </div>
                 <div class="row mb-3">
-                  <div class="col-lg-4 col-sm-12 col-md-4">
-                    <label for="lokasi-longitude" class="form-label fw-normal"
-                      >Latitude</label
-                    >
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label">Longitude</label>
                     <input
                       type="text"
-                      class="form-control text muted"
+                      class="form-control"
                       id="lokasi-"
-                      placeholder="(contoh: -0.4500)"
+                      placeholder="empty"
                     />
                   </div>
-                  <div class="col-lg-4 col-sm-12 col-md-4">
-                    <label for="lokasi-longitude" class="form-label fw-normal"
-                      >Longitude</label
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="lokasi-" class="form-label"
+                      >Ketinggian(MDPL)</label
                     >
                     <input
                       type="text"
-                      class="form-control text muted"
+                      class="form-control"
                       id="lokasi-"
-                      placeholder="(contoh: 101.4500)"
-                    />
-                  </div>
-                  <div class="col-lg-4 col-sm-12 col-md-4">
-                    <label for="lokasi-longitude" class="form-label fw-normal"
-                      >Ketinggian (MDPL)</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control text muted"
-                      id="lokasi-"
-                      placeholder="(contoh: 200)"
+                      placeholder="empty"
                     />
                   </div>
                 </div>
-                <div class="row mb-3 border-top">
-                  <p class="mt-3 mb-0 fw-bold">Dokumen/Media Pendukung</p>
-                  <p class="text-muted">
-                    Masukkan dokumen/media yang berkaitan dengan sejarah
-                    tersebut
-                  </p>
+                <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="identitas-ktp" class="form-label fw-normal"
+                    <label for="identitas-ktp" class="form-label"
                       >Foto/Gambar</label
                     >
                     <input
@@ -1710,20 +1555,7 @@
                     />
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="identitas-ktp" class="form-label fw-normal"
-                      >Tautan Video</label
-                    >
-                    <input
-                      type="file"
-                      class="form-control"
-                      id="identitas-ktp"
-                      placeholder="Unggah video"
-                    />
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="identitas-ktp" class="form-label fw-normal"
+                    <label for="identitas-ktp" class="form-label"
                       >Dokumen Kajian</label
                     >
                     <input
@@ -1733,8 +1565,21 @@
                       placeholder="Unggah Dokumen Kajian (format .pdf)"
                     />
                   </div>
+                </div>
+                <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="identitas-ktp" class="form-label fw-normal"
+                    <label for="identitas-ktp" class="form-label"
+                      >Tautan Video</label
+                    >
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="identitas-ktp"
+                      placeholder="Unggah video"
+                    />
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    <label for="identitas-ktp" class="form-label"
                       >Dokumen Lainnya</label
                     >
                     <input
@@ -1745,9 +1590,9 @@
                     />
                   </div>
                 </div>
-                <div class="row mb-5">
+                <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="identitas-ktp" class="form-label fw-normal"
+                    <label for="identitas-ktp" class="form-label"
                       >Berkas Vektor</label
                     >
                     <input
@@ -1758,7 +1603,7 @@
                     />
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="identitas-ktp" class="form-label fw-normal"
+                    <label for="identitas-ktp" class="form-label"
                       >Berkas Raster</label
                     >
                     <input
@@ -1774,14 +1619,13 @@
                     id="btn-back"
                     class="btn btn-light me-2"
                     type="button"
-                    onclick="prevStep()"
                     disabled
                   >
                     Back
                   </button>
                   <button
                     id="btn-submit"
-                    class="btn btn-primary"
+                    class="btn btn-success"
                     type="button"
                     onclick="submitForm()"
                   >
@@ -1826,9 +1670,9 @@
                 <div class="d-flex justify-content-end mt-3">
                   <button
                     id="btn-finish"
-                    class="btn btn-primary"
+                    class="btn btn-success"
                     type="button"
-                    onclick="window.location.href='cek-token.html';"
+                    onclick="finish()"
                   >
                     Cek status laporan anda
                   </button>
@@ -1864,7 +1708,7 @@
                   >Lapor Temuan</a
                 >
                 <a href="cek-token.html" class="btn btn-outline-primary mt-2"
-                  >Cek Status Laporan</a
+                  >Cek Token</a
                 >
               </div>
             </div>
@@ -2003,8 +1847,7 @@
                     </li>
                     <li>
                       <a href="cek-token.html" class="text-foot"
-                        ><i class="uil uil-angle-right-b me-1"></i> Cek Status
-                        Laporan</a
+                        ><i class="uil uil-angle-right-b me-1"></i> Cek Token</a
                       >
                     </li>
                   </ul>
@@ -2602,9 +2445,7 @@
         document.getElementById(`step-${step}`).classList.add("active");
 
         // Update tombol Back
-        document.querySelectorAll(".btn-light").forEach((btn) => {
-          btn.disabled = step === 1 || step === 3;
-        });
+        document.getElementById("btn-back").disabled = step === 1;
         currentStep = step;
       }
 
