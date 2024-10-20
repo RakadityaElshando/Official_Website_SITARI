@@ -2,45 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Halaman Register - Dinas Kebudayaan Provinsi Riau</title>
+    <title>Daftar Akun - SI-TARI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Premium Bootstrap 5 Landing Page Template"
+      content="Premium Bootstrap 5 Admin Dashboard Template"
     />
     <meta
       name="keywords"
-      content="Saas, Software, multi-uses, HTML, Clean, Modern"
+      content="Saas, CRM, Admin, Dashboard, Modern, Classic"
     />
     <meta name="author" content="Shreethemes" />
     <meta name="email" content="support@shreethemes.in" />
     <meta name="website" content="https://shreethemes.in" />
     <meta name="Version" content="v3.8.0" />
     <!-- favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" href="../landing/images/saas/logo-disbud.png" />
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-
+    <link
+      href="../dashboard/assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- simplebar -->
+    <link
+      href="../dashboard/assets/css/simplebar.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- Icons -->
     <link
-      href="css/materialdesignicons.min.css"
+      href="../dashboard/assets/css/materialdesignicons.min.css"
       rel="stylesheet"
       type="text/css"
     />
     <link
+      href="../dashboard/assets/css/tabler-icons.min.css"
       rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+      type="text/css"
     />
-    <!-- Slider -->
-    <link rel="stylesheet" href="css/tiny-slider.css" />
-    <!-- Main Css -->
     <link
-      href="css/style.css"
+      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+      rel="stylesheet"
+    />
+    <!-- Css -->
+    <link
+      href="../dashboard/assets/css/style.css"
       rel="stylesheet"
       type="text/css"
       id="theme-opt"
     />
-    <link href="css/colors/default.css" rel="stylesheet" id="color-opt" />
   </head>
 
   <body>
@@ -55,100 +66,102 @@
     </div>
     <!-- Loader -->
 
-    <!----------------------- Main Container -------------------------->
-    <div
-      class="container d-flex justify-content-center align-items-center min-vh-100"
-    >
-      <!----------------------- Login Container -------------------------->
-      <!-------------------- ------ Right Box ---------------------------->
-
-      <div class="col-sm-12 col-md-6 col-lg-6">
-        <div class="p-5 border rounded-3">
-          <div class="row">
-            <div class="d-flex justify-content-between"></div>
-          </div>
+    <!-- Hero Start -->
+    <section class="bg-home bg-light d-flex align-items-center">
+      <div class="bg-overlay bg-overlay-white"></div>
+      <div class="container">
+        <div class="row">
           <div class="col-12">
-            <div class="row align-items-center">
-              <div class="header-text mb-4 text-center">
-                <a class="logo m-0" href="index-saas.html">
+            <div class="form-signin p-4 bg-white rounded shadow">
+              <form>
+                <a
+                  class="logo m-0 mb-4 d-flex justify-content-center"
+                  href="index-saas.html"
+                >
                   <img
-                    src="images/saas/logo-riau.png"
-                    height="48"
+                    src="../landing/images/saas/logo-riau.png"
+                    height="64"
                     class="logo-light-mode"
                     alt=""
                   />
                   <img
-                    src="images/saas/logo-disbud.png"
-                    height="48"
+                    src="../landing/images/saas/logo-disbud.png"
+                    height="64"
                     class="logo-light-mode"
                     alt=""
                   />
                 </a>
-                <h2>SI-TARI</h2>
-                <p class="text-muted">Silahkan Buat Akun</p>
-              </div>
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control form-control-lg bg-light fs-6 py-3"
-                  placeholder="Nama"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control form-control-lg bg-light fs-6 py-3"
-                  placeholder="Nomor NIK"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control form-control-lg bg-light fs-6 py-3"
-                  placeholder="Email"
-                />
-              </div>
-              <div class="input-group mb-5">
-                <input
-                  type="password"
-                  class="form-control form-control-lg bg-light fs-6 py-3"
-                  placeholder="Password"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <button
-                  class="btn btn-lg btn-primary w-100 fs-6"
-                  onclick="window.location.href = 'login.html'"
-                >
+                <h5 class="mb-3 text-center">Silahkan buat akun</h5>
+
+                <div class="form-floating mb-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="floatingInput"
+                    placeholder="Budi"
+                  />
+                  <label for="floatingInput">Nama</label>
+                </div>
+
+                <div class="form-floating mb-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="floatingInput"
+                    placeholder="Masukkan nomor NIK"
+                  />
+                  <label for="floatingInput">NIK</label>
+                </div>
+
+                <div class="form-floating mb-2">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="floatingEmail"
+                    placeholder="name@example.com"
+                  />
+                  <label for="floatingEmail">Email</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="floatingPassword"
+                    placeholder="Password"
+                  />
+                  <label for="floatingPassword">Password</label>
+                </div>
+
+                <button class="btn btn-primary w-100" type="submit">
                   Register
                 </button>
-              </div>
-              <div class="input-group mb-3">
-                <button
-                  class="btn btn-lg btn-light w-100 fs-6"
-                  onclick="window.location.href = 'login.html'"
-                >
-                  Login
-                </button>
-              </div>
+
+                <div class="col-12 text-center mt-3">
+                  <p class="mb-0 mt-3">
+                    <small class="text-dark me-2">Sudah punya akun ?</small>
+                    <a href="login.html" class="text-dark fw-bold">Login</a>
+                  </p>
+                </div>
+                <!--end col-->
+              </form>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <!--end container-->
+    </section>
+    <!--end section-->
+    <!-- Hero End -->
 
     <!-- javascript -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- SLIDER -->
-    <script src="js/tiny-slider.js "></script>
+    <script src="../dashboard/assets/js/bootstrap.bundle.min.js"></script>
+    <!-- simplebar -->
+    <script src="../dashboard/assets/js/simplebar.min.js"></script>
     <!-- Icons -->
-    <script src="js/feather.min.js"></script>
-    <!-- Switcher -->
-    <script src="js/switcher.js"></script>
+    <script src="../dashboard/assets/js/feather.min.js"></script>
     <!-- Main Js -->
-    <script src="js/plugins.init.js"></script>
-    <!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
-    <script src="js/app.js"></script>
-    <!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+    <script src="../dashboard/assets/js/plugins.init.js"></script>
+    <script src="../dashboard/assets/js/app.js"></script>
   </body>
 </html>
