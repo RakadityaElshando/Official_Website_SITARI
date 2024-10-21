@@ -186,12 +186,13 @@
         <div class="row justify-content-center">
           <div class="col-12 text-center">
             <div class="section-title mb-4 pb-2">
-              <h4 class="title mb-4">
+              <h4 class="title mb-3">
                 Grafik Data
                 <span class="text-primary">Rekapitulasi</span>
               </h4>
-              <p class="text-muted para-desc mx-auto mb-0">
-                Temukan informasi lengkap mengenai data rekapitulasi
+              <p class="text-muted para-desc mx-auto mb-3 fw-light">
+                Visualisasi data rekapitulasi yang menampilkan informasi
+                statistik tentang cagar budaya secara jelas dan informatif
               </p>
             </div>
           </div>
@@ -208,38 +209,25 @@
         <div class="row justify-content-center">
           <div class="col-12 text-center">
             <div class="section-title mb-4 pb-2">
-              <h4 class="title mb-4">
+              <h4 class="title mb-3">
                 Data
                 <span class="text-primary">Rekapitulasi</span>
               </h4>
-              <p class="text-muted para-desc mx-auto mb-0">
-                Temukan informasi lengkap mengenai data rekapitulasi
+              <p class="text-muted para-desc mx-auto mb-3 fw-light">
+                Ringkasan informasi penting yang mencakup jumlah, jenis, dan
+                status cagar budaya yang telah terdata
               </p>
             </div>
           </div>
-          <!--end col-->
         </div>
-        <!-- Start Search -->
-        <div class="row">
-          <div class="input-group mb-4 justify-content-between col-5">
-            <div class="form-outline col-5" data-mdb-input-init>
-              <label for="entitas">Pencarian</label>
-              <input
-                type="search"
-                id="search"
-                class="form-control"
-                placeholder="Cari data rekapitulasi..."
-              />
-            </div>
-          </div>
-        </div>
-        <!-- End Search -->
-
         <!-- Start Filter -->
-        <div class="row py-3 px-2 rounded-3">
-          <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+        <div class="row py-3 rounded-3">
+          <div class="col-lg-3 col-md-3 col-sm-12 mb-3">
             <label for="entitas">Kategori</label>
-            <select class="form-select text-muted" id="entitas">
+            <select
+              class="form-select text-muted mt-1 rounded-3 py-3"
+              id="entitas"
+            >
               <option selected>Pilih Kategori</option>
               <option value="1">Bangunan</option>
               <option value="2">Benda</option>
@@ -248,9 +236,12 @@
               <option value="5">Struktur</option>
             </select>
           </div>
-          <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+          <div class="col-lg-3 col-md-3 col-sm-12 mb-3">
             <label for="kabupaten">Kabupaten/Kota</label>
-            <select class="form-select text-muted" id="kabupaten">
+            <select
+              class="form-select text-muted mt-1 rounded-3 py-3"
+              id="kabupaten"
+            >
               <option selected>Pilih Kabupaten/Kota</option>
               <option value="1">Pekanbaru</option>
               <option value="2">Kabupaten Kampar</option>
@@ -266,9 +257,12 @@
               <option value="12">Kabupaten Dumai</option>
             </select>
           </div>
-          <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+          <div class="col-lg-3 col-md-3 col-sm-12 mb-3">
             <label for="tahun">Tahun</label>
-            <select class="form-select text-muted" id="tahun">
+            <select
+              class="form-select text-muted mt-1 rounded-3 py-3"
+              id="tahun"
+            >
               <option selected>Pilih Tahun</option>
               <option value="2000">2000</option>
               <option value="2001">2001</option>
@@ -296,6 +290,17 @@
               <option value="2023">2023</option>
             </select>
           </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 mb-3">
+            <div class="form-outline ps-4 border-left" data-mdb-input-init>
+              <label>Kolom Pencarian</label>
+              <input
+                type="search"
+                id="search"
+                class="form-control mt-1 rounded-3 py-3"
+                placeholder="Cari data cagar budaya..."
+              />
+            </div>
+          </div>
         </div>
         <!-- End Filter -->
 
@@ -304,40 +309,39 @@
           <div class="col-12 table-responsive">
             <table
               id="daftarProvinsi"
-              class="table border table-hover border-light rounded-3 text-nowrap"
+              class="table border text-nowrap overflow-hidden rounded-3"
+              style="width: 100%"
             >
               <thead>
                 <tr>
                   <th>Nomor</th>
                   <th>Nama</th>
                   <th>Kategori</th>
-                  <th>Entitas Relasi</th>
+                  <th>Kabupaten/Kota</th>
+                  <th>Tahun</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>123123</td>
-                  <td>Pohon Beringin</td>
-                  <td>Tumbuhan</td>
-                  <td>-</td>
+                  <td>1</td>
+                  <td>Candi Muara Takus</td>
+                  <td>Situs</td>
+                  <td>Kabupaten Kampar</td>
+                  <td>1999</td>
                 </tr>
                 <tr>
-                  <td>123123</td>
-                  <td>Pohon Beringin</td>
-                  <td>Tumbuhan</td>
-                  <td>-</td>
+                  <td>2</td>
+                  <td>Candi Muara Takus</td>
+                  <td>Situs</td>
+                  <td>Kabupaten Kampar</td>
+                  <td>1999</td>
                 </tr>
                 <tr>
-                  <td>123123</td>
-                  <td>Pohon Beringin</td>
-                  <td>Tumbuhan</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>123123</td>
-                  <td>Pohon Beringin</td>
-                  <td>Tumbuhan</td>
-                  <td>-</td>
+                  <td>3</td>
+                  <td>Candi Muara Takus</td>
+                  <td>Situs</td>
+                  <td>Kabupaten Kampar</td>
+                  <td>1999</td>
                 </tr>
               </tbody>
             </table>
