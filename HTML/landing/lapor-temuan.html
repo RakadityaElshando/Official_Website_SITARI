@@ -350,40 +350,33 @@
                 aria-labelledby="data-identitas"
               >
                 <h4>Data Identitas</h4>
-                <p class="text-muted fw-normal mb-4">
-                  Masukkan data identitas anda sebagai pelapor
+                <p class="text-muted fw-light mb-4">
+                  Harap isi data identitas Anda sebagai pelapor dengan lengkap
                 </p>
                 <div class="mb-3">
-                  <label for="form-1-nama" class="form-label fw-normal"
-                    >Nama</label
-                  >
+                  <label class="form-label fw-normal">Nama</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="identitas-nama"
-                    placeholder="Masukkan nama anda"
+                    placeholder="Masukkan nama lengkap Anda"
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="identitas-nik" class="form-label fw-normal"
-                    >NIK</label
-                  >
+                  <label class="form-label fw-normal">NIK</label>
                   <input
                     type="text"
                     class="form-control"
                     id="identitas-nik"
-                    placeholder="Masukkan nomor NIK anda"
+                    placeholder="Masukkan nomor NIK Anda"
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="identitas-email" class="form-label fw-normal"
-                    >Email</label
-                  >
+                  <label class="form-label fw-normal">Email</label>
                   <input
                     type="text"
                     class="form-control"
                     id="identitas-email"
-                    placeholder="Masukkan email anda"
+                    placeholder="Masukkan email yang valid"
                   />
                   <div id="emailHelp" class="form-text">
                     contoh: user@gmail.com
@@ -397,9 +390,11 @@
                     type="password"
                     class="form-control"
                     id="identitas-ktp"
-                    placeholder="Masukkan password anda"
+                    placeholder="Masukkan password Anda"
                   />
-                  <div id="passwordHelp" class="form-text">Minimal 8 digit</div>
+                  <div id="passwordHelp" class="form-text">
+                    (minimal 8 karakter)
+                  </div>
                 </div>
                 <div class="mb-5">
                   <label for="identitas-ktp" class="form-label fw-normal"
@@ -409,9 +404,9 @@
                     type="file"
                     class="form-control"
                     id="identitas-ktp"
-                    placeholder="Unggah foto KTP anda"
+                    placeholder="Unggah Foto KTP Anda"
                   />
-                  <div class="form-text">Format foto (pdf, png, jpg)</div>
+                  <div class="form-text">Format JPG, PNG, maksimal 2MB</div>
                 </div>
                 <div class="d-flex justify-content-end mt-3">
                   <button
@@ -421,7 +416,7 @@
                     onclick="prevStep()"
                     disabled
                   >
-                    Back
+                    Kembali
                   </button>
                   <button
                     id="btn-next"
@@ -429,7 +424,7 @@
                     type="button"
                     onclick="nextStep()"
                   >
-                    Next
+                    Lanjut
                   </button>
                 </div>
               </div>
@@ -443,18 +438,16 @@
                 aria-labelledby="data-temuan"
               >
                 <h4>Data Temuan</h4>
-                <p class="text-muted mb-4">
-                  Masukkan informasi mengenai objek yang anda laporkan
+                <p class="text-muted fw-light mb-4">
+                  Harap masukkan informasi lengkap mengenai objek yang Anda
+                  laporkan
                 </p>
                 <div class="mb-3">
-                  <label for="identitas-nama" class="form-label fw-normal"
-                    >Judul Laporan</label
-                  >
+                  <label class="form-label fw-normal">Judul Laporan</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="identitas-nama"
-                    placeholder="Masukkan judul objek yang dilaporkan"
+                    placeholder="Masukkan judul laporan Anda di sini."
                   />
                 </div>
                 <div class="mb-3">
@@ -467,15 +460,11 @@
                     class="form-control"
                     id="deskripsi-sejarah"
                     rows="3"
-                    placeholder="Masukkan deskripsi lengkap mengenai laporan anda"
+                    placeholder="Tulis deskripsi lengkap mengenai laporan Anda di sini"
                   ></textarea>
                 </div>
                 <div class="mb-3">
-                  <label
-                    for="exampleFormControlTextarea1"
-                    class="form-label fw-normal"
-                    >Jenis Laporan</label
-                  >
+                  <label class="form-label fw-normal">Jenis Laporan</label>
                   <div class="form-check">
                     <input
                       class="form-check-input"
@@ -506,15 +495,13 @@
                     </label>
                   </div>
                   <div class="form-text">
-                    Pastikan jenis laporan sudah benar
+                    Verifikasi bahwa jenis laporan yang dipilih sudah tepat
                   </div>
                 </div>
                 <div class="row mb-5">
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-staff" class="form-label fw-normal"
-                      >Kategori</label
-                    >
-                    <select class="form-select text-muted" id="struktur-staff">
+                    <label class="form-label fw-normal">Kategori</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Kategori</option>
                       <option value="1">Bangunan</option>
                       <option value="2">Benda</option>
@@ -522,16 +509,13 @@
                       <option value="4">Situs</option>
                       <option value="5">Struktur</option>
                     </select>
-                    <div class="form-text">Kategori objek temuan</div>
+                    <div class="form-text">
+                      Pilih kategori yang sesuai untuk objek yang Anda laporkan.
+                    </div>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-periode" class="form-label fw-normal"
-                      >Kabupaten/Kota</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
+                    <label class="form-label fw-normal">Kabupaten/Kota</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Kabupaten/Kota</option>
                       <option value="1">Pekanbaru</option>
                       <option value="2">Kabupaten Kampar</option>
@@ -546,7 +530,9 @@
                       <option value="11">Kabupaten Meranti</option>
                       <option value="12">Kabupaten Dumai</option>
                     </select>
-                    <div class="form-text">Lokasi objek ditemukan</div>
+                    <div class="form-text">
+                      Masukkan lokasi di mana objek tersebut ditemukan
+                    </div>
                   </div>
                 </div>
                 <div class="d-flex justify-content-end mt-3">
@@ -557,7 +543,7 @@
                     onclick="prevStep()"
                     disabled
                   >
-                    Back
+                    Kembali
                   </button>
                   <button
                     id="btn-next"
@@ -579,59 +565,50 @@
                 aria-labelledby="data-struktur"
               >
                 <h4>Data Struktur</h4>
-                <p class="text-muted mb-4">
-                  Masukkan informasi mengenai struktur dari objek yang
+                <p class="text-muted fw-light mb-4">
+                  Harap berikan informasi lengkap mengenai struktur objek yang
                   dilaporkan
                 </p>
                 <div class="mb-3">
-                  <label for="struktur-nama" class="form-label fw-normal"
+                  <label class="form-label fw-normal"
                     >Nama ODCB/CB di Lapangan</label
                   >
                   <input
                     type="text"
                     class="form-control"
-                    id="struktur-nama"
-                    placeholder="Masukkan nama struktur"
+                    placeholder="Masukkan nama ODCB/CB"
                   />
                   <div class="form-text">
                     ODCB = Objek yang Diduga Cagar Budaya
                   </div>
                 </div>
                 <div class="mb-3">
-                  <label for="struktur-fungsi" class="form-label fw-normal"
-                    >Fungsi Struktur</label
-                  >
+                  <label class="form-label fw-normal">Fungsi Struktur</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="struktur-fungsi"
                     placeholder="Masukkan fungsi struktur"
                   />
                 </div>
                 <div class="row mb-5">
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-staff" class="form-label fw-normal"
-                      >Staff Struktur</label
-                    >
-                    <select class="form-select text-muted" id="struktur-staff">
-                      <option selected>Pilih staff</option>
-                      <option value="1">Kategori 1</option>
-                      <option value="2">Kategori 2</option>
-                      <option value="3">Kategori 3</option>
+                    <label class="form-label fw-normal">Sifat Struktur</label>
+                    <select class="form-select text-muted">
+                      <option selected>Pilih Sifat</option>
+                      <option value="1">Sakral</option>
+                      <option value="2">Profan</option>
+                      <option value="3">Campuran</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-periode" class="form-label fw-normal"
-                      >Periode Struktur</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
+                    <label class="form-label fw-normal">Periode Struktur</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih periode</option>
-                      <option value="1">Kategori 1</option>
-                      <option value="2">Kategori 2</option>
-                      <option value="3">Kategori 3</option>
+                      <option value="1">Prasejarah</option>
+                      <option value="2">Klasik</option>
+                      <option value="3">Kolonal</option>
+                      <option value="3">Kemerdekaan</option>
+                      <option value="3">Moderan</option>
                     </select>
                   </div>
                 </div>
@@ -643,7 +620,7 @@
                     onclick="prevStep()"
                     disabled
                   >
-                    Back
+                    Kembali
                   </button>
                   <button
                     id="btn-next"
@@ -651,7 +628,7 @@
                     type="button"
                     onclick="nextStep()"
                   >
-                    Next
+                    Lanjut
                   </button>
                 </div>
               </div>
@@ -665,28 +642,22 @@
                 aria-labelledby="data-lokasi"
               >
                 <h4>Data Lokasi</h4>
-                <p class="text-muted mb-4">
-                  Masukkan detail lokasi tempat objek ditemukan...
+                <p class="text-muted fw-light mb-4">
+                  Harap sertakan informasi lengkap mengenai lokasi objek yang
+                  ditemukan
                 </p>
 
                 <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="lokasi-provinsi" class="form-label fw-normal"
-                      >Provinsi</label
-                    >
-                    <select class="form-select text-muted" id="lokasi-provinsi">
+                    <label class="form-label fw-normal">Provinsi</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Provinsi</option>
                       <option value="1">Riau</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-periode" class="form-label fw-normal"
-                      >Kabupaten/Kota</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
+                    <label class="form-label fw-normal">Kabupaten/Kota</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Kabupaten/Kota</option>
                       <option value="1">Pekanbaru</option>
                       <option value="2">Kabupaten Kampar</option>
@@ -705,13 +676,8 @@
                 </div>
                 <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="lokasi-kecamatan" class="form-label fw-normal"
-                      >Kecamatan</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="lokasi-kecamatan"
-                    >
+                    <label class="form-label fw-normal">Kecamatan</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Kecamatan</option>
                       <option value="1">Kecamatan Tenayan Raya</option>
                       <option value="2">Kecamatan Marpoyan Damai</option>
@@ -726,13 +692,8 @@
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="lokasi-kelurahan" class="form-label fw-normal"
-                      >Kelurahan</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="lokasi-kelurahan"
-                    >
+                    <label class="form-label fw-normal">Kelurahan</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Kelurahan</option>
                       <option value="1">Kelurahan Sempurna</option>
                       <option value="2">Kelurahan Sidomulyo</option>
@@ -748,47 +709,37 @@
                   </div>
                 </div>
                 <div class="mb-3">
-                  <label for="lokasi-alamat" class="form-label fw-normal"
-                    >Alamat</label
-                  >
+                  <label class="form-label fw-normal">Alamat</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="identitas-nama"
-                    placeholder="Masukkan alamat lokasi penemuan"
+                    placeholder="Masukkan alamat lokasi penemuan objek"
                   />
                 </div>
                 <div class="row mb-5">
                   <div class="col-lg-4 col-sm-12 col-md-4">
-                    <label for="lokasi-longitude" class="form-label fw-normal"
-                      >Latitude</label
-                    >
+                    <label class="form-label fw-normal">Latitude</label>
                     <input
                       type="text"
                       class="form-control text muted"
-                      id="lokasi-"
                       placeholder="(contoh: -0.4500)"
                     />
                   </div>
                   <div class="col-lg-4 col-sm-12 col-md-4">
-                    <label for="lokasi-longitude" class="form-label fw-normal"
-                      >Longitude</label
-                    >
+                    <label class="form-label fw-normal">Longitude</label>
                     <input
                       type="text"
                       class="form-control text muted"
-                      id="lokasi-"
                       placeholder="(contoh: 101.4500)"
                     />
                   </div>
                   <div class="col-lg-4 col-sm-12 col-md-4">
-                    <label for="lokasi-longitude" class="form-label fw-normal"
+                    <label class="form-label fw-normal"
                       >Ketinggian (MDPL)</label
                     >
                     <input
                       type="text"
                       class="form-control text muted"
-                      id="lokasi-"
                       placeholder="(contoh: 200)"
                     />
                   </div>
@@ -801,7 +752,7 @@
                     onclick="prevStep()"
                     disabled
                   >
-                    Back
+                    Kembali
                   </button>
                   <button
                     id="btn-next"
@@ -809,7 +760,7 @@
                     type="button"
                     onclick="nextStep()"
                   >
-                    Next
+                    Lanjut
                   </button>
                 </div>
               </div>
@@ -823,107 +774,65 @@
                 aria-labelledby="data-fisik"
               >
                 <h4>Data fisik</h4>
-                <p class="text-muted mb-4">
-                  Masukkan detail fisik dari objek yang ditemukan...
+                <p class="text-muted fw-light mb-4">
+                  Harap sertakan informasi lengkap mengenai detail fisik objek
+                  yang ditemukan
                 </p>
-
                 <div class="mb-3">
-                  <div class="col-12">
-                    <label for="fisik-bangunan" class="form-label fw-normal"
-                      >Waktu Pembuatan</label
-                    >
+                  <label class="form-label fw-normal">Bahan Bangunan</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Masukkan bahan bangunan"
+                  />
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label class="form-label fw-normal">Satuan Waktu</label>
+                    <select class="form-select text-muted">
+                      <option selected>Pilih Periode</option>
+                      <option value="1">Abad</option>
+                      <option value="2">Tahun</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label class="form-label fw-normal">Periode Waktu</label>
+                    <select class="form-select text-muted">
+                      <option selected>Pilih Periode</option>
+                      <option value="1">Sebelum Masehi</option>
+                      <option value="2">Sesudah Masehi</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label class="form-label fw-normal">Waktu Pembuatan</label>
                     <input
                       type="text"
                       class="form-control"
-                      id="dimensi-"
-                      placeholder="Masukkan waktu pembuatan"
+                      placeholder="Masukkan waktu"
                     />
                   </div>
                 </div>
 
                 <div class="row mb-3">
-                  <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-periode" class="form-label fw-normal"
-                      >Satuan Waktu</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
-                      <option selected>Pilih Satuan Waktu</option>
-                      <option value="1">Detik</option>
-                      <option value="2">Menit</option>
-                      <option value="3">Jam</option>
-                      <option value="4">Hari</option>
-                      <option value="5">Minggu</option>
-                      <option value="6">Bulan</option>
-                      <option value="7">Tahun</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-periode" class="form-label fw-normal"
-                      >Periode Waktu</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
-                      <option selected>Pilih Periode Waktu</option>
-                      <option value="1">Harian</option>
-                      <option value="2">Mingguan</option>
-                      <option value="3">Bulanan</option>
-                      <option value="4">Triwulanan</option>
-                      <option value="5">Semestral</option>
-                      <option value="6">Tahunan</option>
-                      <option value="7">Kumulatif</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="row mb-3">
-                  <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="fisik-bangunan" class="form-label fw-normal"
-                      >Bahan Bangunan</label
-                    >
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label class="form-label fw-normal">Tanda Bangunan</label>
                     <input
                       type="text"
                       class="form-control"
-                      id="lokasi-"
-                      placeholder="Masukkan bahan bangunan"
+                      placeholder="Masukkan tanda"
                     />
                   </div>
-                  <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="fisik-ornamen" class="form-label fw-normal"
-                      >Ornamen Bangunan</label
-                    >
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label class="form-label fw-normal">Ornamen Bangunan</label>
                     <input
                       type="text"
                       class="form-control"
-                      id="lokasi-"
-                      placeholder="Masukkan ornamen bangunan"
+                      placeholder="Masukkan ornamen"
                     />
                   </div>
-                </div>
-                <div class="row mb-5">
-                  <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="lokasi-" class="form-label fw-normal"
-                      >Tanda Bangunan</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="lokasi-"
-                      placeholder="Masukkan tanda bangunan"
-                    />
-                  </div>
-                  <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-periode" class="form-label fw-normal"
-                      >Warna Bangunan</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                    <label class="form-label fw-normal">Warna Bangunan</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Warna</option>
                       <option value="1">Merah</option>
                       <option value="2">Hijau</option>
@@ -939,7 +848,7 @@
                   </div>
                 </div>
 
-                <div class="d-flex justify-content-end mt-3">
+                <div class="d-flex justify-content-end mt-5">
                   <button
                     id="btn-back"
                     class="btn btn-light me-2"
@@ -947,7 +856,7 @@
                     onclick="prevStep()"
                     disabled
                   >
-                    Back
+                    Kembali
                   </button>
                   <button
                     id="btn-next"
@@ -955,7 +864,7 @@
                     type="button"
                     onclick="nextStep()"
                   >
-                    Next
+                    Lanjut
                   </button>
                 </div>
               </div>
@@ -969,16 +878,17 @@
                 aria-labelledby="data-dimensi"
               >
                 <h3>Data dimensi</h3>
-                <p class="text-muted mb-4">
-                  Masukkan detail dimensi dari objek yang ditemukan...
+                <p class="text-muted fw-light mb-4">
+                  Harap sertakan informasi lengkap mengenai dimensi objek yang
+                  ditemukan
                 </p>
                 <div class="row mb-3">
-                  <!-- Kolom 1 -->
-                  <p class="text-muted">Atur satuan ukur terlebih dahulu</p>
+                  <p class="text-muted">
+                    Harap tentukan satuan ukur yang akan digunakan sebelum
+                    mengisi detail dimensi objek.
+                  </p>
                   <div class="col-lg-4 col-sm-12 col-md-4">
-                    <label for="dimensi-panjang" class="form-label fw-normal"
-                      >Panjang</label
-                    >
+                    <label class="form-label fw-normal">Panjang</label>
                     <div class="d-flex">
                       <input
                         type="text"
@@ -995,16 +905,14 @@
                     </div>
                   </div>
 
-                  <!-- Kolom 2 -->
                   <div class="col-lg-4 col-sm-12 col-md-4">
-                    <label for="kondisi-" class="form-label fw-normal"
-                      >Lebar</label
-                    >
+                    <label class="form-label fw-normal">Lebar</label>
                     <div class="d-flex">
                       <input
                         type="text"
                         class="form-control flex-grow-1"
                         placeholder="Lebar"
+                        id="dimensi-lebar"
                         aria-label="Ukuran"
                       />
                       <select class="form-select w-auto ms-2 text-muted">
@@ -1016,9 +924,8 @@
                     </div>
                   </div>
 
-                  <!-- Kolom 3 -->
                   <div class="col-lg-4 col-sm-12 col-md-4">
-                    <label for="kondisi-" class="form-label fw-normal"
+                    <label for="dimensi-tinggi" class="form-label fw-normal"
                       >Tinggi</label
                     >
                     <div class="d-flex">
@@ -1026,6 +933,7 @@
                         type="text"
                         class="form-control flex-grow-1"
                         placeholder="Tinggi"
+                        id="dimensi-tinggi"
                         aria-label="Ukuran"
                       />
                       <select class="form-select w-auto ms-2 text-muted">
@@ -1038,16 +946,16 @@
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <!-- Kolom 1 -->
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="kondisi-" class="form-label fw-normal"
+                    <label for="dimensi-luas" class="form-label fw-normal"
                       >Luas Struktur</label
                     >
                     <div class="d-flex">
                       <input
                         type="text"
                         class="form-control flex-grow-1"
-                        placeholder="Masukkan ukuran"
+                        placeholder="Luas Struktur"
+                        id="dimensi-luas"
                         aria-label="Ukuran"
                       />
                       <select class="form-select w-auto ms-2 text-muted">
@@ -1059,16 +967,15 @@
                     </div>
                   </div>
 
-                  <!-- Kolom 2 -->
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="kondisi-" class="form-label fw-normal"
+                    <label for="dimensi-tanah" class="form-label fw-normal"
                       >Luas Tanah</label
                     >
                     <div class="d-flex">
                       <input
                         type="text"
                         class="form-control flex-grow-1"
-                        placeholder="Masukkan ukuran"
+                        placeholder="Luas Tanah"
                         aria-label="Ukuran"
                       />
                       <select class="form-select w-auto ms-2 text-muted">
@@ -1081,16 +988,15 @@
                   </div>
                 </div>
                 <div class="row mb-5">
-                  <!-- Kolom 1 -->
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="kondisi-" class="form-label fw-normal"
+                    <label for="dimensi-badan" class="form-label fw-normal"
                       >Diameter Badan</label
                     >
                     <div class="d-flex">
                       <input
                         type="text"
                         class="form-control flex-grow-1"
-                        placeholder="Masukkan ukuran"
+                        placeholder="Diameter Badan"
                         aria-label="Ukuran"
                       />
                       <select class="form-select w-auto ms-2 text-muted">
@@ -1102,16 +1008,15 @@
                     </div>
                   </div>
 
-                  <!-- Kolom 2 -->
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="kondisi-" class="form-label fw-normal"
+                    <label for="dimensi-kaki" class="form-label fw-normal"
                       >Diameter Kaki</label
                     >
                     <div class="d-flex">
                       <input
                         type="text"
                         class="form-control flex-grow-1"
-                        placeholder="Masukkan ukuran"
+                        placeholder="Diameter Kaki"
                         aria-label="Ukuran"
                       />
                       <select class="form-select w-auto ms-2 text-muted">
@@ -1131,7 +1036,7 @@
                     onclick="prevStep()"
                     disabled
                   >
-                    Back
+                    Kembali
                   </button>
                   <button
                     id="btn-next"
@@ -1139,7 +1044,7 @@
                     type="button"
                     onclick="nextStep()"
                   >
-                    Next
+                    Lanjut
                   </button>
                 </div>
               </div>
@@ -1153,83 +1058,77 @@
                 aria-labelledby="data-kondisi"
               >
                 <h3>Data Kondisi</h3>
-                <p class="text-muted mb-4">
-                  Masukkan detail kondisi dari objek yang ditemukan...
+                <p class="text-muted fw-light mb-4">
+                  Harap sertakan informasi lengkap mengenai kondisi objek yang
+                  ditemukan
                 </p>
                 <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="kondisi-keutuhan" class="form-label fw-normal"
-                      >Keutuhan</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="kondisi-keutuhan"
-                    >
+                    <label class="form-label fw-normal">Keutuhan</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Kondisi</option>
                       <option value="1">Utuh</option>
-                      <option value="2">Berkurangan</option>
-                      <option value="3">Rusak Ringan</option>
-                      <option value="4">Rusak Sedang</option>
-                      <option value="5">Rusak Berat</option>
-                      <option value="6">Tidak Diketahui</option>
+                      <option value="2">Tinggal Sebagian</option>
+                      <option value="3">Hilang</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label
-                      for="kondisi-pemeliharaan"
-                      class="form-label fw-normal"
-                      >Pemeliharaan</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="kondisi-pemeliharaan"
-                    >
+                    <label class="form-label fw-normal">Pemeliharaan</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Pemeliharaan</option>
-                      <option value="1">Rutin</option>
-                      <option value="2">Berkala</option>
-                      <option value="3">Darurat</option>
-                      <option value="4">Preventif</option>
-                      <option value="5">Korektif</option>
-                      <option value="6">Tidak Diperlukan</option>
+                      <option value="1">Terpelihara</option>
+                      <option value="2">Tidak Terpelihara</option>
                     </select>
                   </div>
                 </div>
-                <div class="row mb-5">
-                  <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-periode" class="form-label fw-normal"
-                      >Pemugaran</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
-                      <option selected>Pilih Pemugaran</option>
-                      <option value="1">Ringan</option>
-                      <option value="2">Sedang</option>
-                      <option value="3">Berat</option>
-                      <option value="4">Renovasi</option>
-                      <option value="5">Restorasi</option>
-                      <option value="6">Rehabilitasi</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-periode" class="form-label fw-normal"
-                      >Adaptasi</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
-                      <option selected>Pilih Adaptasi</option>
-                      <option value="1">Pengelolaan Konservasi</option>
-                      <option value="2">Restorasi Arsitektur</option>
-                      <option value="3">Pelestarian Budaya</option>
-                      <option value="4">Pendidikan Sejarah</option>
-                      <option value="5">Pemanfaatan Wisata</option>
-                    </select>
+                <div class="mb-3">
+                  <label class="form-label fw-normal">Pemugaran</label>
+                  <select class="form-select text-muted">
+                    <option selected>Pilih Pemugaran</option>
+                    <option value="1">Pernah</option>
+                    <option value="2">Tidak Pernah</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label
+                    for="exampleFormControlTextarea1"
+                    class="form-label fw-normal"
+                    >Riwayat Pemugaran</label
+                  >
+                  <textarea
+                    class="form-control"
+                    rows="3"
+                    placeholder="Berikan deskripsi riwayat pemugaran"
+                  ></textarea>
+                  <div class="form-text">
+                    Silakan isi jika ada riwayat pemeliharaan
                   </div>
                 </div>
-                <div class="d-flex justify-content-end mt-3">
+                <div class="mb-3">
+                  <label class="form-label fw-normal">Adaptasi</label>
+                  <select class="form-select text-muted">
+                    <option selected>Pilih Adaptasi</option>
+                    <option value="1">Ada</option>
+                    <option value="2">Tidak Ada</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label
+                    for="exampleFormControlTextarea1"
+                    class="form-label fw-normal"
+                    >Riwayat Adaptasi</label
+                  >
+                  <textarea
+                    class="form-control"
+                    rows="3"
+                    placeholder="Berikan deskripsi riwayat adaptasi"
+                  ></textarea>
+                  <div class="form-text">
+                    Silakan isi jika ada riwayat adaptasi
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-end mt-5">
                   <button
                     id="btn-back"
                     class="btn btn-light me-2"
@@ -1237,7 +1136,7 @@
                     onclick="prevStep()"
                     disabled
                   >
-                    Back
+                    Kembali
                   </button>
                   <button
                     id="btn-next"
@@ -1245,7 +1144,7 @@
                     type="button"
                     onclick="nextStep()"
                   >
-                    Next
+                    Lanjut
                   </button>
                 </div>
               </div>
@@ -1259,76 +1158,54 @@
                 aria-labelledby="data-kepemilikan"
               >
                 <h3>Data Kepemilikan</h3>
-                <p class="text-muted mb-4">
-                  Masukkan detail kepemilikan dari objek yang dilaporkan
+                <p class="text-muted fw-light mb-4">
+                  Harap masukkan informasi lengkap mengenai kepemilikan objek
+                  yang dilaporkan.
                 </p>
                 <div class="mb-3">
-                  <label for="identitas-nama" class="form-label fw-normal"
-                    >Nama Pemilik</label
-                  >
+                  <label class="form-label fw-normal">Nama Pemilik</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="identitas-nama"
                     placeholder="Masukkan nama lengkap pemilik objek"
                   />
                 </div>
                 <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-periode" class="form-label fw-normal"
+                    <label class="form-label fw-normal"
                       >Status Kepemilikan</label
                     >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
+                    <select class="form-select text-muted">
                       <option selected>Pilih Status</option>
                       <option value="1">Pemerintah</option>
-                      <option value="2">Swasta</option>
-                      <option value="3">Komunitas</option>
-                      <option value="4">Yayasan</option>
-                      <option value="5">Individu</option>
+                      <option value="2">Non-Pemerintah</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-periode" class="form-label fw-normal"
-                      >Status Perolehan</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
+                    <label class="form-label fw-normal">Status Perolehan</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Status</option>
-                      <option value="1">Sah</option>
-                      <option value="2">Warisan</option>
-                      <option value="3">Penelitian</option>
-                      <option value="4">Pembelian</option>
-                      <option value="5">Pertukaran</option>
+                      <option value="1">Hadiah</option>
+                      <option value="2">Hibah</option>
+                      <option value="3">Pembelian</option>
                     </select>
                   </div>
                 </div>
                 <div class="row mb-3 border-top">
                   <p class="mt-3 mb-0 fw-bold">Lokasi Pemilik</p>
-                  <p class="text-muted">
+                  <p class="text-muted fw-light">
                     Masukkan Lokasi tempat tinggal pemilik
                   </p>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-staff" class="form-label fw-normal"
-                      >Provinsi</label
-                    >
-                    <select class="form-select text-muted" id="struktur-staff">
+                    <label class="form-label fw-normal">Provinsi</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Provinsi</option>
                       <option value="1">Riau</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-periode" class="form-label fw-normal"
-                      >Kabupaten/Kota</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
+                    <label class="form-label fw-normal">Kabupaten/Kota</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Kabupaten</option>
                       <option value="1">Pekanbaru</option>
                       <option value="2">Kabupaten Kampar</option>
@@ -1347,10 +1224,8 @@
                 </div>
                 <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-staff" class="form-label fw-normal"
-                      >Kecamatan</label
-                    >
-                    <select class="form-select text-muted" id="struktur-staff">
+                    <label class="form-label fw-normal">Kecamatan</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Kecamatan</option>
                       <option value="1">Kecamatan Tenayan Raya</option>
                       <option value="2">Kecamatan Marpoyan Damai</option>
@@ -1365,13 +1240,8 @@
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-periode" class="form-label fw-normal"
-                      >Kelurahan</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
+                    <label class="form-label fw-normal">Kelurahan</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Kelurahan</option>
                       <option value="1">Kelurahan Sempurna</option>
                       <option value="2">Kelurahan Sidomulyo</option>
@@ -1387,36 +1257,27 @@
                   </div>
                 </div>
                 <div class="mb-3">
-                  <label for="identitas-nama" class="form-label fw-normal"
-                    >Alamat</label
-                  >
+                  <label class="form-label fw-normal">Alamat</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="identitas-nama"
                     placeholder="Masukkan alamat lengkap pemilik"
                   />
                 </div>
                 <div class="row mb-5">
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="lokasi-" class="form-label fw-normal"
-                      >Latitude</label
-                    >
+                    <label class="form-label fw-normal">Latitude</label>
                     <input
                       type="text"
                       class="form-control"
-                      id="lokasi-"
                       placeholder="(contoh: -0.4500)"
                     />
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="lokasi-" class="form-label fw-normal"
-                      >Longitude</label
-                    >
+                    <label class="form-label fw-normal">Longitude</label>
                     <input
                       type="text"
                       class="form-control"
-                      id="lokasi-"
                       placeholder="(contoh: 101.4500)"
                     />
                   </div>
@@ -1429,7 +1290,7 @@
                     onclick="prevStep()"
                     disabled
                   >
-                    Back
+                    Kembali
                   </button>
                   <button
                     id="btn-next"
@@ -1437,7 +1298,7 @@
                     type="button"
                     onclick="nextStep()"
                   >
-                    Next
+                    Lanjut
                   </button>
                 </div>
               </div>
@@ -1451,76 +1312,53 @@
                 aria-labelledby="data-pengelola"
               >
                 <h3>Data Pengelola</h3>
-                <p class="text-muted mb-4">
-                  Masukkan detail pengelola dari objek yang ditemukan...
+                <p class="text-muted fw-light mb-4">
+                  Harap masukkan informasi lengkap mengenai pengelola objek yang
+                  ditemukan
                 </p>
                 <div class="mb-3">
-                  <label for="identitas-nama" class="form-label fw-normal"
-                    >Nama Pengelola</label
-                  >
+                  <label class="form-label fw-normal">Nama Pengelola</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="identitas-nama"
                     placeholder="Masukkan nama lengkap pengelola objek"
                   />
                 </div>
                 <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-periode" class="form-label fw-normal"
-                      >Status Pengelola</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
+                    <label class="form-label fw-normal">Status Pengelola</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Status</option>
-                      <option value="1">Pemerintah</option>
-                      <option value="2">Swasta</option>
-                      <option value="3">Komunitas</option>
-                      <option value="4">Yayasan</option>
-                      <option value="5">Individu</option>
+                      <option value="1">Sendiri</option>
+                      <option value="2">Pemerintah</option>
+                      <option value="3">Non-Pemerintah</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-periode" class="form-label fw-normal"
-                      >Status Perolehan</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
+                    <label class="form-label fw-normal">Status Perolehan</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Status</option>
-                      <option value="1">Sah</option>
-                      <option value="2">Warisan</option>
-                      <option value="3">Penelitian</option>
-                      <option value="4">Pembelian</option>
-                      <option value="5">Pertukaran</option>
+                      <option value="1">Hadiah</option>
+                      <option value="2">Hadiah</option>
+                      <option value="3">Pembelian</option>
                     </select>
                   </div>
                 </div>
                 <div class="row mb-3 border-top">
                   <p class="mt-3 mb-0 fw-bold">Lokasi Pengelola</p>
-                  <p class="text-muted">
-                    Masukkan Lokasi tempat tinggal pengelola
+                  <p class="text-muted fw-light">
+                    Masukkan lokasi tempat tinggal pengelola
                   </p>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-staff" class="form-label fw-normal"
-                      >Provinsi</label
-                    >
-                    <select class="form-select text-muted" id="struktur-staff">
+                    <label class="form-label fw-normal">Provinsi</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Provinsi</option>
                       <option value="1">Riau</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-periode" class="form-label fw-normal"
-                      >Kabupaten/Kota</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
+                    <label class="form-label fw-normal">Kabupaten/Kota</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Kabupaten</option>
                       <option value="1">Pekanbaru</option>
                       <option value="2">Kabupaten Kampar</option>
@@ -1539,10 +1377,8 @@
                 </div>
                 <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-staff" class="form-label fw-normal"
-                      >Kecamatan</label
-                    >
-                    <select class="form-select text-muted" id="struktur-staff">
+                    <label class="form-label fw-normal">Kecamatan</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Kecamatan</option>
                       <option value="1">Kecamatan Tenayan Raya</option>
                       <option value="2">Kecamatan Marpoyan Damai</option>
@@ -1557,13 +1393,8 @@
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="struktur-periode" class="form-label fw-normal"
-                      >Kelurahan</label
-                    >
-                    <select
-                      class="form-select text-muted"
-                      id="struktur-periode"
-                    >
+                    <label class="form-label fw-normal">Kelurahan</label>
+                    <select class="form-select text-muted">
                       <option selected>Pilih Kelurahan</option>
                       <option value="1">Kelurahan Sempurna</option>
                       <option value="2">Kelurahan Sidomulyo</option>
@@ -1579,36 +1410,27 @@
                   </div>
                 </div>
                 <div class="mb-3">
-                  <label for="identitas-nama" class="form-label fw-normal"
-                    >Alamat</label
-                  >
+                  <label class="form-label fw-normal">Alamat</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="identitas-nama"
                     placeholder="Masukkan alamat lengkap pengelola"
                   />
                 </div>
                 <div class="row mb-5">
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="lokasi-" class="form-label fw-normal"
-                      >Latitude</label
-                    >
+                    <label class="form-label fw-normal">Latitude</label>
                     <input
                       type="text"
                       class="form-control"
-                      id="lokasi-"
                       placeholder="(contoh: -0.4500)"
                     />
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="lokasi-" class="form-label fw-normal"
-                      >Longitude</label
-                    >
+                    <label class="form-label fw-normal">Longitude</label>
                     <input
                       type="text"
                       class="form-control"
-                      id="lokasi-"
                       placeholder="(contoh: 101.4500)"
                     />
                   </div>
@@ -1621,7 +1443,7 @@
                     onclick="prevStep()"
                     disabled
                   >
-                    Back
+                    Kembali
                   </button>
                   <button
                     id="btn-next"
@@ -1629,7 +1451,7 @@
                     type="button"
                     onclick="nextStep()"
                   >
-                    Next
+                    Lanjut
                   </button>
                 </div>
               </div>
@@ -1643,8 +1465,9 @@
                 aria-labelledby="data-sejarah"
               >
                 <h3>Data Sejarah</h3>
-                <p class="text-muted mb-3">
-                  Masukkan detail sejarah dari objek yang ditemukan...
+                <p class="text-muted fw-light mb-4">
+                  Harap masukkan informasi lengkap mengenai sejarah objek yang
+                  ditemukan
                 </p>
                 <div class="mb-3">
                   <div class="col-lg-12 col-sm-12 col-md-12">
@@ -1657,130 +1480,112 @@
                       class="form-control"
                       id="deskripsi-sejarah"
                       rows="3"
-                      placeholder="Berikan deskripsi detail mengenai sejarah objek yang dilaporkan"
+                      placeholder="Silakan masukkan deskripsi lengkap mengenai sejarah objek yang dilaporkan"
                     ></textarea>
                   </div>
                 </div>
-                <div class="mb-3">
-                  <label for="lokasi-alamat" class="form-label fw-normal"
-                    >Alamat</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="identitas-nama"
-                    placeholder="Masukkan alamat lokasi penemuan"
-                  />
+
+                <div class="row mb-3">
+                  <div class="col-sm-12 col-md-6 col-lg-6">
+                    <label class="form-label fw-normal"
+                      >Batas Zonasi Utara</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Batas Zonasi Utara"
+                    />
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-6">
+                    <label class="form-label fw-normal"
+                      >Batas Zonasi Selatan</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Batas Zonasi Selatan"
+                    />
+                  </div>
                 </div>
                 <div class="row mb-3">
-                  <div class="col-lg-4 col-sm-12 col-md-4">
-                    <label for="lokasi-longitude" class="form-label fw-normal"
-                      >Latitude</label
+                  <div class="col-sm-12 col-md-6 col-lg-6">
+                    <label class="form-label fw-normal"
+                      >Batas Zonasi Timur</label
                     >
                     <input
                       type="text"
-                      class="form-control text muted"
-                      id="lokasi-"
-                      placeholder="(contoh: -0.4500)"
+                      class="form-control"
+                      placeholder="Batas Zonasi Timur"
                     />
                   </div>
-                  <div class="col-lg-4 col-sm-12 col-md-4">
-                    <label for="lokasi-longitude" class="form-label fw-normal"
-                      >Longitude</label
+                  <div class="col-sm-12 col-md-6 col-lg-6">
+                    <label class="form-label fw-normal"
+                      >Batas Zonasi Barat</label
                     >
                     <input
                       type="text"
-                      class="form-control text muted"
-                      id="lokasi-"
-                      placeholder="(contoh: 101.4500)"
-                    />
-                  </div>
-                  <div class="col-lg-4 col-sm-12 col-md-4">
-                    <label for="lokasi-longitude" class="form-label fw-normal"
-                      >Ketinggian (MDPL)</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control text muted"
-                      id="lokasi-"
-                      placeholder="(contoh: 200)"
+                      class="form-control"
+                      placeholder="Batas Zonasi Barat"
                     />
                   </div>
                 </div>
                 <div class="row mb-3 border-top">
                   <p class="mt-3 mb-0 fw-bold">Dokumen/Media Pendukung</p>
-                  <p class="text-muted">
-                    Masukkan dokumen/media yang berkaitan dengan sejarah
-                    tersebut
+                  <p class="text-muted fw-light">
+                    Unggah dokumen atau media terkait sejarah untuk mendukung
+                    laporan Anda.
                   </p>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="identitas-ktp" class="form-label fw-normal"
-                      >Foto/Gambar</label
-                    >
+                    <label class="form-label fw-normal">Foto/Gambar</label>
                     <input
                       type="file"
                       class="form-control"
-                      id="identitas-ktp"
                       placeholder="Unggah foto/gambar"
                     />
+                    <div class="form-text">Format foto (pdf, png, jpg)</div>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="identitas-ktp" class="form-label fw-normal"
-                      >Tautan Video</label
-                    >
+                    <label class="form-label fw-normal">Tautan Video</label>
                     <input
                       type="file"
                       class="form-control"
-                      id="identitas-ktp"
                       placeholder="Unggah video"
                     />
                   </div>
                 </div>
                 <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="identitas-ktp" class="form-label fw-normal"
-                      >Dokumen Kajian</label
-                    >
+                    <label class="form-label fw-normal">Dokumen Kajian</label>
                     <input
                       type="file"
                       class="form-control"
-                      id="identitas-ktp"
-                      placeholder="Unggah Dokumen Kajian (format .pdf)"
+                      placeholder="Unggah Dokumen Kajian (format .PDF, DOC/DOCX)"
                     />
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="identitas-ktp" class="form-label fw-normal"
-                      >Dokumen Lainnya</label
-                    >
+                    <label class="form-label fw-normal">Dokumen Lainnya</label>
                     <input
                       type="file"
                       class="form-control"
-                      id="identitas-ktp"
-                      placeholder="Unggah dokumen lainnya (format .pdf)"
+                      placeholder="Unggah dokumen lainnya (format .PDF, DOC/DOCX)"
                     />
                   </div>
                 </div>
                 <div class="row mb-5">
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="identitas-ktp" class="form-label fw-normal"
-                      >Berkas Vektor</label
-                    >
+                    <label class="form-label fw-normal">Peta Vektor</label>
                     <input
                       type="file"
                       class="form-control"
-                      id="identitas-ktp"
-                      placeholder="Unggah berkas vektor"
+                      placeholder="Unggah peta vektor"
                     />
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
-                    <label for="identitas-ktp" class="form-label fw-normal"
-                      >Berkas Raster</label
-                    >
+                    <label class="form-label fw-normal">Peta Raster</label>
                     <input
                       type="file"
                       class="form-control"
-                      id="identitas-ktp"
-                      placeholder="Unggah berkas raster"
+                      placeholder="Unggah peta raster"
                     />
                   </div>
                 </div>
@@ -1792,7 +1597,7 @@
                     onclick="prevStep()"
                     disabled
                   >
-                    Back
+                    Kembali
                   </button>
                   <button
                     id="btn-submit"
@@ -1812,9 +1617,10 @@
                 aria-labelledby="form-konfirmasi"
               >
                 <h4>Terima Kasih!</h4>
-                <p class="text-muted">
-                  Pengisian form Anda berhasil dan akan segera diproses. Anda
-                  bisa gunakan token berikut untuk melihat progress laporan anda
+                <p class="text-muted fw-light">
+                  Pengisian formulir Anda berhasil dan akan segera diproses.
+                  Silakan gunakan token berikut untuk memantau progres laporan
+                  Anda
                 </p>
                 <div class="mb-3">
                   <label for="token" class="form-label fw-normal"
@@ -1823,7 +1629,7 @@
                   <div class="input-group">
                     <input
                       type="text"
-                      class="form-control"
+                      class="form-control bg-soft-primary"
                       id="token"
                       value="TOKEN_GENERATED"
                       readonly
@@ -1841,7 +1647,7 @@
                 <div class="d-flex justify-content-end mt-3">
                   <button
                     id="btn-finish"
-                    class="btn btn-primary"
+                    class="btn btn-primary mt-4"
                     type="button"
                     onclick="window.location.href='cek-token.html';"
                   >
@@ -2504,81 +2310,7 @@
     <script src="js/plugins.init.js"></script>
     <!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
     <script src="js/app.js"></script>
-    <!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
     <script>
-      // const steps = document.querySelectorAll(".list-group-item");
-      // let currentStep = 0; // Inisialisasi currentStep pada langkah pertama
-
-      // // Fungsi untuk memperbarui tombol Back, Next, dan Submit
-      // function updateButtonState() {
-      //   // Jika di langkah pertama, disable tombol Back
-      //   document.getElementById("btn-back").disabled = currentStep === 0;
-
-      //   // Jika di langkah terakhir, sembunyikan Next dan tampilkan Submit
-      //   if (currentStep === steps.length - 1) {
-      //     document.getElementById("btn-next").classList.add("d-none");
-      //     document.getElementById("btn-submit").classList.remove("d-none");
-      //   } else {
-      //     // Jika bukan langkah terakhir, tampilkan Next dan sembunyikan Submit
-      //     document.getElementById("btn-next").classList.remove("d-none");
-      //     document.getElementById("btn-submit").classList.add("d-none");
-      //   }
-      //   console.log("Current step:", currentStep);
-      // }
-
-      // // Fungsi untuk maju ke langkah berikutnya
-      // function nextStep() {
-      //   if (currentStep < steps.length - 1) {
-      //     // Nonaktifkan tab saat ini
-      //     steps[currentStep].classList.remove("active");
-      //     const currentTab = steps[currentStep].getAttribute("href");
-      //     document.querySelector(currentTab).classList.remove("show", "active");
-
-      //     // Pindah ke langkah berikutnya
-      //     currentStep++;
-
-      //     // Aktifkan tab berikutnya
-      //     steps[currentStep].classList.add("active");
-      //     const nextTab = steps[currentStep].getAttribute("href");
-      //     document.querySelector(nextTab).classList.add("show", "active");
-
-      //     // Update tombol setelah pindah langkah
-      //     updateButtonState();
-      //   }
-      // }
-
-      // // Fungsi untuk mundur ke langkah sebelumnya
-      // function previousStep() {
-      //   if (currentStep > 0) {
-      //     // Nonaktifkan tab saat ini
-      //     steps[currentStep].classList.remove("active");
-      //     const currentTab = steps[currentStep].getAttribute("href");
-      //     document.querySelector(currentTab).classList.remove("show", "active");
-
-      //     // Pindah ke langkah sebelumnya
-      //     currentStep--;
-
-      //     // Aktifkan tab sebelumnya
-      //     steps[currentStep].classList.add("active");
-      //     const prevTab = steps[currentStep].getAttribute("href");
-      //     document.querySelector(prevTab).classList.add("show", "active");
-
-      //     // Update tombol setelah pindah langkah
-      //     updateButtonState();
-      //   }
-      // }
-
-      // // Tambahkan event listener untuk tombol Back
-      // document
-      //   .getElementById("btn-back")
-      //   .addEventListener("click", previousStep);
-
-      // // Tambahkan event listener untuk tombol Next
-      // document.getElementById("btn-next").addEventListener("click", nextStep);
-
-      // // Panggil updateButtonState untuk memastikan tombol diatur dengan benar pada awal
-      // updateButtonState();
-
       let currentStep = 1;
       let isLoggedIn = false;
 
@@ -2597,26 +2329,22 @@
       }
 
       function moveToStep(step) {
-        // Sembunyikan semua form
         document.querySelectorAll(".tab-pane").forEach((form) => {
           form.classList.remove("show", "active");
           form.classList.add("d-none");
         });
 
-        // Tampilkan form sesuai step
         const targetForm = document.getElementById(`form-${step}`);
         if (targetForm) {
           targetForm.classList.remove("d-none");
           targetForm.classList.add("show", "active");
         }
 
-        // Update progress bar
         document.querySelectorAll(".list-group-item").forEach((item) => {
           item.classList.remove("active");
         });
         document.getElementById(`step-${step}`).classList.add("active");
 
-        // Update tombol Back
         document.querySelectorAll(".btn-light").forEach((btn) => {
           btn.disabled = step === 1 || step === 3;
         });
@@ -2643,8 +2371,8 @@
       function disableProgressBarSteps(fromStep, toStep) {
         for (let i = fromStep; i <= toStep; i++) {
           const step = document.getElementById(`step-${i}`);
-          step.classList.add("disabled"); // Tambahkan class disabled
-          step.onclick = null; // Nonaktifkan onclick untuk progress bar
+          step.classList.add("disabled");
+          step.onclick = null;
         }
       }
 
@@ -2653,20 +2381,15 @@
       }
 
       function finish() {
-        // Reset form atau lakukan tindakan setelah selesai
         alert("Terima kasih telah mengisi form!");
-        // Anda bisa menambahkan logika lain seperti mereset form atau mengarahkan ke halaman lain
       }
 
       function copyToken() {
-        // Ambil elemen input
         const tokenInput = document.getElementById("token");
 
-        // Pilih teks di dalam input
         tokenInput.select();
-        tokenInput.setSelectionRange(0, 99999); // Untuk mobile devices
+        tokenInput.setSelectionRange(0, 99999);
 
-        // Salin teks ke clipboard
         navigator.clipboard
           .writeText(tokenInput.value)
           .then(() => {
