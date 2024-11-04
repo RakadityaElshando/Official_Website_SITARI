@@ -59,6 +59,9 @@
     ></script>
     <!--  -->
 
+    <!-- AJAX API -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <style>
       .progress-steps {
         width: 40px;
@@ -361,7 +364,7 @@
           </div>
           <!-- End Progress bar -->
           <div class="col-sm-12 col-md-8 col-lg-8 mt-3">
-            <!-- Start Data Identitas -->
+            <!-- Start Data Identitas - Database: Pengirim -->
             <div class="tab-content" id="nav-tabContent">
               <div
                 class="tab-pane fade show active"
@@ -378,6 +381,7 @@
                   <input
                     type="text"
                     class="form-control"
+                    name="nama"
                     placeholder="Masukkan nama lengkap Anda"
                   />
                 </div>
@@ -386,22 +390,35 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="identitas-nik"
+                    name="nik"
                     placeholder="Masukkan nomor NIK Anda"
                   />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-normal">Nomor HP</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="no_hp"
+                    placeholder="Masukkan nomor HP Anda"
+                  />
+                  <div class="form-text">
+                    Pastikan nomor yang diinputkan aktif
+                  </div>
                 </div>
                 <div class="mb-3">
                   <label class="form-label fw-normal">Email</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="identitas-email"
+                    name="email"
                     placeholder="Masukkan email yang valid"
                   />
                   <div id="emailHelp" class="form-text">
                     contoh: user@gmail.com
                   </div>
                 </div>
+                <!-- Belum ada pada database -->
                 <div class="mb-4">
                   <label for="identitas-ktp" class="form-label fw-normal"
                     >Password</label
@@ -409,14 +426,15 @@
                   <input
                     type="password"
                     class="form-control"
-                    id="identitas-ktp"
+                    name="password"
                     placeholder="Masukkan password Anda"
                   />
                   <div id="passwordHelp" class="form-text">
                     (minimal 8 karakter)
                   </div>
                 </div>
-                <div class="mb-5">
+                <!-- Tidak Digunakan -->
+                <!-- <div class="mb-5">
                   <label for="identitas-ktp" class="form-label fw-normal"
                     >Foto KTP</label
                   >
@@ -427,7 +445,7 @@
                     placeholder="Unggah Foto KTP Anda"
                   />
                   <div class="form-text">Format JPG, PNG, maksimal 2MB</div>
-                </div>
+                </div> -->
                 <div class="d-flex justify-content-end mt-3">
                   <button
                     id="btn-back"
@@ -450,7 +468,7 @@
               </div>
               <!-- End Data Identitas -->
 
-              <!-- Start Data Temuan -->
+              <!-- Start Data Temuan - Database: temuan-->
               <div
                 class="tab-pane fade"
                 id="form-2"
@@ -463,11 +481,11 @@
                   laporkan
                 </p>
                 <div class="mb-3">
-                  <label class="form-label fw-normal">Judul Laporan</label>
+                  <label class="form-label fw-normal">Nama Laporan</label>
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="Masukkan judul laporan Anda di sini."
+                    placeholder="Masukkan nama laporan Anda di sini."
                   />
                 </div>
                 <div class="mb-3">
@@ -489,7 +507,7 @@
                     <input
                       class="form-check-input"
                       type="radio"
-                      name="flexRadioDefault"
+                      name="jenis"
                       id="flexRadioDefault1"
                     />
                     <label
@@ -535,20 +553,8 @@
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kabupaten/Kota</label>
-                    <select class="form-select text-muted">
+                    <select id="kabupatenKota" class="form-select text-muted">
                       <option selected>Pilih Kabupaten/Kota</option>
-                      <option value="1">Pekanbaru</option>
-                      <option value="2">Kabupaten Kampar</option>
-                      <option value="3">Kabupaten Rokan Hulu</option>
-                      <option value="4">Kabupaten Rokan Hilir</option>
-                      <option value="5">Kabupaten Siak</option>
-                      <option value="6">Kabupaten Indragiri Hulu</option>
-                      <option value="7">Kabupaten Indragiri Hilir</option>
-                      <option value="8">Kabupaten Kuantan Singingi</option>
-                      <option value="9">Kabupaten Pelalawan</option>
-                      <option value="10">Kabupaten Bengkalis</option>
-                      <option value="11">Kabupaten Meranti</option>
-                      <option value="12">Kabupaten Dumai</option>
                     </select>
                     <div class="form-text">
                       Masukkan lokasi di mana objek tersebut ditemukan
@@ -577,7 +583,7 @@
               </div>
               <!-- End Data Temuan -->
 
-              <!-- Start Data Struktur -->
+              <!-- Start Data Struktur - Database: data_struktur-->
               <div
                 class="tab-pane fade show active d-none"
                 id="form-3"
@@ -595,6 +601,7 @@
                   <input
                     type="text"
                     class="form-control"
+                    name="nama_odcb"
                     placeholder="Masukkan nama ODCB/CB"
                   />
                   <div class="form-text">
@@ -606,13 +613,14 @@
                   <input
                     type="text"
                     class="form-control"
+                    name="fungsi"
                     placeholder="Masukkan fungsi objek"
                   />
                 </div>
                 <div class="row mb-5">
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Sifat Objek</label>
-                    <select class="form-select text-muted">
+                    <select class="form-select text-muted" name="sifat">
                       <option selected>Pilih Sifat</option>
                       <option value="1">Sakral</option>
                       <option value="2">Profan</option>
@@ -621,7 +629,7 @@
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Periode Objek</label>
-                    <select class="form-select text-muted">
+                    <select class="form-select text-muted" name="periode">
                       <option selected>Pilih periode</option>
                       <option value="1">Prasejarah</option>
                       <option value="2">Klasik</option>
@@ -653,7 +661,7 @@
               </div>
               <!-- End Data Struktur -->
 
-              <!-- Start Data Lokasi -->
+              <!-- Start Data Lokasi - Database: lokasi_penemuan-->
               <div
                 class="tab-pane fade d-none"
                 id="form-4"
@@ -669,14 +677,14 @@
                 <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Provinsi</label>
-                    <select class="form-select text-muted">
+                    <select class="form-select text-muted" name="provinsi">
                       <option selected>Pilih Provinsi</option>
                       <option value="1">Riau</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kabupaten/Kota</label>
-                    <select class="form-select text-muted">
+                    <select class="form-select text-muted" name="kota">
                       <option selected>Pilih Kabupaten/Kota</option>
                       <option value="1">Pekanbaru</option>
                       <option value="2">Kabupaten Kampar</option>
@@ -696,7 +704,7 @@
                 <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kecamatan</label>
-                    <select class="form-select text-muted">
+                    <select class="form-select text-muted" name="kecamatan">
                       <option selected>Pilih Kecamatan</option>
                       <option value="1">Kecamatan Tenayan Raya</option>
                       <option value="2">Kecamatan Marpoyan Damai</option>
@@ -712,7 +720,7 @@
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kelurahan</label>
-                    <select class="form-select text-muted">
+                    <select class="form-select text-muted" name="kelurahan">
                       <option selected>Pilih Kelurahan</option>
                       <option value="1">Kelurahan Sempurna</option>
                       <option value="2">Kelurahan Sidomulyo</option>
@@ -732,6 +740,7 @@
                   <input
                     type="text"
                     class="form-control"
+                    name="alamat"
                     placeholder="Masukkan alamat lokasi penemuan objek"
                   />
                 </div>
@@ -746,6 +755,7 @@
                       <input
                         type="text"
                         class="form-control text muted"
+                        name="latitude"
                         placeholder="(contoh: -0.4500)"
                       />
                     </div>
@@ -754,6 +764,7 @@
                       <input
                         type="text"
                         class="form-control text muted"
+                        name="longitude"
                         placeholder="(contoh: 101.4500)"
                       />
                     </div>
@@ -764,6 +775,7 @@
                       <input
                         type="text"
                         class="form-control text muted"
+                        name="ketinggian"
                         placeholder="(contoh: 200)"
                       />
                     </div>
@@ -797,7 +809,7 @@
               </div>
               <!-- End Data Lokasi -->
 
-              <!-- Start Data Fisik -->
+              <!-- Start Data Fisik - Database: data_fisik -->
               <div
                 class="tab-pane fade d-none"
                 id="form-5"
@@ -814,21 +826,24 @@
                   <input
                     type="text"
                     class="form-control"
+                    name="bahan"
                     placeholder="Masukkan bahan bangunan"
                   />
                 </div>
+                <!-- Belum ada di database -->
                 <div class="row mb-3">
                   <div class="col-lg-4 col-sm-12 col-md-4">
                     <label class="form-label fw-normal">Satuan Waktu</label>
-                    <select class="form-select text-muted">
+                    <select class="form-select text-muted" name="satuan">
                       <option selected>Pilih Periode</option>
                       <option value="1">Abad</option>
                       <option value="2">Tahun</option>
                     </select>
                   </div>
+                  <!-- belum ada di database -->
                   <div class="col-lg-4 col-sm-12 col-md-4">
                     <label class="form-label fw-normal">Periode Waktu</label>
-                    <select class="form-select text-muted">
+                    <select class="form-select text-muted" name="periode">
                       <option selected>Pilih Periode</option>
                       <option value="1">Sebelum Masehi</option>
                       <option value="2">Sesudah Masehi</option>
@@ -839,17 +854,18 @@
                     <input
                       type="text"
                       class="form-control"
+                      name="waktu_pembuatan"
                       placeholder="Masukkan waktu"
                     />
                   </div>
                 </div>
-
                 <div class="row mb-3">
                   <div class="col-lg-4 col-sm-12 col-md-4">
                     <label class="form-label fw-normal">Tanda Bangunan</label>
                     <input
                       type="text"
                       class="form-control"
+                      name="tanda"
                       placeholder="Masukkan tanda"
                     />
                   </div>
@@ -858,12 +874,13 @@
                     <input
                       type="text"
                       class="form-control"
+                      name="ornamen"
                       placeholder="Masukkan ornamen"
                     />
                   </div>
                   <div class="col-lg-4 col-sm-12 col-md-4">
                     <label class="form-label fw-normal">Warna Bangunan</label>
-                    <select class="form-select text-muted">
+                    <select class="form-select text-muted" name="warna">
                       <option selected>Pilih Warna</option>
                       <option value="1">Merah</option>
                       <option value="2">Hijau</option>
@@ -901,7 +918,7 @@
               </div>
               <!-- End Data Fisik -->
 
-              <!-- Start Data Dimensi -->
+              <!-- Start Data Dimensi - database: data_dimensi -->
               <div
                 class="tab-pane fade d-none"
                 id="form-6"
@@ -924,9 +941,10 @@
                       <input
                         type="text"
                         class="form-control flex-grow-1"
+                        name="panjang"
                         placeholder="Panjang"
-                        aria-label="Ukuran"
                       />
+                      <!-- Belum ada di database -->
                       <select class="form-select w-auto ms-2 text-muted">
                         <option value="m">m</option>
                         <option value="m2">m²</option>
@@ -942,10 +960,10 @@
                       <input
                         type="text"
                         class="form-control flex-grow-1"
+                        name="lebar"
                         placeholder="Lebar"
-                        id="dimensi-lebar"
-                        aria-label="Ukuran"
                       />
+                      <!-- Belum ada di database -->
                       <select class="form-select w-auto ms-2 text-muted">
                         <option value="m">m</option>
                         <option value="m2">m²</option>
@@ -963,10 +981,10 @@
                       <input
                         type="text"
                         class="form-control flex-grow-1"
+                        name="tinggi"
                         placeholder="Tinggi"
-                        id="dimensi-tinggi"
-                        aria-label="Ukuran"
                       />
+                      <!-- Belum ada di database -->
                       <select class="form-select w-auto ms-2 text-muted">
                         <option value="m">m</option>
                         <option value="m2">m²</option>
@@ -986,9 +1004,9 @@
                         type="text"
                         class="form-control flex-grow-1"
                         placeholder="Luas Struktur"
-                        id="dimensi-luas"
-                        aria-label="Ukuran"
+                        name="luas_struktur"
                       />
+                      <!-- Belum ada di database -->
                       <select class="form-select w-auto ms-2 text-muted">
                         <option value="m">m</option>
                         <option value="m2">m²</option>
@@ -1006,9 +1024,10 @@
                       <input
                         type="text"
                         class="form-control flex-grow-1"
+                        name="luas_tanah"
                         placeholder="Luas Tanah"
-                        aria-label="Ukuran"
                       />
+                      <!-- Belum ada di database -->
                       <select class="form-select w-auto ms-2 text-muted">
                         <option value="m">m</option>
                         <option value="m2">m²</option>
@@ -1027,9 +1046,10 @@
                       <input
                         type="text"
                         class="form-control flex-grow-1"
+                        name="dia_badan"
                         placeholder="Diameter Badan"
-                        aria-label="Ukuran"
                       />
+                      <!-- Belum ada di database -->
                       <select class="form-select w-auto ms-2 text-muted">
                         <option value="m">m</option>
                         <option value="m2">m²</option>
@@ -1047,9 +1067,10 @@
                       <input
                         type="text"
                         class="form-control flex-grow-1"
+                        name="dia_kaki"
                         placeholder="Diameter Kaki"
-                        aria-label="Ukuran"
                       />
+                      <!-- Belum ada di database -->
                       <select class="form-select w-auto ms-2 text-muted">
                         <option value="m">m</option>
                         <option value="m2">m²</option>
@@ -1081,7 +1102,7 @@
               </div>
               <!-- End Data Dimensi -->
 
-              <!-- Start Data Kondisi -->
+              <!-- Start Data Kondisi - database: kondisi_terkini-->
               <div
                 class="tab-pane fade d-none"
                 id="form-7"
@@ -1096,7 +1117,7 @@
                 <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Keutuhan</label>
-                    <select class="form-select text-muted">
+                    <select class="form-select text-muted" name="keutuhan">
                       <option selected>Pilih Kondisi</option>
                       <option value="1">Utuh</option>
                       <option value="2">Tinggal Sebagian</option>
@@ -1105,7 +1126,7 @@
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Pemeliharaan</label>
-                    <select class="form-select text-muted">
+                    <select class="form-select text-muted" name="pemeliharaan">
                       <option selected>Pilih Pemeliharaan</option>
                       <option value="1">Terpelihara</option>
                       <option value="2">Tidak Terpelihara</option>
@@ -1114,12 +1135,13 @@
                 </div>
                 <div class="mb-3">
                   <label class="form-label fw-normal">Pemugaran</label>
-                  <select class="form-select text-muted">
+                  <select class="form-select text-muted" name="pemugaran">
                     <option selected>Pilih Pemugaran</option>
                     <option value="1">Pernah</option>
                     <option value="2">Tidak Pernah</option>
                   </select>
                 </div>
+                <!-- Belum ada di database -->
                 <div class="mb-3">
                   <label
                     for="exampleFormControlTextarea1"
@@ -1137,12 +1159,13 @@
                 </div>
                 <div class="mb-3">
                   <label class="form-label fw-normal">Adaptasi</label>
-                  <select class="form-select text-muted">
+                  <select class="form-select text-muted" name="adaptasi">
                     <option selected>Pilih Adaptasi</option>
                     <option value="1">Ada</option>
                     <option value="2">Tidak Ada</option>
                   </select>
                 </div>
+                <!-- Belum ada di database -->
                 <div class="mb-3">
                   <label
                     for="exampleFormControlTextarea1"
@@ -1181,7 +1204,7 @@
               </div>
               <!-- End Data Kondisi -->
 
-              <!-- Start Data Kepemilikan -->
+              <!-- Start Data Kepemilikan - database: data_kepemilikan-->
               <div
                 class="tab-pane fade d-none"
                 id="form-8"
@@ -1198,6 +1221,7 @@
                   <input
                     type="text"
                     class="form-control"
+                    name="nama_pemilik"
                     placeholder="Masukkan nama lengkap pemilik objek"
                   />
                 </div>
@@ -1206,7 +1230,10 @@
                     <label class="form-label fw-normal"
                       >Status Kepemilikan</label
                     >
-                    <select class="form-select text-muted">
+                    <select
+                      class="form-select text-muted"
+                      name="status_kepemilikan"
+                    >
                       <option selected>Pilih Status</option>
                       <option value="1">Pemerintah</option>
                       <option value="2">Non-Pemerintah</option>
@@ -1214,7 +1241,10 @@
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Status Perolehan</label>
-                    <select class="form-select text-muted">
+                    <select
+                      class="form-select text-muted"
+                      name="status_perolehan"
+                    >
                       <option selected>Pilih Status</option>
                       <option value="1">Hadiah</option>
                       <option value="2">Hibah</option>
@@ -1229,14 +1259,13 @@
                   </p>
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Provinsi</label>
-                    <select class="form-select text-muted">
-                      <option selected>Pilih Provinsi</option>
-                      <option value="1">Riau</option>
+                    <select class="form-select text-muted" name="provinsi">
+                      <option selected value="1">Riau</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kabupaten/Kota</label>
-                    <select class="form-select text-muted">
+                    <select class="form-select text-muted" name="kota">
                       <option selected>Pilih Kabupaten</option>
                       <option value="1">Pekanbaru</option>
                       <option value="2">Kabupaten Kampar</option>
@@ -1256,7 +1285,7 @@
                 <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kecamatan</label>
-                    <select class="form-select text-muted">
+                    <select class="form-select text-muted" name="kecamatan">
                       <option selected>Pilih Kecamatan</option>
                       <option value="1">Kecamatan Tenayan Raya</option>
                       <option value="2">Kecamatan Marpoyan Damai</option>
@@ -1272,7 +1301,7 @@
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kelurahan</label>
-                    <select class="form-select text-muted">
+                    <select class="form-select text-muted" name="kelurahan">
                       <option selected>Pilih Kelurahan</option>
                       <option value="1">Kelurahan Sempurna</option>
                       <option value="2">Kelurahan Sidomulyo</option>
@@ -1292,6 +1321,7 @@
                   <input
                     type="text"
                     class="form-control"
+                    name="alamat"
                     placeholder="Masukkan alamat lengkap pemilik"
                   />
                 </div>
@@ -1306,6 +1336,7 @@
                       <input
                         type="text"
                         class="form-control text muted"
+                        name="latitude"
                         placeholder="(contoh: -0.4500)"
                       />
                     </div>
@@ -1314,9 +1345,11 @@
                       <input
                         type="text"
                         class="form-control text muted"
+                        name="longitude"
                         placeholder="(contoh: 101.4500)"
                       />
                     </div>
+                    <!-- belum ada database -->
                     <div class="col-lg-4 col-sm-12 col-md-4">
                       <label class="form-label fw-normal"
                         >Ketinggian (MDPL)</label
@@ -1324,6 +1357,7 @@
                       <input
                         type="text"
                         class="form-control text muted"
+                        name="ketinggian"
                         placeholder="(contoh: 200)"
                       />
                     </div>
@@ -1356,7 +1390,7 @@
               </div>
               <!-- End Data Kepemilikan -->
 
-              <!-- Start Data Pengelola -->
+              <!-- Start Data Pengelola - database: data_pengelolaan -->
               <div
                 class="tab-pane fade d-none"
                 id="form-9"
@@ -1373,22 +1407,30 @@
                   <input
                     type="text"
                     class="form-control"
+                    name="nama_pengelola"
                     placeholder="Masukkan nama lengkap pengelola objek"
                   />
                 </div>
                 <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Status Pengelola</label>
-                    <select class="form-select text-muted">
+                    <select
+                      class="form-select text-muted"
+                      name="status_pengelola"
+                    >
                       <option selected>Pilih Status</option>
                       <option value="1">Sendiri</option>
                       <option value="2">Pemerintah</option>
                       <option value="3">Non-Pemerintah</option>
                     </select>
                   </div>
+                  <!-- belum ada database -->
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Status Perolehan</label>
-                    <select class="form-select text-muted">
+                    <select
+                      class="form-select text-muted"
+                      name="status_perolehan"
+                    >
                       <option selected>Pilih Status</option>
                       <option value="1">Hadiah</option>
                       <option value="2">Hadiah</option>
@@ -1403,14 +1445,13 @@
                   </p>
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Provinsi</label>
-                    <select class="form-select text-muted">
-                      <option selected>Pilih Provinsi</option>
-                      <option value="1">Riau</option>
+                    <select class="form-select text-muted" name="provinsi">
+                      <option selected value="1">Riau</option>
                     </select>
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kabupaten/Kota</label>
-                    <select class="form-select text-muted">
+                    <select class="form-select text-muted" name="kota">
                       <option selected>Pilih Kabupaten</option>
                       <option value="1">Pekanbaru</option>
                       <option value="2">Kabupaten Kampar</option>
@@ -1430,7 +1471,7 @@
                 <div class="row mb-3">
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kecamatan</label>
-                    <select class="form-select text-muted">
+                    <select class="form-select text-muted" name="kecamatan">
                       <option selected>Pilih Kecamatan</option>
                       <option value="1">Kecamatan Tenayan Raya</option>
                       <option value="2">Kecamatan Marpoyan Damai</option>
@@ -1446,7 +1487,7 @@
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kelurahan</label>
-                    <select class="form-select text-muted">
+                    <select class="form-select text-muted" name="kelurahan">
                       <option selected>Pilih Kelurahan</option>
                       <option value="1">Kelurahan Sempurna</option>
                       <option value="2">Kelurahan Sidomulyo</option>
@@ -1466,6 +1507,7 @@
                   <input
                     type="text"
                     class="form-control"
+                    name="alamat"
                     placeholder="Masukkan alamat lengkap pengelola"
                   />
                 </div>
@@ -1480,6 +1522,7 @@
                       <input
                         type="text"
                         class="form-control text muted"
+                        name="latitude"
                         placeholder="(contoh: -0.4500)"
                       />
                     </div>
@@ -1488,9 +1531,11 @@
                       <input
                         type="text"
                         class="form-control text muted"
+                        name="longitude"
                         placeholder="(contoh: 101.4500)"
                       />
                     </div>
+                    <!-- belum ada database -->
                     <div class="col-lg-4 col-sm-12 col-md-4">
                       <label class="form-label fw-normal"
                         >Ketinggian (MDPL)</label
@@ -1498,6 +1543,7 @@
                       <input
                         type="text"
                         class="form-control text muted"
+                        name="ketinggian"
                         placeholder="(contoh: 200)"
                       />
                     </div>
@@ -1530,7 +1576,7 @@
               </div>
               <!-- End Data Kepemilikan -->
 
-              <!-- Start Data Sejarah -->
+              <!-- Start Data Sejarah - database: data_sejarah -->
               <div
                 class="tab-pane fade d-none"
                 id="form-10"
@@ -1551,7 +1597,7 @@
                     >
                     <textarea
                       class="form-control"
-                      id="deskripsi-sejarah"
+                      name="deskripsi"
                       rows="3"
                       placeholder="Silakan masukkan deskripsi lengkap mengenai sejarah objek yang dilaporkan"
                     ></textarea>
@@ -1566,6 +1612,7 @@
                     <input
                       type="text"
                       class="form-control"
+                      name="batas_utara"
                       placeholder="Batas Zonasi Utara"
                     />
                   </div>
@@ -1576,6 +1623,7 @@
                     <input
                       type="text"
                       class="form-control"
+                      name="batas_selatan"
                       placeholder="Batas Zonasi Selatan"
                     />
                   </div>
@@ -1588,6 +1636,7 @@
                     <input
                       type="text"
                       class="form-control"
+                      name="batas_timur"
                       placeholder="Batas Zonasi Timur"
                     />
                   </div>
@@ -1598,6 +1647,7 @@
                     <input
                       type="text"
                       class="form-control"
+                      name="batas_barat"
                       placeholder="Batas Zonasi Barat"
                     />
                   </div>
@@ -1613,6 +1663,7 @@
                     <input
                       type="file"
                       class="form-control"
+                      name="foto"
                       placeholder="Unggah foto/gambar"
                     />
                     <div class="form-text">Format foto (pdf, png, jpg)</div>
@@ -1622,6 +1673,7 @@
                     <input
                       type="file"
                       class="form-control"
+                      name="video"
                       placeholder="Unggah video"
                     />
                   </div>
@@ -1632,6 +1684,7 @@
                     <input
                       type="file"
                       class="form-control"
+                      name="dokumen_kajian"
                       placeholder="Unggah Dokumen Kajian (format .PDF, DOC/DOCX)"
                     />
                   </div>
@@ -1640,6 +1693,7 @@
                     <input
                       type="file"
                       class="form-control"
+                      name="dokumen_lainnya"
                       placeholder="Unggah dokumen lainnya (format .PDF, DOC/DOCX)"
                     />
                   </div>
@@ -1650,6 +1704,7 @@
                     <input
                       type="file"
                       class="form-control"
+                      name="berkas_vektor"
                       placeholder="Unggah peta vektor"
                     />
                   </div>
@@ -1658,6 +1713,7 @@
                     <input
                       type="file"
                       class="form-control"
+                      name="berkas_raster"
                       placeholder="Unggah peta raster"
                     />
                   </div>
@@ -2383,6 +2439,37 @@
     <script src="js/plugins.init.js"></script>
     <!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
     <script src="js/app.js"></script>
+
+    <script defer>
+      // Ajax API
+      $(document).ready(function () {
+        const provinsiRiauId = 14;
+        const url = `https://emsifa.github.io/api-wilayah-indonesia/api/regencies/${provinsiRiauId}.json`;
+
+        $.ajax({
+          url: url,
+          method: "GET",
+          success: function (data) {
+            console.log("Data berhasil didapatkan:", data);
+            // Periksa apakah data kabupaten/kota tersedia
+            if (Array.isArray(data) && data.length > 0) {
+              // Looping data untuk menambahkan option ke dropdown
+              data.forEach((kabupaten) => {
+                $("#kabupatenKota").append(
+                  `<option value="${kabupaten.id}">${kabupaten.name}</option>`
+                );
+              });
+            } else {
+              $("#kabupatenKota").append("<option>Tidak ada data</option>");
+            }
+          },
+          error: function (xhr, status, error) {
+            console.error("Terjadi kesalahan:", error, xhr.responseText);
+          },
+        });
+      });
+    </script>
+
     <script>
       let currentStep = 1;
       let isLoggedIn = false;
@@ -2419,7 +2506,8 @@
         document.getElementById(`step-${step}`).classList.add("active");
 
         document.querySelectorAll(".btn-light").forEach((btn) => {
-          btn.disabled = step === 1 || step === 3;
+          btn.disabled = step === 1;
+          // btn.disabled = step === 1 || step === 3;
         });
         currentStep = step;
       }
@@ -2431,23 +2519,23 @@
       }
 
       function switchToLoggedInState() {
-        document.getElementById("form-1").classList.add("d-none");
-        document.getElementById("form-2").classList.add("d-none");
+        // document.getElementById("form-1").classList.add("d-none");
+        // document.getElementById("form-2").classList.add("d-none");
 
         document.getElementById("hidden form").classList.remove("d-none");
         document.getElementById("form-3").classList.remove("d-none");
 
-        disableProgressBarSteps(1, 2);
+        // disableProgressBarSteps(1, 2);
         nextStep("form-3");
       }
 
-      function disableProgressBarSteps(fromStep, toStep) {
-        for (let i = fromStep; i <= toStep; i++) {
-          const step = document.getElementById(`step-${i}`);
-          step.classList.add("disabled");
-          step.onclick = null;
-        }
-      }
+      // function disableProgressBarSteps(fromStep, toStep) {
+      //   for (let i = fromStep; i <= toStep; i++) {
+      //     const step = document.getElementById(`step-${i}`);
+      //     step.classList.add("disabled");
+      //     step.onclick = null;
+      //   }
+      // }
 
       function submitForm() {
         moveToStep(11);
