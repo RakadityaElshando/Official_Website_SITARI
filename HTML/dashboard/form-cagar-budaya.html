@@ -1,0 +1,2298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Landrick - Blank Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Premium Bootstrap 5 Admin Dashboard Template"
+    />
+    <meta
+      name="keywords"
+      content="Saas, CRM, Admin, Dashboard, Modern, Classic"
+    />
+    <meta name="author" content="Shreethemes" />
+    <meta name="email" content="support@shreethemes.in" />
+    <meta name="website" content="https://shreethemes.in" />
+    <meta name="Version" content="v3.8.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <!-- Bootstrap -->
+    <link
+      href="assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- simplebar -->
+    <link href="assets/css/simplebar.css" rel="stylesheet" type="text/css" />
+    <!-- Icons -->
+    <link
+      href="assets/css/materialdesignicons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/tabler-icons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+      rel="stylesheet"
+    />
+    <!-- Css -->
+    <link
+      href="assets/css/style.css"
+      rel="stylesheet"
+      type="text/css"
+      id="theme-opt"
+    />
+
+    <!-- Leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <!--  -->
+  </head>
+
+  <body>
+    <!-- Loader -->
+    <!-- <div id="preloader">
+            <div id="status">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+        </div> -->
+    <!-- Loader -->
+
+    <div class="page-wrapper landrick-theme toggled">
+      <nav id="sidebar" class="sidebar-wrapper">
+        <div
+          class="sidebar-content"
+          data-simplebar
+          style="height: calc(100% - 60px)"
+        >
+          <div class="sidebar-brand">
+            <a class="logo" href="index-saas.html">
+              <img
+                src="../landing/images/saas/logo-riau.png"
+                height="48"
+                class="logo-light-mode"
+                alt=""
+              />
+              <img
+                src="../landing/images/saas/logo-disbud.png"
+                height="48"
+                class="logo-light-mode"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <ul class="sidebar-menu">
+            <li>
+              <a href="index.html"><i class="ti ti-home me-2"></i>Dashboard</a>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="javascript:void(0)"
+                ><i class="ti ti-browser me-2"></i>Verifikasi & Validasi</a
+              >
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="laporan-cagar-budaya.html">Laporan Cagar Budaya</a>
+                  </li>
+                  <li>
+                    <a href="data-cagar-budaya.html">Data Cagar Budaya</a>
+                  </li>
+                  <li>
+                    <a href="riwayat-data.html">Riwayat Laporan</a>
+                  </li>
+                  <li>
+                    <a href="form-cagar-budaya.html">Form Cagar Budaya</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <!-- sidebar-menu  -->
+        </div>
+      </nav>
+
+      <!-- Start Page Content -->
+      <main class="page-content bg-light">
+        <div class="top-header">
+          <div class="header-bar d-flex justify-content-between">
+            <div class="d-flex align-items-center">
+              <a href="#" class="logo-icon me-3">
+                <img
+                  src="assets/images/logo-icon.png"
+                  height="30"
+                  class="small"
+                  alt=""
+                />
+                <span class="big">
+                  <img
+                    src="assets/images/logo-dark.png"
+                    height="24"
+                    class="logo-light-mode"
+                    alt=""
+                  />
+                  <img
+                    src="assets/images/logo-light.png"
+                    height="24"
+                    class="logo-dark-mode"
+                    alt=""
+                  />
+                </span>
+              </a>
+              <a
+                id="close-sidebar"
+                class="btn btn-icon btn-soft-light"
+                href="javascript:void(0)"
+              >
+                <i class="ti ti-menu-2"></i>
+              </a>
+              <div class="search-bar p-0 d-none d-md-block ms-2">
+                <div id="search" class="menu-search mb-0">
+                  <form
+                    role="search"
+                    method="get"
+                    id="searchform"
+                    class="searchform"
+                  >
+                    <div>
+                      <input
+                        type="text"
+                        class="form-control border rounded"
+                        name="s"
+                        id="s"
+                        placeholder="Cari disini..."
+                      />
+                      <input type="submit" id="searchsubmit" value="Search" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <ul class="list-unstyled mb-0">
+              <li class="list-inline-item mb-0">
+                <a
+                  href="javascript:void(0)"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight"
+                  aria-controls="offcanvasRight"
+                >
+                  <div class="btn btn-icon btn-soft-light">
+                    <i class="ti ti-settings"></i>
+                  </div>
+                </a>
+              </li>
+
+              <li class="list-inline-item mb-0 ms-1">
+                <div class="dropdown dropdown-primary">
+                  <button
+                    type="button"
+                    class="btn btn-icon btn-soft-light dropdown-toggle p-0"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i class="ti ti-bell"></i>
+                  </button>
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"
+                  >
+                    <span class="visually-hidden">New alerts</span>
+                  </span>
+
+                  <div
+                    class="dropdown-menu dd-menu bg-white shadow rounded border-0 mt-3 p-0"
+                    data-simplebar
+                    style="height: 320px; width: 290px"
+                  >
+                    <div
+                      class="d-flex align-items-center justify-content-between p-3 border-bottom"
+                    >
+                      <h6 class="mb-0 text-dark">Notifications</h6>
+                      <span class="badge bg-soft-danger rounded-pill">3</span>
+                    </div>
+                    <div class="p-3">
+                      <a
+                        href="#!"
+                        class="dropdown-item features feature-primary key-feature p-0"
+                      >
+                        <div class="d-flex align-items-center">
+                          <div class="icon text-center rounded-circle me-2">
+                            <i class="ti ti-shopping-cart"></i>
+                          </div>
+                          <div class="flex-1">
+                            <h6 class="mb-0 text-dark title">Order Complete</h6>
+                            <small class="text-muted">15 min ago</small>
+                          </div>
+                        </div>
+                      </a>
+
+                      <a
+                        href="#!"
+                        class="dropdown-item features feature-primary key-feature p-0 mt-3"
+                      >
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="assets/images/client/04.jpg"
+                            class="avatar avatar-md-sm rounded-circle border shadow me-2"
+                            alt=""
+                          />
+                          <div class="flex-1">
+                            <h6 class="mb-0 text-dark title">
+                              <span class="fw-bold">Message</span> from Luis
+                            </h6>
+                            <small class="text-muted">1 hour ago</small>
+                          </div>
+                        </div>
+                      </a>
+
+                      <a
+                        href="#!"
+                        class="dropdown-item features feature-primary key-feature p-0 mt-3"
+                      >
+                        <div class="d-flex align-items-center">
+                          <div class="icon text-center rounded-circle me-2">
+                            <i class="ti ti-currency-dollar"></i>
+                          </div>
+                          <div class="flex-1">
+                            <h6 class="mb-0 text-dark title">
+                              <span class="fw-bold">One Refund Request</span>
+                            </h6>
+                            <small class="text-muted">2 hour ago</small>
+                          </div>
+                        </div>
+                      </a>
+
+                      <a
+                        href="#!"
+                        class="dropdown-item features feature-primary key-feature p-0 mt-3"
+                      >
+                        <div class="d-flex align-items-center">
+                          <div class="icon text-center rounded-circle me-2">
+                            <i class="ti ti-truck-delivery"></i>
+                          </div>
+                          <div class="flex-1">
+                            <h6 class="mb-0 text-dark title">
+                              Deliverd your Order
+                            </h6>
+                            <small class="text-muted">Yesterday</small>
+                          </div>
+                        </div>
+                      </a>
+
+                      <a
+                        href="#!"
+                        class="dropdown-item features feature-primary key-feature p-0 mt-3"
+                      >
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="assets/images/client/15.jpg"
+                            class="avatar avatar-md-sm rounded-circle border shadow me-2"
+                            alt=""
+                          />
+                          <div class="flex-1">
+                            <h6 class="mb-0 text-dark title">
+                              <span class="fw-bold">Cally</span> started
+                              following you
+                            </h6>
+                            <small class="text-muted">2 days ago</small>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="list-inline-item mb-0 ms-1">
+                <div class="dropdown dropdown-primary">
+                  <button
+                    type="button"
+                    class="btn btn-soft-light dropdown-toggle p-0"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="assets/images/client/05.jpg"
+                      class="avatar avatar-ex-small rounded"
+                      alt=""
+                    />
+                  </button>
+                  <div
+                    class="dropdown-menu dd-menu dropdown-menu-end bg-white shadow border-0 mt-3 py-3"
+                    style="min-width: 200px"
+                  >
+                    <a
+                      class="dropdown-item d-flex align-items-center text-dark pb-3"
+                      href="profile.html"
+                    >
+                      <img
+                        src="assets/images/client/05.jpg"
+                        class="avatar avatar-md-sm rounded-circle border shadow"
+                        alt=""
+                      />
+                      <div class="flex-1 ms-2">
+                        <span class="d-block">Cristina Julia</span>
+                        <small class="text-muted">UI / UX Designer</small>
+                      </div>
+                    </a>
+                    <a class="dropdown-item text-dark" href="index.html"
+                      ><span class="mb-0 d-inline-block me-1"
+                        ><i class="ti ti-home"></i
+                      ></span>
+                      Dashboard</a
+                    >
+                    <a class="dropdown-item text-dark" href="profile.html"
+                      ><span class="mb-0 d-inline-block me-1"
+                        ><i class="ti ti-settings"></i
+                      ></span>
+                      Profile</a
+                    >
+                    <a class="dropdown-item text-dark" href="email.html"
+                      ><span class="mb-0 d-inline-block me-1"
+                        ><i class="ti ti-mail"></i
+                      ></span>
+                      Email</a
+                    >
+                    <div class="dropdown-divider border-top"></div>
+                    <a class="dropdown-item text-dark" href="lock-screen.html"
+                      ><span class="mb-0 d-inline-block me-1"
+                        ><i class="ti ti-lock"></i
+                      ></span>
+                      Lockscreen</a
+                    >
+                    <a class="dropdown-item text-dark" href="login.html"
+                      ><span class="mb-0 d-inline-block me-1"
+                        ><i class="ti ti-logout"></i
+                      ></span>
+                      Logout</a
+                    >
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="layout-specing">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <h6 class="text-muted mb-1">Welcome back, Cristina!</h6>
+                <h5 class="mb-0">
+                  Halaman Verifikasi & Validasi Data Cagar Budaya
+                </h5>
+              </div>
+
+              <div class="mb-0 position-relative">
+                <select class="form-select form-control" id="dailychart">
+                  <option selected="">This Month</option>
+                  <option value="aug">August</option>
+                  <option value="jul">July</option>
+                  <option value="jun">June</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xl-12 mt-4">
+                <ul
+                  class="nav nav-pills mb-3 p-2 rounded-pill w-auto d-flex flex-nowrap overflow-aut"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active py-2 rounded-pill w-auto px-3"
+                      id="step-1"
+                      data-bs-toggle="pill"
+                      data-bs-target="#form-1"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-home"
+                      aria-selected="true"
+                    >
+                      Data Identitas
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link py-2 rounded-pill w-auto px-3"
+                      id="step-2"
+                      data-bs-toggle="pill"
+                      data-bs-target="#form-2"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-profile"
+                      aria-selected="false"
+                    >
+                      Data Temuan
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link py-2 rounded-pill w-auto px-3"
+                      id="step-3"
+                      data-bs-toggle="pill"
+                      data-bs-target="#form-3"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-contact"
+                      aria-selected="false"
+                    >
+                      Data Objek
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link py-2 rounded-pill w-auto px-3"
+                      id="step-4"
+                      data-bs-toggle="pill"
+                      data-bs-target="#form-4"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-contact"
+                      aria-selected="false"
+                    >
+                      Data Lokasi
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link py-2 rounded-pill w-auto px-3"
+                      id="step-5"
+                      data-bs-toggle="pill"
+                      data-bs-target="#form-5"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-contact"
+                      aria-selected="false"
+                    >
+                      Data Fisik
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link py-2 rounded-pill w-auto px-3"
+                      id="step-6"
+                      data-bs-toggle="pill"
+                      data-bs-target="#form-6"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-contact"
+                      aria-selected="false"
+                    >
+                      Data Dimensi
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link py-2 rounded-pill w-auto px-3"
+                      id="step-7"
+                      data-bs-toggle="pill"
+                      data-bs-target="#form-7"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-contact"
+                      aria-selected="false"
+                    >
+                      Data Kondisi
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link py-2 rounded-pill w-auto px-3"
+                      id="step-8"
+                      data-bs-toggle="pill"
+                      data-bs-target="#form-8"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-contact"
+                      aria-selected="false"
+                    >
+                      Data Kepemilikan
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link py-2 rounded-pill w-auto px-3"
+                      id="step-9"
+                      data-bs-toggle="pill"
+                      data-bs-target="#form-9"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-contact"
+                      aria-selected="false"
+                    >
+                      Data Pengelola
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link py-2 rounded-pill w-auto px-3"
+                      id="step-10"
+                      data-bs-toggle="pill"
+                      data-bs-target="#form-10"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-contact"
+                      aria-selected="false"
+                    >
+                      Data Sejarah
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active p-2"
+                    id="form-1"
+                    role="tabpanel"
+                    aria-labelledby="pills-home-tab"
+                  >
+                    <h4>Data Identitas</h4>
+                    <p class="text-muted fw-light mb-4">
+                      Harap isi data identitas Anda sebagai pelapor dengan
+                      lengkap
+                    </p>
+                    <div class="mb-3">
+                      <label class="form-label fw-normal">Nama</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="nama"
+                        placeholder="Masukkan nama lengkap Anda"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label fw-normal">NIK</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="nik"
+                        placeholder="Masukkan nomor NIK Anda"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label fw-normal">Nomor HP</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="no_hp"
+                        placeholder="Masukkan nomor HP Anda"
+                      />
+                      <div class="form-text">
+                        Pastikan nomor yang diinputkan aktif
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label fw-normal">Email</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="email"
+                        placeholder="Masukkan email yang valid"
+                      />
+                      <div id="emailHelp" class="form-text">
+                        contoh: user@gmail.com
+                      </div>
+                    </div>
+                    <!-- Belum ada pada database -->
+                    <div class="mb-4">
+                      <label for="identitas-ktp" class="form-label fw-normal"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        name="password"
+                        placeholder="Masukkan password Anda"
+                      />
+                      <div id="passwordHelp" class="form-text">
+                        (minimal 8 karakter)
+                      </div>
+                    </div>
+                    <!-- Tidak Digunakan -->
+                    <!-- <div class="mb-5">
+                    <label for="identitas-ktp" class="form-label fw-normal"
+                      >Foto KTP</label
+                    >
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="identitas-ktp"
+                      placeholder="Unggah Foto KTP Anda"
+                    />
+                    <div class="form-text">Format JPG, PNG, maksimal 2MB</div>
+                  </div> -->
+                    <div class="d-flex justify-content-end mt-3">
+                      <button
+                        id="btn-back"
+                        class="btn btn-light me-2"
+                        type="button"
+                        onclick="prevStep()"
+                        disabled
+                      >
+                        Kembali
+                      </button>
+                      <button
+                        id="btn-next"
+                        class="btn btn-primary"
+                        type="button"
+                        onclick="nextStep()"
+                      >
+                        Simpan
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade p-2"
+                    id="form-2"
+                    role="tabpanel"
+                    aria-labelledby="pills-profile-tab"
+                  >
+                    <h4>Data Temuan</h4>
+                    <p class="text-muted fw-light mb-4">
+                      Harap masukkan informasi lengkap mengenai objek yang Anda
+                      laporkan
+                    </p>
+                    <div class="mb-3">
+                      <label class="form-label fw-normal">Nama Laporan</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Masukkan nama laporan Anda di sini."
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label
+                        for="exampleFormControlTextarea1"
+                        class="form-label fw-normal"
+                        >Deskripsi Laporan</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="deskripsi-sejarah"
+                        rows="3"
+                        placeholder="Tulis deskripsi lengkap mengenai laporan Anda di sini"
+                      ></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label fw-normal">Jenis Laporan</label>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="jenis"
+                          id="flexRadioDefault1"
+                        />
+                        <label
+                          class="form-check-label fw-normal"
+                          for="flexRadioDefault1"
+                        >
+                          Laporan Penemuan
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault2"
+                          checked
+                        />
+                        <label
+                          class="form-check-label fw-normal"
+                          for="flexRadioDefault2"
+                        >
+                          Laporan Kerusakan
+                        </label>
+                      </div>
+                      <div class="form-text">
+                        Verifikasi bahwa jenis laporan yang dipilih sudah tepat
+                      </div>
+                    </div>
+                    <div class="row mb-5">
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal">Kategori</label>
+                        <select class="form-select text-muted">
+                          <option selected>Pilih Kategori</option>
+                          <option value="1">Bangunan</option>
+                          <option value="2">Benda</option>
+                          <option value="3">Kawasan</option>
+                          <option value="4">Situs</option>
+                          <option value="5">Struktur</option>
+                        </select>
+                        <div class="form-text">
+                          Pilih kategori yang sesuai untuk objek yang Anda
+                          laporkan.
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal"
+                          >Kabupaten/Kota</label
+                        >
+                        <select
+                          id="kabupatenKota"
+                          class="form-select text-muted"
+                        >
+                          <option selected>Pilih Kabupaten/Kota</option>
+                        </select>
+                        <div class="form-text">
+                          Masukkan lokasi di mana objek tersebut ditemukan
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end mt-3">
+                      <button
+                        id="btn-back"
+                        class="btn btn-light me-2"
+                        type="button"
+                        onclick="prevStep()"
+                        disabled
+                      >
+                        Kembali
+                      </button>
+                      <button
+                        id="btn-next"
+                        class="btn btn-primary"
+                        type="button"
+                        onclick="nextStep()"
+                      >
+                        Simpan
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade p-2"
+                    id="form-3"
+                    role="tabpanel"
+                    aria-labelledby="pills-contact-tab"
+                  >
+                    <h4>Data Objek</h4>
+                    <p class="text-muted fw-light mb-4">
+                      Harap berikan informasi lengkap mengenai objek yang
+                      dilaporkan
+                    </p>
+                    <div class="mb-3">
+                      <label class="form-label fw-normal"
+                        >Nama ODCB/CB di Lapangan</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="nama_odcb"
+                        placeholder="Masukkan nama ODCB/CB"
+                      />
+                      <div class="form-text">
+                        ODCB = Objek yang Diduga Cagar Budaya
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label fw-normal">Fungsi Objek</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="fungsi"
+                        placeholder="Masukkan fungsi objek"
+                      />
+                    </div>
+                    <div class="row mb-5">
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal">Sifat Objek</label>
+                        <select class="form-select text-muted" name="sifat">
+                          <option selected>Pilih Sifat</option>
+                          <option value="1">Sakral</option>
+                          <option value="2">Profan</option>
+                          <option value="3">Campuran</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal"
+                          >Periode Objek</label
+                        >
+                        <select class="form-select text-muted" name="periode">
+                          <option selected>Pilih periode</option>
+                          <option value="1">Prasejarah</option>
+                          <option value="2">Klasik</option>
+                          <option value="3">Kolonal</option>
+                          <option value="3">Kemerdekaan</option>
+                          <option value="3">Moderan</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end mt-3">
+                      <button
+                        id="btn-back"
+                        class="btn btn-light me-2"
+                        type="button"
+                        onclick="prevStep()"
+                        disabled
+                      >
+                        Kembali
+                      </button>
+                      <button
+                        id="btn-next"
+                        class="btn btn-primary"
+                        type="button"
+                        onclick="nextStep()"
+                      >
+                        Simpan
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade p-2"
+                    id="form-4"
+                    role="tabpanel"
+                    aria-labelledby="pills-contact-tab"
+                  >
+                    <h4>Data Lokasi</h4>
+                    <p class="text-muted fw-light mb-4">
+                      Harap sertakan informasi lengkap mengenai lokasi objek
+                      yang ditemukan
+                    </p>
+
+                    <div class="row mb-3">
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal">Provinsi</label>
+                        <select class="form-select text-muted" name="provinsi">
+                          <option selected>Pilih Provinsi</option>
+                          <option value="1">Riau</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal"
+                          >Kabupaten/Kota</label
+                        >
+                        <select class="form-select text-muted" name="kota">
+                          <option selected>Pilih Kabupaten/Kota</option>
+                          <option value="1">Pekanbaru</option>
+                          <option value="2">Kabupaten Kampar</option>
+                          <option value="3">Kabupaten Rokan Hulu</option>
+                          <option value="4">Kabupaten Rokan Hilir</option>
+                          <option value="5">Kabupaten Siak</option>
+                          <option value="6">Kabupaten Indragiri Hulu</option>
+                          <option value="7">Kabupaten Indragiri Hilir</option>
+                          <option value="8">Kabupaten Kuantan Singingi</option>
+                          <option value="9">Kabupaten Pelalawan</option>
+                          <option value="10">Kabupaten Bengkalis</option>
+                          <option value="11">Kabupaten Meranti</option>
+                          <option value="12">Kabupaten Dumai</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal">Kecamatan</label>
+                        <select class="form-select text-muted" name="kecamatan">
+                          <option selected>Pilih Kecamatan</option>
+                          <option value="1">Kecamatan Tenayan Raya</option>
+                          <option value="2">Kecamatan Marpoyan Damai</option>
+                          <option value="3">Kecamatan Payung Sekaki</option>
+                          <option value="4">Kecamatan Pekanbaru Kota</option>
+                          <option value="5">Kecamatan Rumbai</option>
+                          <option value="6">Kecamatan Rumbai Pesisir</option>
+                          <option value="7">Kecamatan Bukit Raya</option>
+                          <option value="8">Kecamatan Lima Puluh</option>
+                          <option value="9">Kecamatan Sail</option>
+                          <option value="10">Kecamatan Senapelan</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal">Kelurahan</label>
+                        <select class="form-select text-muted" name="kelurahan">
+                          <option selected>Pilih Kelurahan</option>
+                          <option value="1">Kelurahan Sempurna</option>
+                          <option value="2">Kelurahan Sidomulyo</option>
+                          <option value="3">Kelurahan Lembah Sari</option>
+                          <option value="4">Kelurahan Labuh Baru Timur</option>
+                          <option value="5">Kelurahan Labuh Baru Barat</option>
+                          <option value="6">
+                            Kelurahan Tangkerang Selatan
+                          </option>
+                          <option value="7">Kelurahan Tangkerang Utara</option>
+                          <option value="8">Kelurahan Kampung Dalam</option>
+                          <option value="9">Kelurahan Tanjung Rhu</option>
+                          <option value="10">Kelurahan Rintis</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label fw-normal">Alamat</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="alamat"
+                        placeholder="Masukkan alamat lokasi penemuan objek"
+                      />
+                    </div>
+                    <fieldset disabled>
+                      <div class="row mb-5 border-top">
+                        <p class="mt-3 mb-0 fw-bold">Detail Lokasi</p>
+                        <p class="text-muted fw-light">
+                          Pilih lokasi objek dengan menandai titik pada peta
+                        </p>
+                        <div class="col-lg-4 col-sm-12 col-md-4">
+                          <label class="form-label fw-normal">Latitude</label>
+                          <input
+                            type="text"
+                            class="form-control text muted"
+                            name="latitude"
+                            placeholder="(contoh: -0.4500)"
+                          />
+                        </div>
+                        <div class="col-lg-4 col-sm-12 col-md-4">
+                          <label class="form-label fw-normal">Longitude</label>
+                          <input
+                            type="text"
+                            class="form-control text muted"
+                            name="longitude"
+                            placeholder="(contoh: 101.4500)"
+                          />
+                        </div>
+                        <div class="col-lg-4 col-sm-12 col-md-4">
+                          <label class="form-label fw-normal"
+                            >Ketinggian (MDPL)</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control text muted"
+                            name="ketinggian"
+                            placeholder="(contoh: 200)"
+                          />
+                        </div>
+                      </div>
+                    </fieldset>
+
+                    <div class="row mb-5">
+                      <div class="col-lg-12 col-sm-12 col-md-12">
+                        <div id="map1"></div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end mt-3">
+                      <button
+                        id="btn-back"
+                        class="btn btn-light me-2"
+                        type="button"
+                        onclick="prevStep()"
+                        disabled
+                      >
+                        Kembali
+                      </button>
+                      <button
+                        id="btn-next"
+                        class="btn btn-primary"
+                        type="button"
+                        onclick="nextStep()"
+                      >
+                        Simpan
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade p-2"
+                    id="form-5"
+                    role="tabpanel"
+                    aria-labelledby="pills-contact-tab"
+                  >
+                    <h4>Data fisik</h4>
+                    <p class="text-muted fw-light mb-4">
+                      Harap sertakan informasi lengkap mengenai detail fisik
+                      objek yang ditemukan
+                    </p>
+                    <div class="mb-3">
+                      <label class="form-label fw-normal">Bahan Bangunan</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="bahan"
+                        placeholder="Masukkan bahan bangunan"
+                      />
+                    </div>
+                    <!-- Belum ada di database -->
+                    <div class="row mb-3">
+                      <div class="col-lg-4 col-sm-12 col-md-4">
+                        <label class="form-label fw-normal">Satuan Waktu</label>
+                        <select class="form-select text-muted" name="satuan">
+                          <option selected>Pilih Periode</option>
+                          <option value="1">Abad</option>
+                          <option value="2">Tahun</option>
+                        </select>
+                      </div>
+                      <!-- belum ada di database -->
+                      <div class="col-lg-4 col-sm-12 col-md-4">
+                        <label class="form-label fw-normal"
+                          >Periode Waktu</label
+                        >
+                        <select class="form-select text-muted" name="periode">
+                          <option selected>Pilih Periode</option>
+                          <option value="1">Sebelum Masehi</option>
+                          <option value="2">Sesudah Masehi</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 col-md-4">
+                        <label class="form-label fw-normal"
+                          >Waktu Pembuatan</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="waktu_pembuatan"
+                          placeholder="Masukkan waktu"
+                        />
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-lg-4 col-sm-12 col-md-4">
+                        <label class="form-label fw-normal"
+                          >Tanda Bangunan</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="tanda"
+                          placeholder="Masukkan tanda"
+                        />
+                      </div>
+                      <div class="col-lg-4 col-sm-12 col-md-4">
+                        <label class="form-label fw-normal"
+                          >Ornamen Bangunan</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="ornamen"
+                          placeholder="Masukkan ornamen"
+                        />
+                      </div>
+                      <div class="col-lg-4 col-sm-12 col-md-4">
+                        <label class="form-label fw-normal"
+                          >Warna Bangunan</label
+                        >
+                        <select class="form-select text-muted" name="warna">
+                          <option selected>Pilih Warna</option>
+                          <option value="1">Merah</option>
+                          <option value="2">Hijau</option>
+                          <option value="3">Biru</option>
+                          <option value="4">Kuning</option>
+                          <option value="5">Hitam</option>
+                          <option value="6">Putih</option>
+                          <option value="7">Abu-abu</option>
+                          <option value="8">Cokelat</option>
+                          <option value="9">Jingga</option>
+                          <option value="10">Ungu</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-5">
+                      <button
+                        id="btn-back"
+                        class="btn btn-light me-2"
+                        type="button"
+                        onclick="prevStep()"
+                        disabled
+                      >
+                        Kembali
+                      </button>
+                      <button
+                        id="btn-next"
+                        class="btn btn-primary"
+                        type="button"
+                        onclick="nextStep()"
+                      >
+                        Simpan
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade p-2"
+                    id="form-6"
+                    role="tabpanel"
+                    aria-labelledby="pills-contact-tab"
+                  >
+                    <h3>Data dimensi</h3>
+                    <p class="text-muted fw-light mb-4">
+                      Harap sertakan informasi lengkap mengenai dimensi objek
+                      yang ditemukan
+                    </p>
+                    <div class="row mb-3">
+                      <p class="text-muted">
+                        Harap tentukan satuan ukur yang akan digunakan sebelum
+                        mengisi detail dimensi objek.
+                      </p>
+                      <div class="col-lg-4 col-sm-12 col-md-4">
+                        <label class="form-label fw-normal">Panjang</label>
+                        <div class="d-flex">
+                          <input
+                            type="text"
+                            class="form-control flex-grow-1"
+                            name="panjang"
+                            placeholder="Panjang"
+                          />
+                          <!-- Belum ada di database -->
+                          <select class="form-select w-auto ms-2 text-muted">
+                            <option value="m">m</option>
+                            <option value="m2">m²</option>
+                            <option value="cm">cm</option>
+                            <option value="km">km</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-sm-12 col-md-4">
+                        <label class="form-label fw-normal">Lebar</label>
+                        <div class="d-flex">
+                          <input
+                            type="text"
+                            class="form-control flex-grow-1"
+                            name="lebar"
+                            placeholder="Lebar"
+                          />
+                          <!-- Belum ada di database -->
+                          <select class="form-select w-auto ms-2 text-muted">
+                            <option value="m">m</option>
+                            <option value="m2">m²</option>
+                            <option value="cm">cm</option>
+                            <option value="km">km</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-sm-12 col-md-4">
+                        <label for="dimensi-tinggi" class="form-label fw-normal"
+                          >Tinggi</label
+                        >
+                        <div class="d-flex">
+                          <input
+                            type="text"
+                            class="form-control flex-grow-1"
+                            name="tinggi"
+                            placeholder="Tinggi"
+                          />
+                          <!-- Belum ada di database -->
+                          <select class="form-select w-auto ms-2 text-muted">
+                            <option value="m">m</option>
+                            <option value="m2">m²</option>
+                            <option value="cm">cm</option>
+                            <option value="km">km</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label for="dimensi-luas" class="form-label fw-normal"
+                          >Luas Struktur</label
+                        >
+                        <div class="d-flex">
+                          <input
+                            type="text"
+                            class="form-control flex-grow-1"
+                            placeholder="Luas Struktur"
+                            name="luas_struktur"
+                          />
+                          <!-- Belum ada di database -->
+                          <select class="form-select w-auto ms-2 text-muted">
+                            <option value="m">m</option>
+                            <option value="m2">m²</option>
+                            <option value="cm">cm</option>
+                            <option value="km">km</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label for="dimensi-tanah" class="form-label fw-normal"
+                          >Luas Tanah</label
+                        >
+                        <div class="d-flex">
+                          <input
+                            type="text"
+                            class="form-control flex-grow-1"
+                            name="luas_tanah"
+                            placeholder="Luas Tanah"
+                          />
+                          <!-- Belum ada di database -->
+                          <select class="form-select w-auto ms-2 text-muted">
+                            <option value="m">m</option>
+                            <option value="m2">m²</option>
+                            <option value="cm">cm</option>
+                            <option value="km">km</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-5">
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label for="dimensi-badan" class="form-label fw-normal"
+                          >Diameter Badan</label
+                        >
+                        <div class="d-flex">
+                          <input
+                            type="text"
+                            class="form-control flex-grow-1"
+                            name="dia_badan"
+                            placeholder="Diameter Badan"
+                          />
+                          <!-- Belum ada di database -->
+                          <select class="form-select w-auto ms-2 text-muted">
+                            <option value="m">m</option>
+                            <option value="m2">m²</option>
+                            <option value="cm">cm</option>
+                            <option value="km">km</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label for="dimensi-kaki" class="form-label fw-normal"
+                          >Diameter Kaki</label
+                        >
+                        <div class="d-flex">
+                          <input
+                            type="text"
+                            class="form-control flex-grow-1"
+                            name="dia_kaki"
+                            placeholder="Diameter Kaki"
+                          />
+                          <!-- Belum ada di database -->
+                          <select class="form-select w-auto ms-2 text-muted">
+                            <option value="m">m</option>
+                            <option value="m2">m²</option>
+                            <option value="cm">cm</option>
+                            <option value="km">km</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end mt-3">
+                      <button
+                        id="btn-back"
+                        class="btn btn-light me-2"
+                        type="button"
+                        onclick="prevStep()"
+                        disabled
+                      >
+                        Kembali
+                      </button>
+                      <button
+                        id="btn-next"
+                        class="btn btn-primary"
+                        type="button"
+                        onclick="nextStep()"
+                      >
+                        Simpan
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade p-2"
+                    id="form-7"
+                    role="tabpanel"
+                    aria-labelledby="pills-contact-tab"
+                  >
+                    <h3>Data Kondisi</h3>
+                    <p class="text-muted fw-light mb-4">
+                      Harap sertakan informasi lengkap mengenai kondisi objek
+                      yang ditemukan
+                    </p>
+                    <div class="row mb-3">
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal">Keutuhan</label>
+                        <select class="form-select text-muted" name="keutuhan">
+                          <option selected>Pilih Kondisi</option>
+                          <option value="1">Utuh</option>
+                          <option value="2">Tinggal Sebagian</option>
+                          <option value="3">Hilang</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal">Pemeliharaan</label>
+                        <select
+                          class="form-select text-muted"
+                          name="pemeliharaan"
+                        >
+                          <option selected>Pilih Pemeliharaan</option>
+                          <option value="1">Terpelihara</option>
+                          <option value="2">Tidak Terpelihara</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label fw-normal">Pemugaran</label>
+                      <select class="form-select text-muted" name="pemugaran">
+                        <option selected>Pilih Pemugaran</option>
+                        <option value="1">Pernah</option>
+                        <option value="2">Tidak Pernah</option>
+                      </select>
+                    </div>
+                    <!-- Belum ada di database -->
+                    <div class="mb-3">
+                      <label
+                        for="exampleFormControlTextarea1"
+                        class="form-label fw-normal"
+                        >Riwayat Pemugaran</label
+                      >
+                      <textarea
+                        class="form-control"
+                        rows="3"
+                        placeholder="Berikan deskripsi riwayat pemugaran"
+                      ></textarea>
+                      <div class="form-text">
+                        Silakan isi jika ada riwayat pemeliharaan
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label fw-normal">Adaptasi</label>
+                      <select class="form-select text-muted" name="adaptasi">
+                        <option selected>Pilih Adaptasi</option>
+                        <option value="1">Ada</option>
+                        <option value="2">Tidak Ada</option>
+                      </select>
+                    </div>
+                    <!-- Belum ada di database -->
+                    <div class="mb-3">
+                      <label
+                        for="exampleFormControlTextarea1"
+                        class="form-label fw-normal"
+                        >Riwayat Adaptasi</label
+                      >
+                      <textarea
+                        class="form-control"
+                        rows="3"
+                        placeholder="Berikan deskripsi riwayat adaptasi"
+                      ></textarea>
+                      <div class="form-text">
+                        Silakan isi jika ada riwayat adaptasi
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-5">
+                      <button
+                        id="btn-back"
+                        class="btn btn-light me-2"
+                        type="button"
+                        onclick="prevStep()"
+                        disabled
+                      >
+                        Kembali
+                      </button>
+                      <button
+                        id="btn-next"
+                        class="btn btn-primary"
+                        type="button"
+                        onclick="nextStep()"
+                      >
+                        Simpan
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade p-2"
+                    id="form-8"
+                    role="tabpanel"
+                    aria-labelledby="pills-contact-tab"
+                  >
+                    <h3>Data Kepemilikan</h3>
+                    <p class="text-muted fw-light mb-4">
+                      Harap masukkan informasi lengkap mengenai kepemilikan
+                      objek yang dilaporkan.
+                    </p>
+                    <div class="mb-3">
+                      <label class="form-label fw-normal">Nama Pemilik</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="nama_pemilik"
+                        placeholder="Masukkan nama lengkap pemilik objek"
+                      />
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal"
+                          >Status Kepemilikan</label
+                        >
+                        <select
+                          class="form-select text-muted"
+                          name="status_kepemilikan"
+                        >
+                          <option selected>Pilih Status</option>
+                          <option value="1">Pemerintah</option>
+                          <option value="2">Non-Pemerintah</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal"
+                          >Status Perolehan</label
+                        >
+                        <select
+                          class="form-select text-muted"
+                          name="status_perolehan"
+                        >
+                          <option selected>Pilih Status</option>
+                          <option value="1">Hadiah</option>
+                          <option value="2">Hibah</option>
+                          <option value="3">Pembelian</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row mb-3 border-top">
+                      <p class="mt-3 mb-0 fw-bold">Lokasi Pemilik</p>
+                      <p class="text-muted fw-light">
+                        Masukkan Lokasi tempat tinggal pemilik
+                      </p>
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal">Provinsi</label>
+                        <select class="form-select text-muted" name="provinsi">
+                          <option selected value="1">Riau</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal"
+                          >Kabupaten/Kota</label
+                        >
+                        <select class="form-select text-muted" name="kota">
+                          <option selected>Pilih Kabupaten</option>
+                          <option value="1">Pekanbaru</option>
+                          <option value="2">Kabupaten Kampar</option>
+                          <option value="3">Kabupaten Rokan Hulu</option>
+                          <option value="4">Kabupaten Rokan Hilir</option>
+                          <option value="5">Kabupaten Siak</option>
+                          <option value="6">Kabupaten Indragiri Hulu</option>
+                          <option value="7">Kabupaten Indragiri Hilir</option>
+                          <option value="8">Kabupaten Kuantan Singingi</option>
+                          <option value="9">Kabupaten Pelalawan</option>
+                          <option value="10">Kabupaten Bengkalis</option>
+                          <option value="11">Kabupaten Meranti</option>
+                          <option value="12">Kabupaten Dumai</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal">Kecamatan</label>
+                        <select class="form-select text-muted" name="kecamatan">
+                          <option selected>Pilih Kecamatan</option>
+                          <option value="1">Kecamatan Tenayan Raya</option>
+                          <option value="2">Kecamatan Marpoyan Damai</option>
+                          <option value="3">Kecamatan Payung Sekaki</option>
+                          <option value="4">Kecamatan Pekanbaru Kota</option>
+                          <option value="5">Kecamatan Rumbai</option>
+                          <option value="6">Kecamatan Rumbai Pesisir</option>
+                          <option value="7">Kecamatan Bukit Raya</option>
+                          <option value="8">Kecamatan Lima Puluh</option>
+                          <option value="9">Kecamatan Sail</option>
+                          <option value="10">Kecamatan Senapelan</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal">Kelurahan</label>
+                        <select class="form-select text-muted" name="kelurahan">
+                          <option selected>Pilih Kelurahan</option>
+                          <option value="1">Kelurahan Sempurna</option>
+                          <option value="2">Kelurahan Sidomulyo</option>
+                          <option value="3">Kelurahan Lembah Sari</option>
+                          <option value="4">Kelurahan Labuh Baru Timur</option>
+                          <option value="5">Kelurahan Labuh Baru Barat</option>
+                          <option value="6">
+                            Kelurahan Tangkerang Selatan
+                          </option>
+                          <option value="7">Kelurahan Tangkerang Utara</option>
+                          <option value="8">Kelurahan Kampung Dalam</option>
+                          <option value="9">Kelurahan Tanjung Rhu</option>
+                          <option value="10">Kelurahan Rintis</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label fw-normal">Alamat</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="alamat"
+                        placeholder="Masukkan alamat lengkap pemilik"
+                      />
+                    </div>
+                    <fieldset disabled>
+                      <div class="row mb-5 border-top">
+                        <p class="mt-3 mb-0 fw-bold">Detail Lokasi Pemilik</p>
+                        <p class="text-muted fw-light">
+                          Pilih lokasi objek dengan menandai titik pada peta
+                        </p>
+                        <div class="col-lg-4 col-sm-12 col-md-4">
+                          <label class="form-label fw-normal">Latitude</label>
+                          <input
+                            type="text"
+                            class="form-control text muted"
+                            name="latitude"
+                            placeholder="(contoh: -0.4500)"
+                          />
+                        </div>
+                        <div class="col-lg-4 col-sm-12 col-md-4">
+                          <label class="form-label fw-normal">Longitude</label>
+                          <input
+                            type="text"
+                            class="form-control text muted"
+                            name="longitude"
+                            placeholder="(contoh: 101.4500)"
+                          />
+                        </div>
+                        <!-- belum ada database -->
+                        <div class="col-lg-4 col-sm-12 col-md-4">
+                          <label class="form-label fw-normal"
+                            >Ketinggian (MDPL)</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control text muted"
+                            name="ketinggian"
+                            placeholder="(contoh: 200)"
+                          />
+                        </div>
+                      </div>
+                    </fieldset>
+                    <div class="row mb-5">
+                      <div class="col-lg-12 col-sm-12 col-md-12">
+                        <div id="map2"></div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end mt-3">
+                      <button
+                        id="btn-back"
+                        class="btn btn-light me-2"
+                        type="button"
+                        onclick="prevStep()"
+                        disabled
+                      >
+                        Kembali
+                      </button>
+                      <button
+                        id="btn-next"
+                        class="btn btn-primary"
+                        type="button"
+                        onclick="nextStep()"
+                      >
+                        Simpan
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade p-2"
+                    id="form-9"
+                    role="tabpanel"
+                    aria-labelledby="pills-contact-tab"
+                  >
+                    <h3>Data Pengelola</h3>
+                    <p class="text-muted fw-light mb-4">
+                      Harap masukkan informasi lengkap mengenai pengelola objek
+                      yang ditemukan
+                    </p>
+                    <div class="mb-3">
+                      <label class="form-label fw-normal">Nama Pengelola</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="nama_pengelola"
+                        placeholder="Masukkan nama lengkap pengelola objek"
+                      />
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal"
+                          >Status Pengelola</label
+                        >
+                        <select
+                          class="form-select text-muted"
+                          name="status_pengelola"
+                        >
+                          <option selected>Pilih Status</option>
+                          <option value="1">Sendiri</option>
+                          <option value="2">Pemerintah</option>
+                          <option value="3">Non-Pemerintah</option>
+                        </select>
+                      </div>
+                      <!-- belum ada database -->
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal"
+                          >Status Perolehan</label
+                        >
+                        <select
+                          class="form-select text-muted"
+                          name="status_perolehan"
+                        >
+                          <option selected>Pilih Status</option>
+                          <option value="1">Hadiah</option>
+                          <option value="2">Hadiah</option>
+                          <option value="3">Pembelian</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row mb-3 border-top">
+                      <p class="mt-3 mb-0 fw-bold">Lokasi Pengelola</p>
+                      <p class="text-muted fw-light">
+                        Masukkan lokasi tempat tinggal pengelola
+                      </p>
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal">Provinsi</label>
+                        <select class="form-select text-muted" name="provinsi">
+                          <option selected value="1">Riau</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal"
+                          >Kabupaten/Kota</label
+                        >
+                        <select class="form-select text-muted" name="kota">
+                          <option selected>Pilih Kabupaten</option>
+                          <option value="1">Pekanbaru</option>
+                          <option value="2">Kabupaten Kampar</option>
+                          <option value="3">Kabupaten Rokan Hulu</option>
+                          <option value="4">Kabupaten Rokan Hilir</option>
+                          <option value="5">Kabupaten Siak</option>
+                          <option value="6">Kabupaten Indragiri Hulu</option>
+                          <option value="7">Kabupaten Indragiri Hilir</option>
+                          <option value="8">Kabupaten Kuantan Singingi</option>
+                          <option value="9">Kabupaten Pelalawan</option>
+                          <option value="10">Kabupaten Bengkalis</option>
+                          <option value="11">Kabupaten Meranti</option>
+                          <option value="12">Kabupaten Dumai</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal">Kecamatan</label>
+                        <select class="form-select text-muted" name="kecamatan">
+                          <option selected>Pilih Kecamatan</option>
+                          <option value="1">Kecamatan Tenayan Raya</option>
+                          <option value="2">Kecamatan Marpoyan Damai</option>
+                          <option value="3">Kecamatan Payung Sekaki</option>
+                          <option value="4">Kecamatan Pekanbaru Kota</option>
+                          <option value="5">Kecamatan Rumbai</option>
+                          <option value="6">Kecamatan Rumbai Pesisir</option>
+                          <option value="7">Kecamatan Bukit Raya</option>
+                          <option value="8">Kecamatan Lima Puluh</option>
+                          <option value="9">Kecamatan Sail</option>
+                          <option value="10">Kecamatan Senapelan</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal">Kelurahan</label>
+                        <select class="form-select text-muted" name="kelurahan">
+                          <option selected>Pilih Kelurahan</option>
+                          <option value="1">Kelurahan Sempurna</option>
+                          <option value="2">Kelurahan Sidomulyo</option>
+                          <option value="3">Kelurahan Lembah Sari</option>
+                          <option value="4">Kelurahan Labuh Baru Timur</option>
+                          <option value="5">Kelurahan Labuh Baru Barat</option>
+                          <option value="6">
+                            Kelurahan Tangkerang Selatan
+                          </option>
+                          <option value="7">Kelurahan Tangkerang Utara</option>
+                          <option value="8">Kelurahan Kampung Dalam</option>
+                          <option value="9">Kelurahan Tanjung Rhu</option>
+                          <option value="10">Kelurahan Rintis</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label fw-normal">Alamat</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="alamat"
+                        placeholder="Masukkan alamat lengkap pengelola"
+                      />
+                    </div>
+                    <fieldset disabled>
+                      <div class="row mb-5 border-top">
+                        <p class="mt-3 mb-0 fw-bold">Detail Lokasi Pengelola</p>
+                        <p class="text-muted fw-light">
+                          Pilih lokasi objek dengan menandai titik pada peta
+                        </p>
+                        <div class="col-lg-4 col-sm-12 col-md-4">
+                          <label class="form-label fw-normal">Latitude</label>
+                          <input
+                            type="text"
+                            class="form-control text muted"
+                            name="latitude"
+                            placeholder="(contoh: -0.4500)"
+                          />
+                        </div>
+                        <div class="col-lg-4 col-sm-12 col-md-4">
+                          <label class="form-label fw-normal">Longitude</label>
+                          <input
+                            type="text"
+                            class="form-control text muted"
+                            name="longitude"
+                            placeholder="(contoh: 101.4500)"
+                          />
+                        </div>
+                        <!-- belum ada database -->
+                        <div class="col-lg-4 col-sm-12 col-md-4">
+                          <label class="form-label fw-normal"
+                            >Ketinggian (MDPL)</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control text muted"
+                            name="ketinggian"
+                            placeholder="(contoh: 200)"
+                          />
+                        </div>
+                      </div>
+                    </fieldset>
+                    <div class="row mb-5">
+                      <div class="col-lg-12 col-sm-12 col-md-12">
+                        <div id="map3"></div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end mt-3">
+                      <button
+                        id="btn-back"
+                        class="btn btn-light me-2"
+                        type="button"
+                        onclick="prevStep()"
+                        disabled
+                      >
+                        Kembali
+                      </button>
+                      <button
+                        id="btn-next"
+                        class="btn btn-primary"
+                        type="button"
+                        onclick="nextStep()"
+                      >
+                        Simpan
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade p-2"
+                    id="form-10"
+                    role="tabpanel"
+                    aria-labelledby="pills-contact-tab"
+                  >
+                    <h3>Data Sejarah</h3>
+                    <p class="text-muted fw-light mb-4">
+                      Harap masukkan informasi lengkap mengenai sejarah objek
+                      yang ditemukan
+                    </p>
+                    <div class="mb-3">
+                      <div class="col-lg-12 col-sm-12 col-md-12">
+                        <label
+                          for="exampleFormControlTextarea1"
+                          class="form-label fw-normal"
+                          >Deskripsi Sejarah</label
+                        >
+                        <textarea
+                          class="form-control"
+                          name="deskripsi"
+                          rows="3"
+                          placeholder="Silakan masukkan deskripsi lengkap mengenai sejarah objek yang dilaporkan"
+                        ></textarea>
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <div class="col-sm-12 col-md-6 col-lg-6">
+                        <label class="form-label fw-normal"
+                          >Batas Zonasi Utara</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="batas_utara"
+                          placeholder="Batas Zonasi Utara"
+                        />
+                      </div>
+                      <div class="col-sm-12 col-md-6 col-lg-6">
+                        <label class="form-label fw-normal"
+                          >Batas Zonasi Selatan</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="batas_selatan"
+                          placeholder="Batas Zonasi Selatan"
+                        />
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-sm-12 col-md-6 col-lg-6">
+                        <label class="form-label fw-normal"
+                          >Batas Zonasi Timur</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="batas_timur"
+                          placeholder="Batas Zonasi Timur"
+                        />
+                      </div>
+                      <div class="col-sm-12 col-md-6 col-lg-6">
+                        <label class="form-label fw-normal"
+                          >Batas Zonasi Barat</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="batas_barat"
+                          placeholder="Batas Zonasi Barat"
+                        />
+                      </div>
+                    </div>
+                    <div class="row mb-3 border-top">
+                      <p class="mt-3 mb-0 fw-bold">Dokumen/Media Pendukung</p>
+                      <p class="text-muted fw-light">
+                        Unggah dokumen atau media terkait sejarah untuk
+                        mendukung laporan Anda.
+                      </p>
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal">Foto/Gambar</label>
+                        <input
+                          type="file"
+                          class="form-control"
+                          name="foto"
+                          placeholder="Unggah foto/gambar"
+                        />
+                        <div class="form-text">Format foto (pdf, png, jpg)</div>
+                      </div>
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal">Tautan Video</label>
+                        <input
+                          type="file"
+                          class="form-control"
+                          name="video"
+                          placeholder="Unggah video"
+                        />
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal"
+                          >Dokumen Kajian</label
+                        >
+                        <input
+                          type="file"
+                          class="form-control"
+                          name="dokumen_kajian"
+                          placeholder="Unggah Dokumen Kajian (format .PDF, DOC/DOCX)"
+                        />
+                      </div>
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal"
+                          >Dokumen Lainnya</label
+                        >
+                        <input
+                          type="file"
+                          class="form-control"
+                          name="dokumen_lainnya"
+                          placeholder="Unggah dokumen lainnya (format .PDF, DOC/DOCX)"
+                        />
+                      </div>
+                    </div>
+                    <div class="row mb-5">
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal">Peta Vektor</label>
+                        <input
+                          type="file"
+                          class="form-control"
+                          name="berkas_vektor"
+                          placeholder="Unggah peta vektor"
+                        />
+                      </div>
+                      <div class="col-lg-6 col-sm-12 col-md-6">
+                        <label class="form-label fw-normal">Peta Raster</label>
+                        <input
+                          type="file"
+                          class="form-control"
+                          name="berkas_raster"
+                          placeholder="Unggah peta raster"
+                        />
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end mt-3">
+                      <button
+                        id="btn-back"
+                        class="btn btn-light me-2"
+                        type="button"
+                        onclick="prevStep()"
+                        disabled
+                      >
+                        Kembali
+                      </button>
+                      <button
+                        id="btn-submit"
+                        class="btn btn-primary"
+                        type="button"
+                        onclick="submitForm()"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Start -->
+        <footer class="bg-white shadow py-3">
+          <div class="container-fluid">
+            <div class="row align-items-center">
+              <div class="col">
+                <div class="text-sm-start text-center">
+                  <p class="mb-0 text-muted">
+                    ©
+                    <script>
+                      document.write(new Date().getFullYear());
+                    </script>
+                    Landrick. Design with
+                    <i class="mdi mdi-heart text-danger"></i> by
+                    <a
+                      href="https://shreethemes.in/"
+                      target="_blank"
+                      class="text-reset"
+                      >Shreethemes</a
+                    >.
+                  </p>
+                </div>
+              </div>
+              <!--end col-->
+            </div>
+            <!--end row-->
+          </div>
+          <!--end container-->
+        </footer>
+        <!--end footer-->
+        <!-- End -->
+      </main>
+      <!--End page-content" -->
+    </div>
+    <!-- page-wrapper -->
+
+    <!-- Offcanvas Start -->
+    <div
+      class="offcanvas offcanvas-end bg-white shadow"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header border-bottom">
+        <h5 id="offcanvasRightLabel" class="mb-0">
+          <img
+            src="assets/images/logo-dark.png"
+            height="24"
+            class="light-version"
+            alt=""
+          />
+          <img
+            src="assets/images/logo-light.png"
+            height="24"
+            class="dark-version"
+            alt=""
+          />
+        </h5>
+        <button
+          type="button"
+          class="btn-close d-flex align-items-center text-dark"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <i class="mdi mdi-close fs-4"></i>
+        </button>
+      </div>
+      <div class="offcanvas-body p-4 px-md-5">
+        <div class="row">
+          <div class="col-12">
+            <!-- Style switcher -->
+            <div id="style-switcher">
+              <div>
+                <ul class="text-center list-unstyled mb-0">
+                  <li class="d-grid">
+                    <a
+                      href="javascript:void(0)"
+                      class="rtl-version t-rtl-light"
+                      onclick="setTheme('style-rtl')"
+                      ><img
+                        src="assets/images/demos/rtl.png"
+                        class="img-fluid rounded-md shadow-md d-block"
+                        alt=""
+                      /><span class="text-muted mt-2 d-block"
+                        >RTL Version</span
+                      ></a
+                    >
+                  </li>
+                  <li class="d-grid">
+                    <a
+                      href="javascript:void(0)"
+                      class="ltr-version t-ltr-light"
+                      onclick="setTheme('style')"
+                      ><img
+                        src="assets/images/demos/ltr.png"
+                        class="img-fluid rounded-md shadow-md d-block"
+                        alt=""
+                      /><span class="text-muted mt-2 d-block"
+                        >LTR Version</span
+                      ></a
+                    >
+                  </li>
+                  <li class="d-grid">
+                    <a
+                      href="javascript:void(0)"
+                      class="dark-rtl-version t-rtl-dark"
+                      onclick="setTheme('style-dark-rtl')"
+                      ><img
+                        src="assets/images/demos/dark-rtl.png"
+                        class="img-fluid rounded-md shadow-md d-block"
+                        alt=""
+                      /><span class="text-muted mt-2 d-block"
+                        >RTL Version</span
+                      ></a
+                    >
+                  </li>
+                  <li class="d-grid">
+                    <a
+                      href="javascript:void(0)"
+                      class="dark-ltr-version t-ltr-dark"
+                      onclick="setTheme('style-dark')"
+                      ><img
+                        src="assets/images/demos/dark.png"
+                        class="img-fluid rounded-md shadow-md d-block"
+                        alt=""
+                      /><span class="text-muted mt-2 d-block"
+                        >LTR Version</span
+                      ></a
+                    >
+                  </li>
+                  <li class="d-grid">
+                    <a
+                      href="javascript:void(0)"
+                      class="dark-version t-dark mt-4"
+                      onclick="setTheme('style-dark')"
+                      ><img
+                        src="assets/images/demos/dark.png"
+                        class="img-fluid rounded-md shadow-md d-block"
+                        alt=""
+                      /><span class="text-muted mt-2 d-block"
+                        >Dark Version</span
+                      ></a
+                    >
+                  </li>
+                  <li class="d-grid">
+                    <a
+                      href="javascript:void(0)"
+                      class="light-version t-light mt-4"
+                      onclick="setTheme('style')"
+                      ><img
+                        src="assets/images/demos/ltr.png"
+                        class="img-fluid rounded-md shadow-md d-block"
+                        alt=""
+                      /><span class="text-muted mt-2 d-block"
+                        >Light Version</span
+                      ></a
+                    >
+                  </li>
+                  <li class="d-grid">
+                    <a href="../landing/index.html" target="_blank" class="mt-4"
+                      ><img
+                        src="assets/images/demos/landing.png"
+                        class="img-fluid rounded-md shadow-md d-block"
+                        alt=""
+                      /><span class="text-muted mt-2 d-block"
+                        >Landing Demos</span
+                      ></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- end Style switcher -->
+          </div>
+          <!--end col-->
+        </div>
+      </div>
+
+      <div class="offcanvas-footer p-3 border-top text-center">
+        <ul class="list-unstyled social-icon mb-0">
+          <li class="list-inline-item mb-0">
+            <a
+              href="https://1.envato.market/4n73n"
+              target="_blank"
+              class="rounded"
+              ><i class="ti ti-shopping-cart align-middle" title="Buy Now"></i
+            ></a>
+          </li>
+          <li class="list-inline-item mb-0">
+            <a
+              href="https://dribbble.com/shreethemes"
+              target="_blank"
+              class="rounded"
+              ><i class="ti ti-brand-dribbble align-middle" title="dribbble"></i
+            ></a>
+          </li>
+          <li class="list-inline-item mb-0">
+            <a
+              href="https://www.facebook.com/shreethemes"
+              target="_blank"
+              class="rounded"
+              ><i class="ti ti-brand-facebook align-middle" title="facebook"></i
+            ></a>
+          </li>
+          <li class="list-inline-item mb-0">
+            <a
+              href="https://www.instagram.com/shreethemes/"
+              target="_blank"
+              class="rounded"
+              ><i
+                class="ti ti-brand-instagram align-middle"
+                title="instagram"
+              ></i
+            ></a>
+          </li>
+          <li class="list-inline-item mb-0">
+            <a
+              href="https://twitter.com/shreethemes"
+              target="_blank"
+              class="rounded"
+              ><i class="ti ti-brand-twitter align-middle" title="twitter"></i
+            ></a>
+          </li>
+          <li class="list-inline-item mb-0">
+            <a href="mailto:support@shreethemes.in" class="rounded"
+              ><i class="ti ti-mail align-middle" title="email"></i
+            ></a>
+          </li>
+          <li class="list-inline-item mb-0">
+            <a href="https://shreethemes.in" target="_blank" class="rounded"
+              ><i class="ti ti-world align-middle" title="website"></i
+            ></a>
+          </li>
+        </ul>
+        <!--end icon-->
+      </div>
+    </div>
+    <!-- Offcanvas End -->
+
+    <!-- javascript -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- simplebar -->
+    <script src="assets/js/simplebar.min.js"></script>
+    <!-- Icons -->
+    <script src="assets/js/feather.min.js"></script>
+    <!-- Main Js -->
+    <script src="assets/js/plugins.init.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+      let currentStep = 1;
+      let isLoggedIn = false;
+
+      function nextStep() {
+        moveToStep(currentStep + 1);
+      }
+
+      function prevStep() {
+        if (currentStep > 1) {
+          moveToStep(currentStep - 1);
+        }
+      }
+
+      function moveToStep(step) {
+        document.querySelectorAll(".tab-pane").forEach((form) => {
+          form.classList.remove("show", "active");
+          form.classList.add("d-none");
+        });
+
+        const targetForm = document.getElementById(`form-${step}`);
+        if (targetForm) {
+          targetForm.classList.remove("d-none");
+          targetForm.classList.add("show", "active");
+        }
+
+        document.querySelectorAll(".list-group-item").forEach((item) => {
+          item.classList.remove("active");
+        });
+        document.getElementById(`step-${step}`).classList.add("active");
+
+        document.querySelectorAll(".btn-light").forEach((btn) => {
+          btn.disabled = step === 1;
+          // btn.disabled = step === 1 || step === 3;
+        });
+        currentStep = step;
+      }
+
+      function submitForm() {
+        moveToStep(11);
+      }
+
+      function finish() {
+        alert("Terima kasih telah mengisi form!");
+      }
+
+      // Map 1
+      var map1 = L.map("map1").setView([0.494164, 101.454738], 15);
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map1);
+
+      // Map 2
+      var map2 = L.map("map2").setView([0.494164, 101.454738], 15);
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map2);
+
+      // Map 3
+      var map3 = L.map("map3").setView([0.494164, 101.454738], 15);
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map3);
+
+      var popup = L.popup();
+
+      function onMapClick(e, map) {
+        popup
+          .setLatLng(e.latlng)
+          .setContent("You clicked the map at " + e.latlng.toString())
+          .openOn(map);
+      }
+
+      map1.on("click", function (e) {
+        onMapClick(e, map1);
+      });
+      map2.on("click", function (e) {
+        onMapClick(e, map2);
+      });
+      map3.on("click", function (e) {
+        onMapClick(e, map3);
+      });
+    </script>
+  </body>
+</html>
