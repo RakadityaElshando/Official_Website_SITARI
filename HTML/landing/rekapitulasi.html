@@ -46,6 +46,9 @@
       id="theme-opt"
     />
     <link href="css/colors/default.css" rel="stylesheet" id="color-opt" />
+
+    <!-- AJAX API -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
 
   <body>
@@ -222,75 +225,106 @@
         </div>
         <!-- Start Filter -->
         <div class="row py-3 rounded-3">
-          <div class="col-lg-3 col-md-3 col-sm-12 mb-3">
-            <label for="entitas">Kategori</label>
-            <select
-              class="form-select text-muted mt-1 rounded-3 py-3"
-              id="entitas"
-            >
-              <option selected>Pilih Kategori</option>
-              <option value="1">Bangunan</option>
-              <option value="2">Benda</option>
-              <option value="3">Kawasan</option>
-              <option value="4">Situs</option>
-              <option value="5">Struktur</option>
-            </select>
+          <div class="col-lg-8 col-md-8 col-sm-12 mb-3">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <label>Kabupaten/Kota</label>
+                <select
+                  id="kabupatenKota"
+                  name="kota"
+                  class="form-select text-muted mt-1 rounded-3 py-3"
+                >
+                  <option selected>Pilih Kabupaten/Kota</option>
+                </select>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <label>Kecamatan</label>
+                <select
+                  id="kecamatan"
+                  name="kecamatan"
+                  class="form-select text-muted mt-1 rounded-3 py-3"
+                >
+                  <option selected>Pilih Kecamatan</option>
+                </select>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <label>Kelurahan</label>
+                <select
+                  id="kelurahan"
+                  name="kelurahan"
+                  class="form-select text-muted mt-1 rounded-3 py-3"
+                >
+                  <option selected>Pilih Kelurahan</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <label>Kategori</label>
+                <select
+                  class="form-select text-muted mt-1 rounded-3 py-3"
+                  id="kategori"
+                  name="kategori"
+                >
+                  <option selected>Pilih Kategori</option>
+                  <option value="1">Bangunan</option>
+                  <option value="2">Benda</option>
+                  <option value="3">Kawasan</option>
+                  <option value="4">Situs</option>
+                  <option value="5">Struktur</option>
+                </select>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <label for="tahun">Tahun</label>
+                <select
+                  class="form-select text-muted mt-1 rounded-3 py-3"
+                  name="tahun"
+                  id="tahun"
+                >
+                  <option selected>Pilih Tahun</option>
+                  <option value="2000">2000</option>
+                  <option value="2001">2001</option>
+                  <option value="2002">2002</option>
+                  <option value="2003">2003</option>
+                  <option value="2004">2004</option>
+                  <option value="2005">2005</option>
+                  <option value="2006">2006</option>
+                  <option value="2007">2007</option>
+                  <option value="2008">2008</option>
+                  <option value="2009">2009</option>
+                  <option value="2010">2010</option>
+                  <option value="2011">2011</option>
+                  <option value="2012">2012</option>
+                  <option value="2013">2013</option>
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                </select>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <label>SK</label>
+                <select
+                  class="form-select text-muted mt-1 rounded-3 py-3"
+                  id="sk"
+                  name="sk"
+                >
+                  <option selected>Pilih Kategori</option>
+                  <option value="1">Perkotaan</option>
+                  <option value="2">Pedesaan</option>
+                  <option value="3">Kawasan</option>
+                </select>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-12 mb-3">
-            <label for="kabupaten">Kabupaten/Kota</label>
-            <select
-              class="form-select text-muted mt-1 rounded-3 py-3"
-              id="kabupaten"
-            >
-              <option selected>Pilih Kabupaten/Kota</option>
-              <option value="1">Pekanbaru</option>
-              <option value="2">Kabupaten Kampar</option>
-              <option value="3">Kabupaten Rokan Hulu</option>
-              <option value="4">Kabupaten Rokan Hilir</option>
-              <option value="5">Kabupaten Siak</option>
-              <option value="6">Kabupaten Indragiri Hulu</option>
-              <option value="7">Kabupaten Indragiri Hilir</option>
-              <option value="8">Kabupaten Kuantan Singingi</option>
-              <option value="9">Kabupaten Pelalawan</option>
-              <option value="10">Kabupaten Bengkalis</option>
-              <option value="11">Kabupaten Meranti</option>
-              <option value="12">Kabupaten Dumai</option>
-            </select>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-12 mb-3">
-            <label for="tahun">Tahun</label>
-            <select
-              class="form-select text-muted mt-1 rounded-3 py-3"
-              id="tahun"
-            >
-              <option selected>Pilih Tahun</option>
-              <option value="2000">2000</option>
-              <option value="2001">2001</option>
-              <option value="2002">2002</option>
-              <option value="2003">2003</option>
-              <option value="2004">2004</option>
-              <option value="2005">2005</option>
-              <option value="2006">2006</option>
-              <option value="2007">2007</option>
-              <option value="2008">2008</option>
-              <option value="2009">2009</option>
-              <option value="2010">2010</option>
-              <option value="2011">2011</option>
-              <option value="2012">2012</option>
-              <option value="2013">2013</option>
-              <option value="2014">2014</option>
-              <option value="2015">2015</option>
-              <option value="2016">2016</option>
-              <option value="2017">2017</option>
-              <option value="2018">2018</option>
-              <option value="2019">2019</option>
-              <option value="2020">2020</option>
-              <option value="2021">2021</option>
-              <option value="2022">2022</option>
-              <option value="2023">2023</option>
-            </select>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-12 mb-3">
+
+          <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
             <div class="form-outline ps-4 border-left" data-mdb-input-init>
               <label>Kolom Pencarian</label>
               <input
@@ -1023,6 +1057,100 @@
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <script defer>
+      $(document).ready(function () {
+        const provinsiRiauId = 14;
+        const apiBaseURL = "https://emsifa.github.io/api-wilayah-indonesia/api";
+
+        // Mengambil data Kabupaten/Kota di Provinsi Riau
+        function loadKabupatenKota() {
+          const urlKabupaten = `${apiBaseURL}/regencies/${provinsiRiauId}.json`;
+          $.ajax({
+            url: urlKabupaten,
+            method: "GET",
+            success: function (data) {
+              $("#kabupatenKota").append(
+                data.map(
+                  (kabupaten) =>
+                    `<option value="${kabupaten.id}">${kabupaten.name}</option>`
+                )
+              );
+            },
+            error: function () {
+              console.error("Gagal mengambil data Kabupaten/Kota");
+            },
+          });
+        }
+
+        // Mengambil data Kecamatan berdasarkan Kabupaten/Kota yang dipilih
+        function loadKecamatan(kabupatenId) {
+          const urlKecamatan = `${apiBaseURL}/districts/${kabupatenId}.json`;
+          $.ajax({
+            url: urlKecamatan,
+            method: "GET",
+            success: function (data) {
+              $("#kecamatan").html("<option selected>Pilih Kecamatan</option>");
+              $("#kelurahan").html("<option selected>Pilih Kelurahan</option>"); // Reset Kelurahan
+              $("#kecamatan").append(
+                data.map(
+                  (kecamatan) =>
+                    `<option value="${kecamatan.id}">${kecamatan.name}</option>`
+                )
+              );
+            },
+            error: function () {
+              console.error("Gagal mengambil data Kecamatan");
+            },
+          });
+        }
+
+        // Mengambil data Kelurahan berdasarkan Kecamatan yang dipilih
+        function loadKelurahan(kecamatanId) {
+          const urlKelurahan = `${apiBaseURL}/villages/${kecamatanId}.json`;
+          $.ajax({
+            url: urlKelurahan,
+            method: "GET",
+            success: function (data) {
+              $("#kelurahan").html("<option selected>Pilih Kelurahan</option>");
+              $("#kelurahan").append(
+                data.map(
+                  (kelurahan) =>
+                    `<option value="${kelurahan.id}">${kelurahan.name}</option>`
+                )
+              );
+            },
+            error: function () {
+              console.error("Gagal mengambil data Kelurahan");
+            },
+          });
+        }
+
+        // Event listener untuk dropdown Kabupaten/Kota
+        $("#kabupatenKota").change(function () {
+          const kabupatenId = $(this).val();
+          if (kabupatenId) {
+            loadKecamatan(kabupatenId);
+          } else {
+            $("#kecamatan").html("<option selected>Pilih Kecamatan</option>");
+            $("#kelurahan").html("<option selected>Pilih Kelurahan</option>");
+          }
+        });
+
+        // Event listener untuk dropdown Kecamatan
+        $("#kecamatan").change(function () {
+          const kecamatanId = $(this).val();
+          if (kecamatanId) {
+            loadKelurahan(kecamatanId);
+          } else {
+            $("#kelurahan").html("<option selected>Pilih Kelurahan</option>");
+          }
+        });
+
+        // Memuat data Kabupaten/Kota saat halaman pertama kali dimuat
+        loadKabupatenKota();
+      });
+    </script>
+
     <script>
       const ctx = document.getElementById("myChart");
 
