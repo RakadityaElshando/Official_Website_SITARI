@@ -62,18 +62,26 @@
       crossorigin=""
     ></script>
     <!--  -->
+
+    <style>
+      #map1,
+      #map2,
+      #map3 {
+        height: 320px;
+      }
+    </style>
   </head>
 
   <body>
     <!-- Loader -->
-    <!-- <div id="preloader">
-            <div id="status">
-                <div class="spinner">
-                    <div class="double-bounce1"></div>
-                    <div class="double-bounce2"></div>
-                </div>
-            </div>
-        </div> -->
+    <div id="preloader">
+      <div id="status">
+        <div class="spinner">
+          <div class="double-bounce1"></div>
+          <div class="double-bounce2"></div>
+        </div>
+      </div>
+    </div>
     <!-- Loader -->
 
     <div class="page-wrapper landrick-theme toggled">
@@ -2088,12 +2096,21 @@
 
       map1.on("click", function (e) {
         onMapClick(e, map1);
+        const { lat, lng } = e.latlng; // Get latitude and longitude from the event
+        alert(`Latitude: ${lat}, Longitude: ${lng}`); // Display the coordinates
+        console.log(`Latitude: ${lat}, Longitude: ${lng}`); // Log the coordinates to the console
       });
       map2.on("click", function (e) {
         onMapClick(e, map2);
+        const { lat, lng } = e.latlng; // Get latitude and longitude from the event
+        alert(`Latitude: ${lat}, Longitude: ${lng}`); // Display the coordinates
+        console.log(`Latitude: ${lat}, Longitude: ${lng}`); // Log the coordinates to the console
       });
       map3.on("click", function (e) {
         onMapClick(e, map3);
+        const { lat, lng } = e.latlng; // Get latitude and longitude from the event
+        alert(`Latitude: ${lat}, Longitude: ${lng}`); // Display the coordinates
+        console.log(`Latitude: ${lat}, Longitude: ${lng}`); // Log the coordinates to the console
       });
     </script>
   </body>

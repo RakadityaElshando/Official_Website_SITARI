@@ -2591,12 +2591,21 @@
 
       map1.on("click", function (e) {
         onMapClick(e, map1);
+        const { lat, lng } = e.latlng; // Get latitude and longitude from the event
+        alert(`Latitude: ${lat}, Longitude: ${lng}`); // Display the coordinates
+        console.log(`Latitude: ${lat}, Longitude: ${lng}`); // Log the coordinates to the console
       });
       map2.on("click", function (e) {
         onMapClick(e, map2);
+        const { lat, lng } = e.latlng; // Get latitude and longitude from the event
+        alert(`Latitude: ${lat}, Longitude: ${lng}`); // Display the coordinates
+        console.log(`Latitude: ${lat}, Longitude: ${lng}`); // Log the coordinates to the console
       });
       map3.on("click", function (e) {
         onMapClick(e, map3);
+        const { lat, lng } = e.latlng; // Get latitude and longitude from the event
+        alert(`Latitude: ${lat}, Longitude: ${lng}`); // Display the coordinates
+        console.log(`Latitude: ${lat}, Longitude: ${lng}`); // Log the coordinates to the console
       });
     </script>
   </body>
