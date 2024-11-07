@@ -684,7 +684,7 @@
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kabupaten/Kota</label>
                     <select
-                      id="kabupatenKota"
+                      id="kabupatenKota2"
                       name="kota"
                       class="form-select text-muted"
                     >
@@ -696,7 +696,7 @@
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kecamatan</label>
                     <select
-                      id="kecamatan"
+                      id="kecamatan2"
                       name="kecamatan"
                       class="form-select text-muted"
                     >
@@ -706,7 +706,7 @@
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kelurahan</label>
                     <select
-                      id="kelurahan"
+                      id="kelurahan2"
                       name="kelurahan"
                       class="form-select text-muted"
                     >
@@ -734,6 +734,7 @@
                       <input
                         type="text"
                         class="form-control text muted"
+                        id="latitude1"
                         name="latitude"
                         placeholder="(contoh: -0.4500)"
                       />
@@ -743,6 +744,7 @@
                       <input
                         type="text"
                         class="form-control text muted"
+                        id="longitude1"
                         name="longitude"
                         placeholder="(contoh: 101.4500)"
                       />
@@ -1244,7 +1246,7 @@
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kabupaten/Kota</label>
-                    <select id="kabupatenKota" class="form-select text-muted">
+                    <select id="kabupatenKota3" class="form-select text-muted">
                       <option selected>Pilih Kabupaten/Kota</option>
                     </select>
                   </div>
@@ -1253,7 +1255,7 @@
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kecamatan</label>
                     <select
-                      id="kecamatan"
+                      id="kecamatan3"
                       name="kecamatan"
                       class="form-select text-muted"
                     >
@@ -1263,7 +1265,7 @@
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kelurahan</label>
                     <select
-                      id="kelurahan"
+                      id="kelurahan3"
                       name="kelurahan"
                       class="form-select text-muted"
                     >
@@ -1291,6 +1293,7 @@
                       <input
                         type="text"
                         class="form-control text muted"
+                        id="latitude2"
                         name="latitude"
                         placeholder="(contoh: -0.4500)"
                       />
@@ -1300,6 +1303,7 @@
                       <input
                         type="text"
                         class="form-control text muted"
+                        id="longitude2"
                         name="longitude"
                         placeholder="(contoh: 101.4500)"
                       />
@@ -1406,7 +1410,7 @@
                   </div>
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kabupaten/Kota</label>
-                    <select id="kabupatenKota" class="form-select text-muted">
+                    <select id="kabupatenKota4" class="form-select text-muted">
                       <option selected>Pilih Kabupaten/Kota</option>
                     </select>
                   </div>
@@ -1415,7 +1419,7 @@
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kecamatan</label>
                     <select
-                      id="kecamatan"
+                      id="kecamatan4"
                       name="kecamatan"
                       class="form-select text-muted"
                     >
@@ -1425,7 +1429,7 @@
                   <div class="col-lg-6 col-sm-12 col-md-6">
                     <label class="form-label fw-normal">Kelurahan</label>
                     <select
-                      id="kelurahan"
+                      id="kelurahan4"
                       name="kelurahan"
                       class="form-select text-muted"
                     >
@@ -1453,6 +1457,7 @@
                       <input
                         type="text"
                         class="form-control text muted"
+                        name="latitude3"
                         name="latitude"
                         placeholder="(contoh: -0.4500)"
                       />
@@ -1462,6 +1467,7 @@
                       <input
                         type="text"
                         class="form-control text muted"
+                        name="longitude3"
                         name="longitude"
                         placeholder="(contoh: 101.4500)"
                       />
@@ -2383,12 +2389,13 @@
             url: urlKabupaten,
             method: "GET",
             success: function (data) {
-              $("#kabupatenKota").append(
-                data.map(
+              const options = data
+                .map(
                   (kabupaten) =>
                     `<option value="${kabupaten.id}">${kabupaten.name}</option>`
                 )
-              );
+                .join("");
+              $("[id^='kabupatenKota']").append(options);
             },
             error: function () {
               console.error("Gagal mengambil data Kabupaten/Kota");
@@ -2397,19 +2404,23 @@
         }
 
         // Mengambil data Kecamatan berdasarkan Kabupaten/Kota yang dipilih
-        function loadKecamatan(kabupatenId) {
+        function loadKecamatan(kabupatenId, kecamatanId, kelurahanId) {
           const urlKecamatan = `${apiBaseURL}/districts/${kabupatenId}.json`;
           $.ajax({
             url: urlKecamatan,
             method: "GET",
             success: function (data) {
-              $("#kecamatan").html("<option selected>Pilih Kecamatan</option>");
-              $("#kelurahan").html("<option selected>Pilih Kelurahan</option>"); // Reset Kelurahan
-              $("#kecamatan").append(
-                data.map(
+              const options = data
+                .map(
                   (kecamatan) =>
                     `<option value="${kecamatan.id}">${kecamatan.name}</option>`
                 )
+                .join("");
+              $(`#${kecamatanId}`)
+                .html("<option selected>Pilih Kecamatan</option>")
+                .append(options);
+              $(`#${kelurahanId}`).html(
+                "<option selected>Pilih Kelurahan</option>"
               );
             },
             error: function () {
@@ -2419,19 +2430,21 @@
         }
 
         // Mengambil data Kelurahan berdasarkan Kecamatan yang dipilih
-        function loadKelurahan(kecamatanId) {
+        function loadKelurahan(kecamatanId, kelurahanId) {
           const urlKelurahan = `${apiBaseURL}/villages/${kecamatanId}.json`;
           $.ajax({
             url: urlKelurahan,
             method: "GET",
             success: function (data) {
-              $("#kelurahan").html("<option selected>Pilih Kelurahan</option>");
-              $("#kelurahan").append(
-                data.map(
+              const options = data
+                .map(
                   (kelurahan) =>
                     `<option value="${kelurahan.id}">${kelurahan.name}</option>`
                 )
-              );
+                .join("");
+              $(`#${kelurahanId}`)
+                .html("<option selected>Pilih Kelurahan</option>")
+                .append(options);
             },
             error: function () {
               console.error("Gagal mengambil data Kelurahan");
@@ -2439,24 +2452,36 @@
           });
         }
 
-        // Event listener untuk dropdown Kabupaten/Kota
-        $("#kabupatenKota").change(function () {
+        // Event listener untuk semua dropdown Kabupaten/Kota dan Kecamatan
+        $("[id^='kabupatenKota']").change(function () {
           const kabupatenId = $(this).val();
+          const setId = $(this).attr("id").replace("kabupatenKota", ""); // Ambil ID terkait (2, 3, atau 4)
+          const kecamatanId = `kecamatan${setId}`;
+          const kelurahanId = `kelurahan${setId}`;
+
           if (kabupatenId) {
-            loadKecamatan(kabupatenId);
+            loadKecamatan(kabupatenId, kecamatanId, kelurahanId);
           } else {
-            $("#kecamatan").html("<option selected>Pilih Kecamatan</option>");
-            $("#kelurahan").html("<option selected>Pilih Kelurahan</option>");
+            $(`#${kecamatanId}`).html(
+              "<option selected>Pilih Kecamatan</option>"
+            );
+            $(`#${kelurahanId}`).html(
+              "<option selected>Pilih Kelurahan</option>"
+            );
           }
         });
 
-        // Event listener untuk dropdown Kecamatan
-        $("#kecamatan").change(function () {
+        $("[id^='kecamatan']").change(function () {
           const kecamatanId = $(this).val();
+          const setId = $(this).attr("id").replace("kecamatan", ""); // Ambil ID terkait (2, 3, atau 4)
+          const kelurahanId = `kelurahan${setId}`;
+
           if (kecamatanId) {
-            loadKelurahan(kecamatanId);
+            loadKelurahan(kecamatanId, kelurahanId);
           } else {
-            $("#kelurahan").html("<option selected>Pilih Kelurahan</option>");
+            $(`#${kelurahanId}`).html(
+              "<option selected>Pilih Kelurahan</option>"
+            );
           }
         });
 
@@ -2592,20 +2617,20 @@
       map1.on("click", function (e) {
         onMapClick(e, map1);
         const { lat, lng } = e.latlng; // Get latitude and longitude from the event
-        alert(`Latitude: ${lat}, Longitude: ${lng}`); // Display the coordinates
-        console.log(`Latitude: ${lat}, Longitude: ${lng}`); // Log the coordinates to the console
+        document.getElementById("latitude1").value = lat;
+        document.getElementById("longitude1").value = lng;
       });
       map2.on("click", function (e) {
         onMapClick(e, map2);
         const { lat, lng } = e.latlng; // Get latitude and longitude from the event
-        alert(`Latitude: ${lat}, Longitude: ${lng}`); // Display the coordinates
-        console.log(`Latitude: ${lat}, Longitude: ${lng}`); // Log the coordinates to the console
+        document.getElementById("latitude2").value = lat;
+        document.getElementById("longitude2").value = lng;
       });
       map3.on("click", function (e) {
         onMapClick(e, map3);
         const { lat, lng } = e.latlng; // Get latitude and longitude from the event
-        alert(`Latitude: ${lat}, Longitude: ${lng}`); // Display the coordinates
-        console.log(`Latitude: ${lat}, Longitude: ${lng}`); // Log the coordinates to the console
+        document.getElementById("latitude3").value = lat;
+        document.getElementById("longitude3").value = lng;
       });
     </script>
   </body>
